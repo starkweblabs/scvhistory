@@ -1,4 +1,4 @@
-dateModified: 1776117634
+dateModified: 1776117873
 email:
   fromEmail: nathan@starksocial.com
   fromName: 'SCV History'
@@ -200,6 +200,17 @@ meta:
     fdb7f91f-2ca8-4df3-b40b-ed08f4227c9f: 'Spouse Of' # Spouse Of
     fe7f97dd-7d4c-4a34-aba6-88be3274095c: 'Obit Related Military' # Obit Related Military
     fe92ac21-e789-4858-8229-ef9b241d0ce1: 'MP Home of Record' # MP Home of Record
+plugins:
+  retour:
+    edition: standard
+    enabled: true
+    licenseKey: VXU2O3NLJEDTASZ1IMKJDOFE
+    schemaVersion: 3.0.12
+  seomatic:
+    edition: standard
+    enabled: true
+    licenseKey: UFDAACH6E85YZCJV9XW2T1DQ
+    schemaVersion: 3.0.13
 system:
   edition: solo
   live: true
