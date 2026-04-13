@@ -1,0 +1,22 @@
+columnSuffix: null
+handle: historicalPeriod
+instructions: null
+name: 'Historical Period'
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  defaultPlacement: end
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
+  showSearchInput: true
+  showSiteMenu: false
+  source: 'group:5fcd0c5d-7181-4e5b-8008-6343935422c7' # Historical Period
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Categories

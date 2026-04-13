@@ -1,0 +1,22 @@
+columnSuffix: null
+handle: historicalEra
+instructions: null
+name: 'Historical Era'
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  defaultPlacement: end
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
+  showSearchInput: true
+  showSiteMenu: false
+  source: 'group:047b3491-7cfa-4aba-99ee-28de76344edb' # Historical Era
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Categories

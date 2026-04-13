@@ -1,0 +1,22 @@
+columnSuffix: null
+handle: neighborhood
+instructions: null
+name: Neighborhood
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  defaultPlacement: end
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
+  showSearchInput: true
+  showSiteMenu: false
+  source: 'group:4c744660-4a32-4290-8c1c-c63ce96860a2' # Neighborhood
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Categories
