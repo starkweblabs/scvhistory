@@ -1,0 +1,20 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 702dbfa1-389d-4c04-8665-4b8e678766d2 # Group
+handle: groups
+maxAuthors: 1
+name: Groups
+previewTargets:
+  -
+    label: 'Primary entry page'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  3ae144ef-e15a-4685-8fec-8ac0dfa20b68: # SCV History
+    enabledByDefault: true
+    hasUrls: true
+    template: _entries/groups
+    uriFormat: 'groups/{slug}'
+type: channel

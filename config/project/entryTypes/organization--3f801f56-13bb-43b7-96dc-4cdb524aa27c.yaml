@@ -1,0 +1,15 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+handle: organization
+hasTitleField: false
+icon: null
+name: Organization
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

@@ -1,0 +1,15 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+handle: group
+hasTitleField: false
+icon: null
+name: Group
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

@@ -1,0 +1,20 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 64271c25-81d0-4aff-bba1-bf6896aa3db6 # Place
+handle: places
+maxAuthors: 1
+name: Places
+previewTargets:
+  -
+    label: 'Primary entry page'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  3ae144ef-e15a-4685-8fec-8ac0dfa20b68: # SCV History
+    enabledByDefault: true
+    hasUrls: true
+    template: _entries/places
+    uriFormat: 'places/{slug}'
+type: channel

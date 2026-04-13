@@ -1,0 +1,15 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+handle: militaryProfile
+hasTitleField: false
+icon: null
+name: 'Military Profile'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

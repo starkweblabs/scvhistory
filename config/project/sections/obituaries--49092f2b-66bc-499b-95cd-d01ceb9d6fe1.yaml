@@ -1,0 +1,20 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 78044714-6da8-436b-bd35-473db1023624 # Obituary
+handle: obituaries
+maxAuthors: 1
+name: Obituaries
+previewTargets:
+  -
+    label: 'Primary entry page'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  3ae144ef-e15a-4685-8fec-8ac0dfa20b68: # SCV History
+    enabledByDefault: true
+    hasUrls: true
+    template: _entries/obituaries
+    uriFormat: 'obituaries/{slug}'
+type: channel

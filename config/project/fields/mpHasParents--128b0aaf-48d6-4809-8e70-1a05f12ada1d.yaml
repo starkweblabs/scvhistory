@@ -1,0 +1,13 @@
+columnSuffix: null
+handle: mpHasParents
+instructions: null
+name: 'MP Has Parents'
+searchable: false
+settings:
+  default: false
+  offLabel: null
+  onLabel: null
+  showLabelsInCards: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

@@ -1,17 +1,140 @@
-dateModified: 1775797418
+dateModified: 1776116325
 email:
   fromEmail: nathan@starksocial.com
   fromName: 'SCV History'
   transportType: craft\mail\transportadapters\Sendmail
 meta:
   __names__:
+    0e428760-475d-483d-97b2-d1444c7630f4: 'Photo Date' # Photo Date
+    1b97d8d9-6b72-48e2-9f3b-25bfe8e1a5f0: 'Webmaster Note Top' # Webmaster Note Top
+    1c4743cd-c0fa-42eb-92c1-ace6b3f5bf18: Organizations # Organizations
+    1d2482c4-095a-413b-9e52-d396af8ef90d: 'MP Base Station' # MP Base Station
+    2b51a19f-90c3-4bc5-860d-da1deb512c16: Collections # Collections
+    3a747d65-9c1e-466f-a067-725518530446: 'Photo Sources' # Photo Sources
     3ae144ef-e15a-4685-8fec-8ac0dfa20b68: 'SCV History' # SCV History
     3bee9c17-c323-425b-a326-462233b04cde: 'Public Schema' # Public Schema
+    3c1958db-81e5-4078-9bb2-085ec9288fe9: 'Org Website' # Org Website
+    3e373788-6a9f-4f34-8d9c-37fe116dd115: 'MP Rank' # MP Rank
+    3f801f56-13bb-43b7-96dc-4cdb524aa27c: Organization # Organization
+    04e3416e-73bc-4e6b-b275-4684ebcefd34: Event # Event
+    4f57db14-792f-4d7e-b71f-95e03830afb1: 'Photo Credit' # Photo Credit
+    5e8daf31-6516-4238-9d20-d2e62d65491f: 'Has Sub-Boards' # Has Sub-Boards
+    5f666556-bbe0-4999-b3db-cf58e10d2fb8: 'Person Webmaster Note Bottom' # Person Webmaster Note Bottom
     5fd08951-56b9-4dde-9720-41c3046d0f37: 'SCV History' # SCV History
+    6a616037-fe82-4eb2-8667-bb3bc817fd39: 'Date Established' # Date Established
+    6b0b2b45-2fde-4748-8ddb-b18b3ad1904f: 'Fine Print' # Fine Print
+    6d489164-21bb-490e-b068-916f5dd35394: 'Org Fine Print' # Org Fine Print
+    6f1c8cb1-2216-4b03-9cb1-c5190c82b1a7: 'Event Date' # Event Date
+    7ce3598f-7711-4df6-8f99-ac10d904f0e2: 'Place Longitude' # Place Longitude
+    7f2b776b-bbf7-4fd8-8f9f-4f9e5b3ef56b: 'Person Find A Grave URL' # Person Find A Grave URL
+    8a1309e9-6990-4d93-9c45-6b2a0cdd0855: 'Photo Sequence' # Photo Sequence
+    008c946e-c13a-432d-991a-167ac93a724d: 'Place SCV Landmark' # Place SCV Landmark
+    8f0df48b-3c81-485e-951c-51be872f0071: 'Event Frequency' # Event Frequency
+    9c016c2f-9d7f-4193-a1b7-5d23a5f65faf: 'MP Service Start' # MP Service Start
+    9d0087fe-8a7b-4f5e-941b-b7e89febe4e9: Persons # Persons
+    9da65ae7-394c-4f9a-8f30-d1fee0c1a4a7: 'Has Parent Org' # Has Parent Org
+    9f22cd72-08e6-4475-8d5e-3e1920ece313: 'MP Narrative' # MP Narrative
+    9f760d67-cfee-4bd1-b8df-e60254e51474: 'Accession Batch' # Accession Batch
+    14e21ca9-0e1e-4188-b24a-a00381ce2367: 'Person Wikipedia URL' # Person Wikipedia URL
+    15e98910-53c8-4cbc-9d54-06bdd1c492b2: 'Military Profiles' # Military Profiles
+    19b82513-b9da-4646-a2fd-d68c021bc39f: 'Full Name' # Full Name
+    19ca3acf-8e4b-4491-9689-b93b6995fbab: 'Webmaster Note Bottom' # Webmaster Note Bottom
+    23f25afa-83f4-49fe-a098-4d9c5ae1afa4: 'Event Date End' # Event Date End
+    24da9c34-e5ec-46bf-8d4a-ed8ec2823d5e: 'Event CHL Number' # Event CHL Number
+    29aeece8-4c7e-41bd-bbf8-f4d81d6a4559: 'MP Burial Place' # MP Burial Place
+    29fa4bea-ad8f-4d3b-abf0-d1eaa63f18ac: 'Event Recurring' # Event Recurring
+    036deeea-7eea-42b5-89ad-55bc86bd744b: 'Group Aliases' # Group Aliases
+    42d78cec-1dc4-444b-92a5-a152db50db29: 'Place Address' # Place Address
+    51b9e121-0b2f-45d8-a7bd-999b3983fdee: 'Group Date End' # Group Date End
+    55c3e400-151a-4fa1-8f31-01d869a5d5ba: 'MP Date of Birth' # MP Date of Birth
+    68e6a476-a21e-4f5e-bd09-3668de8c50ce: 'Author Bio' # Author Bio
+    69ddeab8-2bcc-4094-a6d6-894d9c6f3f1e: 'Event Wikipedia URL' # Event Wikipedia URL
+    71c22db0-f8da-468b-888f-e0699cabff11: 'MP Unit' # MP Unit
+    73a69018-cf55-4606-bb7b-d8a9e8b1a2d0: Occupation # Occupation
+    86fb465a-1c5e-4958-923a-e02fd2b9ff28: 'Originally Published Title' # Originally Published Title
+    109b781b-42ee-4e02-bf82-da1f7981ac37: Events # Events
+    0110dcc2-9ed5-49f6-8446-b5002c904180: 'Event Date Start' # Event Date Start
+    128b0aaf-48d6-4809-8e70-1a05f12ada1d: 'MP Has Parents' # MP Has Parents
+    345bc614-72e5-4974-baed-bef72b54a866: 'Death Date' # Death Date
+    363e9913-8cab-4263-81ef-20a36cdd7852: 'MP Wikipedia URL' # MP Wikipedia URL
+    430f48e5-d9ff-40e7-9d65-0bc6291d8d54: 'Obit Date Published' # Obit Date Published
+    447a484a-adde-421a-aea6-2819d46b9b8c: 'MP Has Children' # MP Has Children
+    506e37ea-45dd-4aa1-85f4-803b107a7c17: Groups # Groups
+    554b9680-0f62-4708-b169-40c1d6a371cb: 'Person Webmaster Note Top' # Person Webmaster Note Top
+    572db4f6-ae23-4f72-a5e6-8a7c9aec4e74: Articles # Articles
+    600ba13a-cb0b-455e-b5a3-ce47481e5ee5: 'Person Fine Print' # Person Fine Print
+    619f528f-21f8-465d-bb8f-2bd013b1a621: Collection # Collection
+    698d779f-1097-4b65-8801-1f7984a324b8: 'Date Founded' # Date Founded
+    702dbfa1-389d-4c04-8665-4b8e678766d2: Group # Group
+    757b1bf8-8bee-4d70-a8e3-7290c2296d0e: 'Obit Legacy URL' # Obit Legacy URL
+    859dcc97-3458-4901-8659-37043953a91e: 'MP Date of Death' # MP Date of Death
+    869c1a3c-de72-4539-9c4f-c2a66302a5ad: 'Person Legacy URL' # Person Legacy URL
+    2041e1b2-ddec-4612-a05b-8a707377d1c4: 'Place Featured' # Place Featured
+    4248c77d-a53f-4d72-89b2-30404e1375a4: 'Place SCV Landmark URL' # Place SCV Landmark URL
+    7193e2f7-f1e2-498d-a2d3-14ea96c3865a: 'Article Latitude' # Article Latitude
+    7696edc9-c918-4a2f-80d3-56816a53633e: 'Group Website' # Group Website
+    8030b8ae-84bf-4fd5-b29c-4fc2c8b60011: 'Place Latitude' # Place Latitude
+    49092f2b-66bc-499b-95cd-d01ceb9d6fe1: Obituaries # Obituaries
+    64271c25-81d0-4aff-bba1-bf6896aa3db6: Place # Place
+    209335f5-d0cd-48d6-97a6-643511740df6: 'Obit Webmaster Note Bottom' # Obit Webmaster Note Bottom
+    0226347c-1fda-47f6-a8d4-ac7745a0e5fe: 'Original Publish Date' # Original Publish Date
+    587283d6-596f-47e7-90d8-3ec1a2b75fee: 'Place Legacy URL' # Place Legacy URL
+    687309fb-d997-402d-9771-2889c6c9a552: 'MP Webmaster Note Bottom' # MP Webmaster Note Bottom
+    932972ed-8afd-4048-810a-8e0e21a8a18d: Article # Article
+    942179a5-5b8f-46d7-8960-4fb2ae897625: 'Group Legacy URL' # Group Legacy URL
+    1678256c-2ea1-4897-9904-446333a2eaac: 'Article Longitude' # Article Longitude
+    2783613e-042b-4eba-aff6-22af40915baf: Places # Places
+    75145733-21e2-48ad-8719-877284efdc47: 'Legacy URL' # Legacy URL
+    78044714-6da8-436b-bd35-473db1023624: Obituary # Obituary
+    a5c082cc-7b40-4999-9e7b-156b63a992bc: 'MP Fine Print' # MP Fine Print
+    a7c54af7-30d6-4ae8-8125-8753fc952bd7: 'MP Awards Citations' # MP Awards Citations
+    a7d29285-f1cd-4793-8d5a-9f83c09cab99: 'MP Has Siblings' # MP Has Siblings
+    a8ef966a-768e-4643-9830-6aa0d566a047: 'Legacy Key' # Legacy Key
+    a215f091-faba-486a-85f7-2c2dad943767: 'Place CHL URL' # Place CHL URL
+    a1969145-2261-41ba-b15b-9385f97f5f0f: Subheadline # Subheadline
+    aabbd823-5b55-4eba-a4c7-01653d8e577b: 'MP Legacy URL' # MP Legacy URL
+    ac39d204-7be6-4731-933e-8994f7f54870: 'Obit Find A Grave URL' # Obit Find A Grave URL
+    ad04bf73-a5d3-4389-9e11-02ec6b7d5927: 'Org Aliases' # Org Aliases
+    b6f60f2c-09bb-43e2-ab37-f36f1544c1d4: 'Photo Source Code' # Photo Source Code
+    b9d1def6-30f2-4133-8bb0-2b222faad34e: 'Burial Place' # Burial Place
+    ba80cc74-a8ca-455c-b406-7836e2a3ff54: 'Org Wikipedia URL' # Org Wikipedia URL
+    bbe026c4-9dd3-4081-a43d-ba3d44432715: 'MP Combat Operations' # MP Combat Operations
+    be6f4e82-53c5-4654-8398-9a23d0b66251: 'Source Line' # Source Line
+    bed77614-e166-47dd-b910-b1d4ff5bc37b: 'Place Wikipedia URL' # Place Wikipedia URL
+    beddf6b8-b0e9-476e-b624-db1f64e8f170: 'MP Webmaster Note Top' # MP Webmaster Note Top
+    bfe168c1-16f3-47bc-9e6a-fb6378c27e18: 'Event Significance' # Event Significance
+    cb5da8a7-7de2-470a-a1ec-7df04995cd3f: 'Place Aliases' # Place Aliases
+    cc6505fc-3350-4db4-97ad-e8ff3fec1d3d: 'Batch Sequence' # Batch Sequence
+    cc358573-75fa-4e74-9c21-3da22a70051e: 'Group Date Start' # Group Date Start
+    cd83b674-ea20-48d3-912e-1da3bb578813: 'MP Age at Loss' # MP Age at Loss
+    d128c8cb-5a5c-4c17-b8ec-025770ae4070: 'Extended Caption' # Extended Caption
+    d487d693-b6f8-4637-9f22-86552a6e75bb: 'Obit Date of Death' # Obit Date of Death
+    d81838a3-86d6-44fb-b151-b5b77f7bc8f1: 'MP High School' # MP High School
+    dc38cbfd-540d-4988-bd35-a7c07015d57c: 'Event Legacy URL' # Event Legacy URL
+    dd0a52b7-df2d-4e82-a561-d26cb387c12e: 'Org Longitude' # Org Longitude
+    df3ed0ec-a3cf-4df1-916e-711b8af9a0d4: 'MP Has Spouse' # MP Has Spouse
+    e2dbda40-5fc4-43b9-a35b-24774c380b20: 'Term Notes' # Term Notes
+    e2ec95fc-c81f-4a2a-aaa7-61ff0c646e1b: 'Publication Details' # Publication Details
+    e2f52146-4d98-4e9f-a342-5f55cb6381d2: 'Org Legacy URL' # Org Legacy URL
+    e31f2a11-8bb9-4061-992b-119f6b2645fc: Person # Person
+    e34dff31-185d-469b-9dc0-528a82120aac: Birthplace # Birthplace
+    e97d0827-a474-451e-aecd-c48ecd38717e: 'MP Service End' # MP Service End
+    e8320e2a-0de3-4d5b-bc01-2c49eaa28486: 'MP Find A Grave URL' # MP Find A Grave URL
+    e5540563-0866-4ca0-a9d8-c17225eb20a1: 'Military Profile' # Military Profile
+    ea5a6f8f-47bb-471a-8b22-e36ee428407b: 'Event Next Occurrence' # Event Next Occurrence
+    ea2701b7-c19a-42f4-bfa6-673e90079acf: 'Birth Date' # Birth Date
+    ebf41740-5f0c-48b0-a176-663bd3142759: 'Org Address' # Org Address
+    f5eb4908-d535-4b94-9a6c-ecc1b3828387: 'Archive URL' # Archive URL
+    f32eae51-5e21-4625-9edf-19e38d4a92b7: 'Org Latitude' # Org Latitude
+    f93e01ae-4939-48d8-8151-268836846a7c: 'MP Specialty MOS' # MP Specialty MOS
+    fa9e8a3d-1e71-4bd5-8614-61ce7dd91233: 'Place CHL Number' # Place CHL Number
+    fb2c5789-1453-4ead-bdcb-edc81ac95334: 'Obit Webmaster Note Top' # Obit Webmaster Note Top
+    fe92ac21-e789-4858-8229-ef9b241d0ce1: 'MP Home of Record' # MP Home of Record
 system:
   edition: solo
   live: true
   name: 'SCV History'
+  retryDuration: null
   schemaVersion: 5.9.0.8
   timeZone: America/Los_Angeles
 users:
