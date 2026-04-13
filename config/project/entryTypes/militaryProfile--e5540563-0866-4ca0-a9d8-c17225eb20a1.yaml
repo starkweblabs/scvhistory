@@ -1,6 +1,677 @@
 allowLineBreaksInTitles: false
 color: null
 description: null
+fieldLayouts:
+  b3443d9b-c3ac-40d5-8a0b-48a53c134733:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 3e373788-6a9f-4f34-8d9c-37fe116dd115 # MP Rank
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a7830bd7-843b-459f-869c-0f7ea69e3b14
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: f93e01ae-4939-48d8-8151-268836846a7c # MP Specialty MOS
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9bb0c1c8-6dbc-4e9e-ae34-32b9ac19c2b0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 71c22db0-f8da-468b-888f-e0699cabff11 # MP Unit
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dab688fe-9bf7-45c3-bd34-c7e38dad2afb
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 1d2482c4-095a-413b-9e52-d396af8ef90d # MP Base Station
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2182ad7b-52bd-4d4e-a27d-977bff90353f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 9c016c2f-9d7f-4193-a1b7-5d23a5f65faf # MP Service Start
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 57166a9c-6451-4221-a760-0066d7611da8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: e97d0827-a474-451e-aecd-c48ecd38717e # MP Service End
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 283cd936-a77e-491a-b8ab-6dc32cf2461c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: bbe026c4-9dd3-4081-a43d-ba3d44432715 # MP Combat Operations
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 42a095e2-ee38-4841-97c0-5146c207647e
+            userCondition: null
+            warning: null
+            width: 100
+        name: Service
+        uid: c2f2ab36-67b1-4ac0-8fe1-01ae8c4bd33d
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 55c3e400-151a-4fa1-8f31-01d869a5d5ba # MP Date of Birth
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4f1f8d3a-a7c6-4bde-bb3e-7517daf325ef
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 859dcc97-3458-4901-8659-37043953a91e # MP Date of Death
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3eb3709d-c847-4028-a15b-9bc8bff50f3c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: cd83b674-ea20-48d3-912e-1da3bb578813 # MP Age at Loss
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0799ebfa-ef5c-45ea-ac11-84557a310f96
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: fe92ac21-e789-4858-8229-ef9b241d0ce1 # MP Home of Record
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 788c9de6-519f-4b56-8db4-2a1aad251acf
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: d81838a3-86d6-44fb-b151-b5b77f7bc8f1 # MP High School
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ee4bb964-97b1-43e7-b82f-ed7966e594a2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 29aeece8-4c7e-41bd-bbf8-f4d81d6a4559 # MP Burial Place
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e4c119b7-9d67-4a12-9af5-dfe64ad30ac6
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: a7c54af7-30d6-4ae8-8125-8753fc952bd7 # MP Awards Citations
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7a8b6d52-8f04-4093-94b5-908308192c87
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 9f22cd72-08e6-4475-8d5e-3e1920ece313 # MP Narrative
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2128261a-bd23-4639-8aa3-1cdf12c8dc98
+            userCondition: null
+            warning: null
+            width: 100
+        name: Personal
+        uid: e92ae3fd-9201-4dca-97b3-8c36dcbf09b7
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: df3ed0ec-a3cf-4df1-916e-711b8af9a0d4 # MP Has Spouse
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 69d3045b-48a4-4d44-81f5-3e260d2a48b2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 9e2abb25-a5c6-4256-8607-9a6ff6ef1a8e # MP Spouse
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e54a19c6-5f88-4bc3-b4f0-6eed47945373
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 447a484a-adde-421a-aea6-2819d46b9b8c # MP Has Children
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3be7cae2-d8e2-41ea-af48-c06f710cfae6
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: b07de159-f475-4937-98ce-db9b4d8c5855 # MP Children
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3b0e4f11-a027-4552-a667-919d87523920
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 128b0aaf-48d6-4809-8e70-1a05f12ada1d # MP Has Parents
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 11e05cd9-188e-4431-bb2b-8391bf45891b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: ad257040-ace0-4010-a707-3b9ce99a248f # MP Parents
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7796281e-45e5-4a58-b446-299a2790fcf8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: a7d29285-f1cd-4793-8d5a-9f83c09cab99 # MP Has Siblings
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9ed5eeb0-26af-49dc-89e9-4d86bf3b2c7e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 3ca8c98c-5420-4133-96da-4f21f9f566e3 # MP Siblings
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 436fc27f-62d0-4642-bec1-de755c7dd09b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: eca3a22b-ede0-47d3-89bb-8fda28ebfe83 # MP Related Persons
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 275c9b91-47c2-445e-a8c1-c6b4b465bf94
+            userCondition: null
+            warning: null
+            width: 100
+        name: Family
+        uid: 43acd1d4-13f7-4363-b609-bb901fe57688
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 5241daa5-0f02-47c2-bfe9-cbfa4d52fb80 # MP Subject
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4d85d6c6-3fa4-4c4a-a371-b0eb09b8624b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 2475755e-6c05-4ce2-ba03-c8eb55c99e02 # MP Places
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 83bbcfb0-4800-48c9-9685-216a76a72763
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 6bf4fdd7-a155-4378-8813-deadbbc622ed # MP Events
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 18aa3409-0f89-4679-b76c-440c0d259f1c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 962f38b8-f3e6-476e-8ad4-11e0226524df # MP Organizations
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cd89edf0-d253-4b81-b1fb-0ef9d2985406
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: f313790d-6d5c-4b50-a64b-f0103c1daf13 # MP Groups
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d83cd53c-d386-4a75-adac-134448778e30
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 7eadd519-a55c-433a-8391-a6ec84fa97e7 # MP Related Obituaries
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6dba6673-d2e3-418b-8772-8c3bae0865db
+            userCondition: null
+            warning: null
+            width: 100
+        name: Connections
+        uid: a5ca884c-0e42-430c-88c2-b5ca123c5c47
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 363e9913-8cab-4263-81ef-20a36cdd7852 # MP Wikipedia URL
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: baebe833-9220-4c1c-a06e-05dea5b97c0d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: e8320e2a-0de3-4d5b-bc01-2c49eaa28486 # MP Find A Grave URL
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0aa03dc1-936d-49d9-88ac-21e53dc7b94b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: aabbd823-5b55-4eba-a4c7-01653d8e577b # MP Legacy URL
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4806ee5d-c413-48e9-a14f-daa44fb7a29b
+            userCondition: null
+            warning: null
+            width: 100
+        name: External
+        uid: de1ee75d-1ac3-4503-9c89-f8228e2b3a0a
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: beddf6b8-b0e9-476e-b624-db1f64e8f170 # MP Webmaster Note Top
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 010c4adc-c0ee-4499-8664-3cb4fb1d5bc3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 687309fb-d997-402d-9771-2889c6c9a552 # MP Webmaster Note Bottom
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a9a94292-94d3-4c72-8d50-dbc9d44dfc45
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: a5c082cc-7b40-4999-9e7b-156b63a992bc # MP Fine Print
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 49a35f0c-b398-4262-8d65-63add4077586
+            userCondition: null
+            warning: null
+            width: 100
+        name: Notes
+        uid: ecc76a92-7a82-4b15-b3b3-7c46320e6cb0
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 9a795a95-5db5-4474-951f-38f5f2fdd6d6 # Historical Era
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b5b170b0-666e-42d7-a498-f06cd323b391
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: d710292c-42cd-463f-b92f-a2851d2f258b # Historical Period
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0d598a70-19d4-4e59-9e33-96fa27f3788c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: a9d40f84-91b6-40fe-b6c1-14b3a4315c67 # Neighborhood
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 406f6c8b-c3cd-441d-80be-bf37f57acfcc
+            userCondition: null
+            warning: null
+            width: 100
+        name: Taxonomy
+        uid: a758dda9-6a93-49b9-b838-0105734adc6e
+        userCondition: null
+    thumbFieldKey: null
 handle: militaryProfile
 hasTitleField: false
 icon: null

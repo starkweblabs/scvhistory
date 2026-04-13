@@ -1,6 +1,275 @@
 allowLineBreaksInTitles: false
 color: null
 description: null
+fieldLayouts:
+  c0d5f4fb-04d5-411b-bf7a-d41e26ff1b5c:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: e2ec95fc-c81f-4a2a-aaa7-61ff0c646e1b # Publication Details
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 43a3de02-edff-4f1a-b5aa-b58397bc634b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: d487d693-b6f8-4637-9f22-86552a6e75bb # Obit Date of Death
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5d46076f-39ec-4c69-83b9-5bce621ecc6f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 430f48e5-d9ff-40e7-9d65-0bc6291d8d54 # Obit Date Published
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d799268f-b715-4c30-82ae-5cc5e015fcb2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 9545ec9a-db2c-435c-908c-b7afcadd4991 # Obit Published In
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2fbf69a5-6e3b-41c6-a664-cb3b357baba7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 757b1bf8-8bee-4d70-a8e3-7290c2296d0e # Obit Legacy URL
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5cfea43e-e74c-4e5c-95f2-dfb4f4f8a8e9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: ac39d204-7be6-4731-933e-8994f7f54870 # Obit Find A Grave URL
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a8ef9f14-70fe-4cec-a3de-d29031da00f5
+            userCondition: null
+            warning: null
+            width: 100
+        name: Publication
+        uid: e360535a-d02d-4167-b100-bb140f5c8741
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 3f17c1fb-9f4d-4d93-93c0-d5875c4f2910 # Obit Subject
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9d2b912a-754a-403a-aadf-238101de8acc
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 0a435923-bb41-4cc3-8f64-48ada83aef28 # Obit Group
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 53a0f538-b2b9-4ac9-bf0b-ce2cc4a6584d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 63028120-1877-42f9-bd4a-02e19aa083f0 # Obit Related Persons
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 31fe7236-c5b4-4af2-87c1-5547ea31bb1f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: fe7f97dd-7d4c-4a34-aba6-88be3274095c # Obit Related Military
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 76285764-b2d1-4a72-9950-273dcad1bc6e
+            userCondition: null
+            warning: null
+            width: 100
+        name: Connections
+        uid: a4843dc8-fbd4-4fdb-8013-b397fefd226f
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: fb2c5789-1453-4ead-bdcb-edc81ac95334 # Obit Webmaster Note Top
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 117519d2-3dca-4f39-bc0d-a5a50fd5aa68
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 209335f5-d0cd-48d6-97a6-643511740df6 # Obit Webmaster Note Bottom
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 45a64359-1873-41da-a66a-6588566579a8
+            userCondition: null
+            warning: null
+            width: 100
+        name: Notes
+        uid: 1b6a06c6-898a-4b1c-a1a3-62897728aa66
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 9a795a95-5db5-4474-951f-38f5f2fdd6d6 # Historical Era
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4c029aeb-7549-49ea-ade2-98bead70a2af
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: d710292c-42cd-463f-b92f-a2851d2f258b # Historical Period
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 36799ee5-f659-458b-8e63-0d61c570d488
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: a9d40f84-91b6-40fe-b6c1-14b3a4315c67 # Neighborhood
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ac6a8fb6-4a7a-433a-8d25-8c2bd6e1955c
+            userCondition: null
+            warning: null
+            width: 100
+        name: Taxonomy
+        uid: 23dc010f-9125-4a76-b771-3f0ef5e24bc1
+        userCondition: null
+    thumbFieldKey: null
 handle: obituary
 hasTitleField: false
 icon: null

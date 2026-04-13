@@ -1,6 +1,189 @@
 allowLineBreaksInTitles: false
 color: null
 description: null
+fieldLayouts:
+  d4884368-9cd4-4349-835f-b5432890856b:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 036deeea-7eea-42b5-89ad-55bc86bd744b # Group Aliases
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5bb5fd65-1bf3-4085-bb2f-6035d2e0c8a9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: cc358573-75fa-4e74-9c21-3da22a70051e # Group Date Start
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 35751362-d8d9-4cf6-8727-f30a549ea97c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 51b9e121-0b2f-45d8-a7bd-999b3983fdee # Group Date End
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9dc3cad1-bfb2-4ebb-8281-da51fff881ee
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 7696edc9-c918-4a2f-80d3-56816a53633e # Group Website
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bae2d2d4-db2c-414d-89f0-e7e2a16e5aa7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 942179a5-5b8f-46d7-8960-4fb2ae897625 # Group Legacy URL
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 05294248-aa3b-40ae-b5b5-528f82906ef6
+            userCondition: null
+            warning: null
+            width: 100
+        name: Identity
+        uid: ffbdd1e1-4d50-41f2-a346-5397b6653a2a
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 8e3b6920-ba35-460b-ab49-1a2291ef0ec0 # Group Persons
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 13522396-ed40-4ecd-9cb9-8c41fe317622
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 4c63e41a-3d70-4840-9069-fa32507828ee # Group Events
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f761b576-4b17-478f-a990-c89f2109247a
+            userCondition: null
+            warning: null
+            width: 100
+        name: Connections
+        uid: 16def51e-6c0a-489a-b698-a6a400d49aa4
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 9a795a95-5db5-4474-951f-38f5f2fdd6d6 # Historical Era
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6dbf10b3-a104-40bd-a730-fc9d7a3a4ae3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: d710292c-42cd-463f-b92f-a2851d2f258b # Historical Period
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 450adb1b-db43-43ad-b3d7-766956b936ce
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: a9d40f84-91b6-40fe-b6c1-14b3a4315c67 # Neighborhood
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 85ba22f5-60d7-4a2a-a8b6-d2d70c83ee58
+            userCondition: null
+            warning: null
+            width: 100
+        name: Taxonomy
+        uid: 3db0ba18-6f79-4a46-8314-adf56479fd30
+        userCondition: null
+    thumbFieldKey: null
 handle: group
 hasTitleField: false
 icon: null
