@@ -185,7 +185,7 @@ fieldLayouts:
         userCondition: null
     thumbFieldKey: null
 handle: group
-hasTitleField: false
+hasTitleField: true
 icon: null
 name: Group
 showSlugField: true

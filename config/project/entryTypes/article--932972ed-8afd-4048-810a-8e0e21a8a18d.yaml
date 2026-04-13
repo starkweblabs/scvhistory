@@ -497,7 +497,7 @@ fieldLayouts:
         userCondition: null
     thumbFieldKey: null
 handle: article
-hasTitleField: false
+hasTitleField: true
 icon: null
 name: Article
 showSlugField: true

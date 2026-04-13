@@ -673,7 +673,7 @@ fieldLayouts:
         userCondition: null
     thumbFieldKey: null
 handle: militaryProfile
-hasTitleField: false
+hasTitleField: true
 icon: null
 name: 'Military Profile'
 showSlugField: true

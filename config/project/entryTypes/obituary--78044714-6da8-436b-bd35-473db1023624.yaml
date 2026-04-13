@@ -271,7 +271,7 @@ fieldLayouts:
         userCondition: null
     thumbFieldKey: null
 handle: obituary
-hasTitleField: false
+hasTitleField: true
 icon: null
 name: Obituary
 showSlugField: true

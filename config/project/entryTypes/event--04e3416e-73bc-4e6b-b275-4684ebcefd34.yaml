@@ -335,7 +335,7 @@ fieldLayouts:
         userCondition: null
     thumbFieldKey: null
 handle: event
-hasTitleField: false
+hasTitleField: true
 icon: null
 name: Event
 showSlugField: true

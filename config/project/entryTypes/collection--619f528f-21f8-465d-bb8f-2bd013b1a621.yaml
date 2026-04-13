@@ -185,7 +185,7 @@ fieldLayouts:
         userCondition: null
     thumbFieldKey: null
 handle: collection
-hasTitleField: false
+hasTitleField: true
 icon: null
 name: Collection
 showSlugField: true

@@ -1,4 +1,4 @@
-dateModified: 1776118393
+dateModified: 1776122446
 email:
   fromEmail: nathan@starksocial.com
   fromName: 'SCV History'
@@ -20,6 +20,7 @@ meta:
     1c4743cd-c0fa-42eb-92c1-ace6b3f5bf18: Organizations # Organizations
     1cc4a471-4827-44f0-bbcf-d884b0f5a4ad: 'Event Places' # Event Places
     1d2482c4-095a-413b-9e52-d396af8ef90d: 'MP Base Station' # MP Base Station
+    1f1e0b5a-e874-40b9-9a54-cf6acef1dd94: Body # Body
     2b5ff652-e35d-48c0-9f14-51570e23c33f: 'Place Events' # Place Events
     2b8c5353-113c-4862-8fa6-eed91e039549: 'Related Events' # Related Events
     2b51a19f-90c3-4bc5-860d-da1deb512c16: Collections # Collections

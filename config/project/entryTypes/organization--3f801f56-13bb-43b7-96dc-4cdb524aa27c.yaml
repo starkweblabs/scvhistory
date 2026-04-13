@@ -373,7 +373,7 @@ fieldLayouts:
         userCondition: null
     thumbFieldKey: null
 handle: organization
-hasTitleField: false
+hasTitleField: true
 icon: null
 name: Organization
 showSlugField: true

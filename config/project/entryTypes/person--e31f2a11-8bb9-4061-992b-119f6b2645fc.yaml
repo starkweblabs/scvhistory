@@ -475,14 +475,14 @@ fieldLayouts:
         userCondition: null
     thumbFieldKey: null
 handle: person
-hasTitleField: false
+hasTitleField: true
 icon: null
 name: Person
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: null
+titleFormat: '{fullName}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
 uiLabelFormat: '{title}'
