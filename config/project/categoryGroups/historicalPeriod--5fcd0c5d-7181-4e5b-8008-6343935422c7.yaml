@@ -1,0 +1,50 @@
+defaultPlacement: end
+fieldLayouts:
+  c7b5a890-155e-4d7a-93a6-acb0bb7327e8:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            uid: 2c073291-c321-48b3-954f-68787bfccce9
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: c83d091a-de75-48c6-8aec-ed0a589a667b
+        userCondition: null
+    thumbFieldKey: null
+handle: historicalPeriod
+name: 'Historical Period'
+siteSettings:
+  3ae144ef-e15a-4685-8fec-8ac0dfa20b68: # SCV History
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: null
+  uid: d20b426d-f6ae-4303-8c40-4611c731acb4

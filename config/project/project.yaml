@@ -1,4 +1,4 @@
-dateModified: 1776116325
+dateModified: 1776116602
 email:
   fromEmail: nathan@starksocial.com
   fromName: 'SCV History'
@@ -16,10 +16,12 @@ meta:
     3c1958db-81e5-4078-9bb2-085ec9288fe9: 'Org Website' # Org Website
     3e373788-6a9f-4f34-8d9c-37fe116dd115: 'MP Rank' # MP Rank
     3f801f56-13bb-43b7-96dc-4cdb524aa27c: Organization # Organization
+    4c744660-4a32-4290-8c1c-c63ce96860a2: Neighborhood # Neighborhood
     04e3416e-73bc-4e6b-b275-4684ebcefd34: Event # Event
     4f57db14-792f-4d7e-b71f-95e03830afb1: 'Photo Credit' # Photo Credit
     5e8daf31-6516-4238-9d20-d2e62d65491f: 'Has Sub-Boards' # Has Sub-Boards
     5f666556-bbe0-4999-b3db-cf58e10d2fb8: 'Person Webmaster Note Bottom' # Person Webmaster Note Bottom
+    5fcd0c5d-7181-4e5b-8008-6343935422c7: 'Historical Period' # Historical Period
     5fd08951-56b9-4dde-9720-41c3046d0f37: 'SCV History' # SCV History
     6a616037-fe82-4eb2-8667-bb3bc817fd39: 'Date Established' # Date Established
     6b0b2b45-2fde-4748-8ddb-b18b3ad1904f: 'Fine Print' # Fine Print
@@ -45,6 +47,7 @@ meta:
     29fa4bea-ad8f-4d3b-abf0-d1eaa63f18ac: 'Event Recurring' # Event Recurring
     036deeea-7eea-42b5-89ad-55bc86bd744b: 'Group Aliases' # Group Aliases
     42d78cec-1dc4-444b-92a5-a152db50db29: 'Place Address' # Place Address
+    047b3491-7cfa-4aba-99ee-28de76344edb: 'Historical Era' # Historical Era
     51b9e121-0b2f-45d8-a7bd-999b3983fdee: 'Group Date End' # Group Date End
     55c3e400-151a-4fa1-8f31-01d869a5d5ba: 'MP Date of Birth' # MP Date of Birth
     68e6a476-a21e-4f5e-bd09-3668de8c50ce: 'Author Bio' # Author Bio
