@@ -1,0 +1,23 @@
+dateModified: 1775797418
+email:
+  fromEmail: nathan@starksocial.com
+  fromName: 'SCV History'
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    3ae144ef-e15a-4685-8fec-8ac0dfa20b68: 'SCV History' # SCV History
+    3bee9c17-c323-425b-a326-462233b04cde: 'Public Schema' # Public Schema
+    5fd08951-56b9-4dde-9720-41c3046d0f37: 'SCV History' # SCV History
+system:
+  edition: solo
+  live: true
+  name: 'SCV History'
+  schemaVersion: 5.9.0.8
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  require2fa: false
+  requireEmailVerification: true

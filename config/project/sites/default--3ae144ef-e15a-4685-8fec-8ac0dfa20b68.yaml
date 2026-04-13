@@ -1,0 +1,8 @@
+baseUrl: $PRIMARY_SITE_URL
+handle: default
+hasUrls: true
+language: en
+name: 'SCV History'
+primary: true
+siteGroup: 5fd08951-56b9-4dde-9720-41c3046d0f37 # SCV History
+sortOrder: 1
