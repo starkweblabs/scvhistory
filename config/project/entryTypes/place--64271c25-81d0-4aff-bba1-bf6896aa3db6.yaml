@@ -13,6 +13,22 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
+            fieldUid: 1f1e0b5a-e874-40b9-9a54-cf6acef1dd94 # Body
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2025c76d-5624-4cf3-bb98-c61609daaad6
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
             fieldUid: 42d78cec-1dc4-444b-92a5-a152db50db29 # Place Address
             handle: null
             instructions: null
@@ -351,7 +367,7 @@ fieldLayouts:
         userCondition: null
     thumbFieldKey: null
 handle: place
-hasTitleField: true
+hasTitleField: false
 icon: null
 name: Place
 showSlugField: true

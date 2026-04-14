@@ -13,6 +13,22 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
+            fieldUid: 1f1e0b5a-e874-40b9-9a54-cf6acef1dd94 # Body
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7dac4068-664c-4f9d-b5a2-4b06bfe1e981
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
             fieldUid: 19b82513-b9da-4646-a2fd-d68c021bc39f # Full Name
             handle: null
             instructions: null
@@ -475,7 +491,7 @@ fieldLayouts:
         userCondition: null
     thumbFieldKey: null
 handle: person
-hasTitleField: true
+hasTitleField: false
 icon: null
 name: Person
 showSlugField: true

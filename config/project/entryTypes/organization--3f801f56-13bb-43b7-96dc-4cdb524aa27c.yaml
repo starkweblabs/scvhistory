@@ -13,6 +13,22 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
+            fieldUid: 1f1e0b5a-e874-40b9-9a54-cf6acef1dd94 # Body
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: da061ca4-69e5-440b-8a90-5af4a052d406
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
             fieldUid: 698d779f-1097-4b65-8801-1f7984a324b8 # Date Founded
             handle: null
             instructions: null
@@ -373,7 +389,7 @@ fieldLayouts:
         userCondition: null
     thumbFieldKey: null
 handle: organization
-hasTitleField: true
+hasTitleField: false
 icon: null
 name: Organization
 showSlugField: true

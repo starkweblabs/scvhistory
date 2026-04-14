@@ -1,4 +1,4 @@
-dateModified: 1776122446
+dateModified: 1776124800
 email:
   fromEmail: nathan@starksocial.com
   fromName: 'SCV History'
@@ -80,6 +80,7 @@ meta:
     036deeea-7eea-42b5-89ad-55bc86bd744b: 'Group Aliases' # Group Aliases
     42d78cec-1dc4-444b-92a5-a152db50db29: 'Place Address' # Place Address
     0043c112-7178-4dd3-a3ee-602d9127ed84: 'Child Of' # Child Of
+    46e0adbb-5c7a-4b0c-876f-d1f5bfdca53c: 'Featured Image' # Featured Image
     047b3491-7cfa-4aba-99ee-28de76344edb: 'Historical Era' # Historical Era
     51b9e121-0b2f-45d8-a7bd-999b3983fdee: 'Group Date End' # Group Date End
     55c3e400-151a-4fa1-8f31-01d869a5d5ba: 'MP Date of Birth' # MP Date of Birth

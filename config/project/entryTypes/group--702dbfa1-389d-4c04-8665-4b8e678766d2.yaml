@@ -13,6 +13,22 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
+            fieldUid: 1f1e0b5a-e874-40b9-9a54-cf6acef1dd94 # Body
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4b4019ef-7c0a-4dc8-aacd-543be54e9cc8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
             fieldUid: 036deeea-7eea-42b5-89ad-55bc86bd744b # Group Aliases
             handle: null
             instructions: null
@@ -185,7 +201,7 @@ fieldLayouts:
         userCondition: null
     thumbFieldKey: null
 handle: group
-hasTitleField: true
+hasTitleField: false
 icon: null
 name: Group
 showSlugField: true
