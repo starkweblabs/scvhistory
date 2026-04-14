@@ -11,7 +11,7 @@ settings:
     - image
   branchLimit: null
   defaultPlacement: end
-  defaultUploadLocationSource: null
+  defaultUploadLocationSource: 'volume:79c1056c-85f5-4d7d-bbde-c4e8d6a19f97' # Archive Media
   defaultUploadLocationSubpath: null
   maintainHierarchy: false
   maxRelations: 1
@@ -31,7 +31,7 @@ settings:
     - 'volume:79c1056c-85f5-4d7d-bbde-c4e8d6a19f97' # Archive Media
   targetSiteId: null
   validateRelatedElements: false
-  viewMode: list
+  viewMode: large
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Assets
