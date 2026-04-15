@@ -29,7 +29,7 @@
           <h1 class="scv-entry-title">{{ org.title }}</h1>
 
           {% if org.orgAliases %}
-            <p class="scv-entry-aliases">Also known as: {{ org.orgAliases }}</p>
+            <p class="scv-entry-aliases">Also known as {{ org.orgAliases }}</p>
           {% endif %}
 
           <dl class="scv-entry-meta">
@@ -38,10 +38,10 @@
               <dd>{{ org.dateFounded }}</dd>
             {% endif %}
 
-            {% if org.dateDissolved %}
-              <dt>Dissolved</dt>
-              <dd>{{ org.dateDissolved }}</dd>
-            {% endif %}
+            {# {% if org.dateDissolved %}
+  <dt>Dissolved</dt>
+  <dd>{{ org.dateDissolved }}</dd>
+{% endif %} #}
 
             {% if org.orgAddress %}
               <dt>Address</dt>

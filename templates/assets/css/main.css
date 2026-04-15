@@ -2079,3 +2079,40 @@ figure.scv-person-portrait img, span.scv-person-portrait img { display: block; w
   width: 60%;
   opacity: 0.25;
 }
+
+/* ── Entry meta (Founded, Address, etc.) ── */
+.scv-entry-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin: 0.75rem 0;
+  font-size: 0.9rem;
+}
+
+.scv-entry-meta dt {
+  display: inline;
+  font-weight: 600;
+  color: var(--color-navy);
+}
+
+.scv-entry-meta dt::after {
+  content: ': ';
+}
+
+.scv-entry-meta dd {
+  display: inline;
+  margin: 0;
+  color: var(--color-navy);
+}
+
+.scv-entry-meta dd::after {
+  content: '\A';
+  white-space: pre;
+}
+
+.scv-entry-aliases {
+  font-size: 0.9rem;
+  color: var(--color-warm-gray);
+  margin: 0.25rem 0 0.5rem;
+  font-style: italic;
+}
