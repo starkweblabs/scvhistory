@@ -838,3 +838,68 @@ Entities first. Articles second. Relations auto-populated from entity dictionary
 - OCR auto-generated on upload
 - Craft stores metadata + relations + rights; Archive.org stores files + tiles
 
+
+---
+
+## Phase 12 — Linked Open Data (LOD)
+
+Priority: Light LOD (Schema.org + Wikidata) starts immediately. Full LOD in Phase 3+.
+The data model is already 80% LOD-ready. This is mostly export/presentation work.
+
+### Immediate — Add Two Fields to All Entry Types (Do This Week)
+- [ ] Add `sameAs` Plain Text (multi) to Person, Place, Organization, Event, Article
+- [ ] Add `externalSource` Plain Text to same — values: "Wikidata", "LCSH", "Getty AAT", "GeoNames", "Local-SCV", "Tataviam-consulted"
+- [ ] Update taxonomy JSON files with LCSH/AAT URIs (updated files in taxonomy-import/)
+- [ ] Add `termUri` URL field to every Category field layout in Craft CP
+
+### Phase 1-2 — Schema.org JSON-LD in Templates
+- [ ] Add Schema.org JSON-LD block to persons/_entry.twig (schema:Person)
+- [ ] Add Schema.org JSON-LD block to organizations/_entry.twig (schema:Organization)
+- [ ] Add Schema.org JSON-LD block to places/_entry.twig (schema:Place)
+- [ ] Add Schema.org JSON-LD block to articles (schema:Article)
+- [ ] Add dcterms metadata (creator, provenance, rights, source) to all entry templates
+- [ ] Wikidata reconciliation step added to Claude entity extraction pipeline
+
+### Phase 3 — GraphQL LOD Endpoint
+- [ ] Enable public GraphQL schema (already installed in Craft)
+- [ ] Custom resolver returns JSON-LD or RDF/Turtle on demand
+- [ ] Endpoint: /api/entries/{slug}.jsonld
+
+### Phase 3 — IIIF + LOD
+- [ ] Embed JSON-LD in IIIF Manifests
+- [ ] IIIF Web Annotations reference canonical SCVHistory URIs
+- [ ] Align with IIIF Change Discovery API — other institutions can subscribe to updates
+
+### Phase 3+ — Full LOD
+- [ ] Public RDF/Turtle dump for researchers
+- [ ] Contribute to California Digital Library via Europeana Data Model (EDM)
+- [ ] SKOS ConceptScheme export for all taxonomies
+
+### LOD Standard Priority Order
+
+| Standard | Priority | Effort | Value |
+|---|---|---|---|
+| Schema.org JSON-LD | High | Low | SEO, citations, Google Knowledge Graph |
+| Wikidata sameAs links | High | Low-Med | Free enrichment, interoperability |
+| Dublin Core (dcterms) | High | Low | Rights, provenance, creator metadata |
+| Getty AAT/TGN URIs | Medium | Med | Academic credibility, vocabulary alignment |
+| CIDOC CRM | Low | High | Defer until 1000+ richly linked entries |
+| Europeana EDM | Low | Med-High | Only if contributing to California Digital Library |
+
+### Cultural Sensitivity in LOD
+
+- Indigenous content (Tataviam): Follow CARE Principles — opt-in for LOD, document consent in entry metadata
+- isLivingPerson flag suppresses LOD output for sensitive personal fields
+- Sensitive site locations: Described in entry but coordinates not published in LOD
+- sameAs Wikidata QIDs for Tataviam cultural groups only with explicit community consent
+
+### LOD and the Open-Source Starter Kit
+
+Ship with the starter kit:
+- JSON-LD context file (neutral core ontology mapping)
+- Sample Wikidata reconciliation script for entity-first import
+- Schema.org Twig macro library
+- Taxonomy JSON files with sameAs fields as the standard format
+
+This turns SCVHistory from a local website into a node in the global cultural heritage graph.
+
