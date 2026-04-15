@@ -2,6 +2,28 @@
 
 Upload BUILDPLAN.md + CHANGELOG.md + ERRORLOG.md at the start of every session.
 
+---
+
+## How to Update These Files
+
+**Adding something to the build queue:**
+Tell Claude what to add and it will generate an updated BUILDPLAN.md to download and commit.
+
+**End of every session:**
+1. Claude generates a CHANGELOG entry — paste it at the top of CHANGELOG.md in TextEdit
+2. Download any updated BUILDPLAN.md or ERRORLOG.md Claude generated
+3. Commit and push everything:
+
+MAC:
+git add BUILDPLAN.md CHANGELOG.md ERRORLOG.md
+git commit -m "docs: session log YYYY-MM-DD"
+git push
+
+**Start of every session — paste this prompt into a new chat:**
+You are working on SCVHistory.com, a Craft CMS 5 digital archive project for Santa Clarita Valley history. Before doing anything else, fetch and read these three files from GitHub: https://raw.githubusercontent.com/starkweblabs/scvhistory/main/BUILDPLAN.md and https://raw.githubusercontent.com/starkweblabs/scvhistory/main/CHANGELOG.md and https://raw.githubusercontent.com/starkweblabs/scvhistory/main/ERRORLOG.md. After reading all three, summarize what was last completed, current status, and what's next. Then ask what we're working on today.
+
+---
+
 ## Project North Star
 World-class digital archive of SCV history. Launch: 2027 (30th anniversary). Audience: general public, students, researchers, CSUN post-grads.
 
@@ -26,8 +48,8 @@ Content-type headers set in .twig files: {% header 'Content-Type: text/css' %}
 ## Workstream 1 — Craft CMS Build
 
 ### Content Status
-Persons: 33 — Local YES, Cloudways YES
-Organizations: 14 — Local NO, Cloudways YES
+Persons: 33 — Local YES (untitled), Cloudways YES (titled)
+Organizations: 14 — Local NO, Cloudways YES (titled as of 2026-04-14)
 Places: 0 — Local NO, Cloudways NO
 Groups: 0 — Local NO, Cloudways NO
 
@@ -39,8 +61,8 @@ templates/assets/css/main.css + main.twig — LIVE (both)
 templates/assets/css/layout.css + layout.twig — LIVE (both)
 templates/assets/js/main.js + main.twig — LIVE (both)
 persons/_entry.twig — LIVE (both)
-persons/index.twig — LIVE (both) — era filter + person grid
-organizations/_entry.twig — BUILT locally, pushed to GitHub, needs Cloudways pull + test
+persons/index.twig — LIVE (both)
+organizations/_entry.twig — LIVE (both)
 organizations/index.twig — NOT BUILT
 places/_entry.twig — NOT BUILT
 places/index.twig — NOT BUILT
@@ -48,8 +70,8 @@ Homepage — NOT BUILT
 Search results — NOT BUILT
 
 ### Queue (in order)
-- [ ] Pull organizations/_entry.twig to Cloudways (Cloudways panel > Deployment via GIT > Pull)
-- [ ] Test org entry template on Cloudways against live org content
+- [ ] Pull Cloudways DB to DDEV local — fixes untitled entries locally, enables local design against real content
+- [ ] Fix images on Cloudways — featuredImage field empty on org entries, needs investigation
 - [ ] Build organizations/index.twig
 - [ ] Run places_import_v2.php on Cloudways
 - [ ] Build places/_entry.twig
@@ -59,13 +81,15 @@ Search results — NOT BUILT
 - [ ] Build Search results page
 - [ ] Build Homepage (include Recently Added strip — 4-6 cards, latest entries across all sections)
 - [ ] Build "What's New" page — two streams: (1) Site Updates: simple Craft single section for admin notes; (2) Recently Added: auto-query last 15 entries across all sections ordered by dateUpdated
-- [ ] Add "Recently Added" strip to Homepage (4-6 cards, same query as What's New)
 - [ ] Add "What's New" link to footer nav
+- [ ] Set up "Live Tech Updates" page — public-facing log of build progress, decisions, and deployments. Pulls from a dedicated Craft single or channel. Admin posts brief notes; page auto-displays newest first. Separate from content updates — this is about the project itself.
+- [ ] Sort out SEOmatic trial — two plugins installed as trials, need licensing decision
+- [ ] README.md in repo — public explanation of project for GitHub visitors and CSUN audience
 
 ### Open Questions
 - [ ] Confirm articleOrganizations field handle on Articles section for org reverse-lookup
 - [ ] FacetWP-style filtering approach in Craft (no plugin equivalent yet)
-- [ ] SEO/Meta plugin for Craft (SEOmatic appears to be installed — confirm)
+- [ ] Why are images not showing on Cloudways — featuredImage empty on org entries
 
 ## Workstream 2 — Archive.org Legacy Mirror
 - [ ] Mirror legacy site to Cloudways (in progress)
@@ -79,22 +103,24 @@ Search results — NOT BUILT
 2026-04-13 — 33 Person records imported via persons_v3_batch1/2/3.php on DDEV
 2026-04-13 — Person titles corrected to WP short names after import used full legal names
 2026-04-13 — persons/index.twig built with era filter and person grid
-2026-04-14 — Local = code only, Cloudways = content + testing — eliminates double work
-2026-04-14 — Build all templates first, migrate content to Cloudways after
+2026-04-14 — Local = code only, Cloudways = content + testing
 2026-04-14 — Repo made public — enables GitHub raw file fetching for session start
 2026-04-14 — Auto-deploy via GitHub Action (deploy.yml) using SSH password auth
-2026-04-14 — Cloudways Pull button used for manual deploys when needed
+2026-04-14 — CRAFT_ALLOW_ADMIN_CHANGES=true added to Cloudways .env to allow section config changes
+2026-04-14 — Org section template path fixed to organizations/_entry
+2026-04-14 — All 14 org titles fixed — were null due to circular titleFormat reference
 
 ## Key Technical Notes
 - Use php craft exec not php craft eval (does not exist in Craft 5)
 - Craft 5: use Craft::app->entries not Craft::app->sections
 - Never edit config files via CLI append/cat — causes corruption
-- Never assume a file or field exists unless confirmed
 - CSS/JS must be in templates/assets/ not web/assets/ — Mutagen does not sync web/assets
 - Content-type headers required in .twig asset files
 - PRIMARY_SITE_URL must be https:// not http:// in .env
+- CRAFT_ALLOW_ADMIN_CHANGES=true required in Cloudways .env to save section settings
 - ddev craft clear-caches/all after template changes locally
 - Git merge editor opens vim — type :wq to save and exit
+- To open .md files in TextEdit: open -a TextEdit filename.md
 
 ## Import Scripts on Cloudways (public_html root)
 - persons_import.php, persons_import_v2.php, persons_v3_batch1/2/3.php
@@ -103,3 +129,5 @@ Search results — NOT BUILT
 
 ## Backlog
 - SCVTalk integration — separate blog/media property, revisit after SCVHistory launch
+- GitHub Issues + Project board for public task tracking
+- CSUN partnership pitch materials
