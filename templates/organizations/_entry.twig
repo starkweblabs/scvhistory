@@ -1,0 +1,458 @@
+{% extends "_layouts/base" %}
+
+{% block content %}
+
+{# ── Field Variables ─────────────────────────────────────────────── #}
+{% set image         = entry.featuredImage.one() %}
+{% set body          = entry.body %}
+{% set dateFounded   = entry.dateFounded %}
+{% set aliases       = entry.orgAliases %}
+{% set address       = entry.orgAddress %}
+{% set lat           = entry.orgLat %}
+{% set lng           = entry.orgLng %}
+{% set website       = entry.orgWebsite %}
+{% set wikipedia     = entry.orgWikipediaUrl %}
+{% set legacyUrl     = entry.orgLegacyUrl %}
+{% set hasParent     = entry.hasParentOrg %}
+{% set parentOrg     = entry.parentOrganization.one() %}
+{% set hasSubBoards  = entry.hasSubBoards %}
+{% set subBoards     = entry.subBoards.all() %}
+{% set boardMembers  = entry.boardMembers.all() %}
+{% set termNotes     = entry.termNotes %}
+{% set foundedBy     = entry.orgFoundedBy.all() %}
+{% set assocPersons  = entry.orgAssociatedPersons.all() %}
+{% set orgEvents     = entry.orgEvents.all() %}
+{% set finePrint     = entry.orgFinePrint %}
+{% set eras          = entry.historicalEra.all() %}
+{% set periods       = entry.historicalPeriod.all() %}
+{% set neighborhoods = entry.neighborhood.all() %}
+
+{# ── Word count / read time ──────────────────────────────────────── #}
+{% set wordCount = body|striptags|split(' ')|length %}
+{% set readTime  = max(1, (wordCount / 200)|round) %}
+{% set modified  = entry.dateUpdated|date('M j, Y') %}
+
+{# ── Articles about this organization ───────────────────────────── #}
+{# TODO: Verify field handle 'articleOrganizations' once Articles section is built #}
+{% set articlesAbout = craft.entries()
+  .section('articles')
+  .relatedTo({ targetElement: entry, field: 'articleOrganizations' })
+  .orderBy('title ASC')
+  .all() %}
+
+<div class="scv-article-wrap">
+
+  {# ══ MAIN CONTENT ══════════════════════════════════════════════════ #}
+  <main>
+    <article class="scv-org">
+
+      {# Breadcrumb #}
+      <nav class="scv-breadcrumb">
+        <a href="{{ siteUrl }}">Home</a>
+        <span class="scv-bc-sep">›</span>
+        <a href="{{ url('organizations') }}">Organizations</a>
+        <span class="scv-bc-sep">›</span>
+        <span>{{ entry.title }}</span>
+      </nav>
+
+      {# ── Org Header ───────────────────────────────────────────────── #}
+      <header class="scv-person-header">
+        <div class="scv-person-header__inner">
+
+          {# Logo / Photo #}
+          {% if image %}
+          <div class="scv-person-header__photo-wrap">
+            <img src="{{ image.url }}"
+                 alt="{{ entry.title }}"
+                 class="scv-person-header__photo">
+          </div>
+          {% endif %}
+
+          {# Name + Meta #}
+          <div class="scv-person-header__meta">
+
+            <h1>{{ entry.title }}</h1>
+
+            {% if aliases %}
+              <p class="scv-person-occupation">Also known as: {{ aliases }}</p>
+            {% endif %}
+
+            {# Founded #}
+            {% if dateFounded %}
+            <div class="scv-person-dates">
+              <span class="scv-person-dates__label">Founded</span>
+              <span class="scv-person-dates__val">{{ dateFounded }}</span>
+            </div>
+            {% endif %}
+
+            {# Address #}
+            {% if address %}
+            <div class="scv-person-dates">
+              <span class="scv-person-dates__label">Address</span>
+              <span class="scv-person-dates__val">
+                {% if lat and lng %}
+                  <a href="https://maps.google.com/?q={{ lat }},{{ lng }}" target="_blank" rel="noopener">{{ address }}</a>
+                {% else %}
+                  {{ address }}
+                {% endif %}
+              </span>
+            </div>
+            {% endif %}
+
+            {# Era + Period + Neighborhood Tags #}
+            {% if eras|length or periods|length or neighborhoods|length %}
+            <div class="scv-tags">
+              {% for era in eras %}
+                <a href="{{ url('organizations', { era: era.slug }) }}" class="scv-tag scv-tag--story-era">
+                  {{ era.title }}
+                </a>
+              {% endfor %}
+              {% for period in periods %}
+                <a href="{{ url('organizations', { period: period.slug }) }}" class="scv-tag scv-tag--era">
+                  {{ period.title }}
+                </a>
+              {% endfor %}
+              {% for hood in neighborhoods %}
+                <a href="{{ url('organizations', { neighborhood: hood.slug }) }}" class="scv-tag scv-tag--neighborhood">
+                  {{ hood.title }}
+                </a>
+              {% endfor %}
+            </div>
+            {% endif %}
+
+          </div>{# .scv-person-header__meta #}
+        </div>{# .scv-person-header__inner #}
+      </header>
+
+      <hr class="scv-header-rule">
+
+      {# Body Content #}
+      {% if body %}
+        <div class="entry-content scv-article-content">
+          {{ body }}
+        </div>
+      {% endif %}
+
+      {# Term Notes #}
+      {% if termNotes %}
+        <div class="scv-webmaster-note">{{ termNotes }}</div>
+      {% endif %}
+
+      {# Fine Print #}
+      {% if finePrint %}
+        <div class="scv-fine-print">{{ finePrint }}</div>
+      {% endif %}
+
+      {# ── Founded By ───────────────────────────────────────────────── #}
+      {% if foundedBy|length %}
+      <div class="scv-person-section">
+        <h2 class="scv-person-section__title">Founded By</h2>
+        <ul class="scv-subject-persons">
+          {% for person in foundedBy %}
+            {% set pImage = person.featuredImage.one() ?? null %}
+            <li class="scv-subject-person">
+              <a href="{{ person.url }}" class="scv-subject-person__link">
+                {% if pImage %}
+                  <img src="{{ pImage.url }}" alt="{{ person.title }}" class="scv-subject-person__photo">
+                {% else %}
+                  <div class="scv-subject-person__placeholder">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                  </div>
+                {% endif %}
+                <div>
+                  <div class="scv-subject-person__name">{{ person.title }}</div>
+                  {% if person.occupation %}
+                    <div class="scv-subject-person__occ">{{ person.occupation }}</div>
+                  {% endif %}
+                </div>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+
+      {# ── Board Members ────────────────────────────────────────────── #}
+      {% if boardMembers|length %}
+      <div class="scv-person-section">
+        <h2 class="scv-person-section__title">Board Members</h2>
+        <ul class="scv-subject-persons">
+          {% for person in boardMembers %}
+            {% set pImage = person.featuredImage.one() ?? null %}
+            <li class="scv-subject-person">
+              <a href="{{ person.url }}" class="scv-subject-person__link">
+                {% if pImage %}
+                  <img src="{{ pImage.url }}" alt="{{ person.title }}" class="scv-subject-person__photo">
+                {% else %}
+                  <div class="scv-subject-person__placeholder">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                  </div>
+                {% endif %}
+                <div>
+                  <div class="scv-subject-person__name">{{ person.title }}</div>
+                  {% if person.occupation %}
+                    <div class="scv-subject-person__occ">{{ person.occupation }}</div>
+                  {% endif %}
+                </div>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+
+      {# ── Associated People ────────────────────────────────────────── #}
+      {% if assocPersons|length %}
+      <div class="scv-person-section">
+        <h2 class="scv-person-section__title">Associated People</h2>
+        <ul class="scv-subject-persons">
+          {% for person in assocPersons %}
+            {% set pImage = person.featuredImage.one() ?? null %}
+            <li class="scv-subject-person">
+              <a href="{{ person.url }}" class="scv-subject-person__link">
+                {% if pImage %}
+                  <img src="{{ pImage.url }}" alt="{{ person.title }}" class="scv-subject-person__photo">
+                {% else %}
+                  <div class="scv-subject-person__placeholder">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                  </div>
+                {% endif %}
+                <div>
+                  <div class="scv-subject-person__name">{{ person.title }}</div>
+                  {% if person.occupation %}
+                    <div class="scv-subject-person__occ">{{ person.occupation }}</div>
+                  {% endif %}
+                </div>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+
+      {# ── Related Events ───────────────────────────────────────────── #}
+      {% if orgEvents|length %}
+      <div class="scv-person-section">
+        <h2 class="scv-person-section__title">Related Events</h2>
+        <ul class="scv-subject-persons">
+          {% for ev in orgEvents %}
+            <li class="scv-subject-person">
+              <a href="{{ ev.url }}" class="scv-subject-person__link">
+                <div class="scv-subject-person__placeholder">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                </div>
+                <div>
+                  <div class="scv-subject-person__name">{{ ev.title }}</div>
+                  {% if ev.eventDate %}
+                    <div class="scv-subject-person__occ">{{ ev.eventDate }}</div>
+                  {% endif %}
+                </div>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+
+      {# ── Articles About This Organization ─────────────────────────── #}
+      {% if articlesAbout|length %}
+      <div class="scv-person-section">
+        <h2 class="scv-person-section__title">Articles About {{ entry.title }}</h2>
+        <ul class="scv-subject-persons">
+          {% for art in articlesAbout %}
+            {% set artImage = art.featuredImage.one() ?? null %}
+            {% set artColl  = art.partOfCollection.one() ?? null %}
+            <li class="scv-subject-person">
+              <a href="{{ art.url }}" class="scv-subject-person__link">
+                {% if artImage %}
+                  <img src="{{ artImage.url }}" alt="{{ art.title }}" class="scv-subject-person__photo">
+                {% else %}
+                  <div class="scv-subject-person__placeholder">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                  </div>
+                {% endif %}
+                <div>
+                  <div class="scv-subject-person__name">{{ art.title }}</div>
+                  {% if artColl %}
+                    <div class="scv-subject-person__occ">{{ artColl.title }}</div>
+                  {% elseif art.originalPublishDate %}
+                    <div class="scv-subject-person__occ">{{ art.originalPublishDate }}</div>
+                  {% endif %}
+                </div>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+
+    </article>
+  </main>
+
+  {# ══ SIDEBAR ═══════════════════════════════════════════════════════ #}
+  <aside class="scv-article-sidebar">
+
+    {# 1. Utility Bar #}
+    <div class="scv-sidebar-card scv-util-card">
+      <div class="scv-sidebar-card-body">
+        <div class="scv-util-meta">
+          <span class="scv-util-meta-key">Last Updated</span>
+          <span class="scv-util-meta-val">{{ modified }}</span>
+        </div>
+        <div class="scv-util-rule"></div>
+        <div class="scv-util-reading">
+          <span class="scv-util-reading-val">{{ readTime }} Min Read</span>
+          <span class="scv-util-pipe">|</span>
+          <span class="scv-util-reading-val">{{ wordCount|number_format }} Words</span>
+        </div>
+        <div class="scv-util-btns">
+          <button class="scv-util-btn" onclick="window.print()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+            Save / Print
+          </button>
+          <button class="scv-util-btn scv-util-btn--tts" id="scv-tts-btn" onclick="scvToggleTTS()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+            <span id="scv-tts-label">Listen</span>
+          </button>
+        </div>
+        <div class="scv-util-speed" id="scv-speed-controls" style="display:none">
+          <span class="scv-util-speed-label">Speed:</span>
+          <button class="scv-speed-btn" onclick="scvSetSpeed(0.75,this)">Slow</button>
+          <button class="scv-speed-btn scv-speed-btn--active" onclick="scvSetSpeed(1.0,this)">Normal</button>
+          <button class="scv-speed-btn" onclick="scvSetSpeed(1.25,this)">Fast</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    var scvTTSRate = 1.0;
+    function scvSetSpeed(rate, el) {
+      scvTTSRate = rate;
+      document.querySelectorAll('.scv-speed-btn').forEach(function(b){ b.classList.remove('scv-speed-btn--active'); });
+      el.classList.add('scv-speed-btn--active');
+      if (window.speechSynthesis.speaking) {
+        window.speechSynthesis.cancel();
+        var u = new SpeechSynthesisUtterance(document.querySelector('.scv-article-content').innerText);
+        u.rate = scvTTSRate; u.onend = scvTTSEnd;
+        window.speechSynthesis.speak(u);
+      }
+    }
+    function scvTTSEnd() {
+      document.getElementById('scv-tts-btn').classList.remove('scv-util-btn--tts-active');
+      document.getElementById('scv-tts-label').textContent = 'Listen';
+      document.getElementById('scv-speed-controls').style.display = 'none';
+    }
+    function scvToggleTTS() {
+      var btn = document.getElementById('scv-tts-btn');
+      var label = document.getElementById('scv-tts-label');
+      var spd = document.getElementById('scv-speed-controls');
+      if (window.speechSynthesis.speaking) {
+        window.speechSynthesis.cancel(); btn.classList.remove('scv-util-btn--tts-active');
+        label.textContent = 'Listen'; spd.style.display = 'none'; return;
+      }
+      var content = document.querySelector('.scv-article-content');
+      if (!content) return;
+      var u = new SpeechSynthesisUtterance(content.innerText);
+      u.rate = scvTTSRate; u.onend = scvTTSEnd;
+      window.speechSynthesis.speak(u);
+      btn.classList.add('scv-util-btn--tts-active');
+      label.textContent = 'Stop'; spd.style.display = 'flex';
+    }
+    </script>
+
+    {# 2. Cite This Article #}
+    {% include '_partials/cite-article' with { entry: entry } only %}
+
+    {# 3. Search #}
+    <div class="scv-sidebar-card">
+      <div class="scv-sidebar-card-body">
+        {% include '_partials/search-form' only %}
+      </div>
+    </div>
+
+    {# 4. Parent Organization #}
+    {% if hasParent and parentOrg %}
+    <div class="scv-sidebar-card">
+      <div class="scv-sidebar-card-body">
+        <span class="scv-sidebar-label">Parent Organization</span>
+        <ul class="scv-subject-persons">
+          {% set pOrgImage = parentOrg.featuredImage.one() ?? null %}
+          <li class="scv-subject-person">
+            <a href="{{ parentOrg.url }}" class="scv-subject-person__link">
+              {% if pOrgImage %}
+                <img src="{{ pOrgImage.url }}" alt="{{ parentOrg.title }}" class="scv-subject-person__photo">
+              {% else %}
+                <div class="scv-subject-person__placeholder">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                </div>
+              {% endif %}
+              <div>
+                <div class="scv-subject-person__name">{{ parentOrg.title }}</div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    {% endif %}
+
+    {# 5. Sub-Boards #}
+    {% if hasSubBoards and subBoards|length %}
+    <div class="scv-sidebar-card">
+      <div class="scv-sidebar-card-body">
+        <span class="scv-sidebar-label">Sub-Boards</span>
+        <ul class="scv-subject-persons">
+          {% for board in subBoards %}
+            {% set bImage = board.featuredImage.one() ?? null %}
+            <li class="scv-subject-person">
+              <a href="{{ board.url }}" class="scv-subject-person__link">
+                {% if bImage %}
+                  <img src="{{ bImage.url }}" alt="{{ board.title }}" class="scv-subject-person__photo">
+                {% else %}
+                  <div class="scv-subject-person__placeholder">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                  </div>
+                {% endif %}
+                <div>
+                  <div class="scv-subject-person__name">{{ board.title }}</div>
+                </div>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    {% endif %}
+
+    {# 6. External Links #}
+    {% if website or wikipedia or legacyUrl %}
+    <div class="scv-sidebar-card">
+      <div class="scv-sidebar-card-body">
+        <span class="scv-sidebar-label">External Links</span>
+        {% if website %}
+          <a href="{{ website }}" class="scv-sidebar-legacy-link" target="_blank" rel="noopener">
+            Official Website
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="scv-legacy-icon"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        {% endif %}
+        {% if wikipedia %}
+          <a href="{{ wikipedia }}" class="scv-sidebar-legacy-link" target="_blank" rel="noopener">
+            Wikipedia
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="scv-legacy-icon"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        {% endif %}
+        {% if legacyUrl %}
+          <a href="https://scvhistory.com{{ legacyUrl }}" class="scv-sidebar-legacy-link" target="_blank" rel="noopener">
+            View on Legacy Site
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="scv-legacy-icon"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
+
+  </aside>
+
+</div>{# .scv-article-wrap #}
+
+{% endblock %}
