@@ -1,0 +1,20 @@
+[
+  {"title": "Gold Rush", "slug": "gold-rush", "description": "California Gold Rush (1848-1855) and Placerita Canyon gold discovery (1842) — California's first gold rush"},
+  {"title": "Water History", "slug": "water-history", "description": "Water infrastructure, rights, agencies, and conflicts in the SCV — includes St. Francis Dam, Castaic Lake, water companies"},
+  {"title": "Indigenous History", "slug": "indigenous-history", "description": "Tataviam and other Native peoples of the Santa Clarita Valley — pre-contact through contemporary. See also Tataviam taxonomy."},
+  {"title": "Railroads", "slug": "railroads", "description": "Southern Pacific Railroad and railroad history in the SCV — includes San Fernando Tunnel, Lang Station"},
+  {"title": "Oil Industry", "slug": "oil-industry", "description": "Oil exploration, production, and refining in the SCV — includes Pico Canyon, first commercially productive oil well in California"},
+  {"title": "Film Industry", "slug": "film-industry", "description": "Motion picture and television production in the SCV — includes silent film era, Melody Ranch, Vasquez Rocks filming locations"},
+  {"title": "Agriculture", "slug": "agriculture", "description": "Farming, orchards, vineyards, and ranching in the SCV"},
+  {"title": "Architecture", "slug": "architecture", "description": "Significant buildings, structures, and architectural history"},
+  {"title": "Military History", "slug": "military-history", "description": "Military service, conflicts, veterans, and military installations connected to SCV"},
+  {"title": "Politics and Government", "slug": "politics-government", "description": "Local, state, and federal political history — elected officials, legislation, civic governance"},
+  {"title": "Law Enforcement", "slug": "law-enforcement", "description": "Sheriffs, marshals, constables, police, and law enforcement history"},
+  {"title": "Education", "slug": "education", "description": "Schools, colleges, educators, and educational history"},
+  {"title": "Religion", "slug": "religion", "description": "Religious institutions, clergy, and faith community history — includes Mission Catholicism, Protestant denominations, Jewish community"},
+  {"title": "Commerce and Trade", "slug": "commerce-trade", "description": "Business, trade, merchants, and economic history"},
+  {"title": "Land Grants", "slug": "land-grants", "description": "Spanish and Mexican land grants — ranchos, grantees, grant boundaries, legal history"},
+  {"title": "Natural Disasters", "slug": "natural-disasters", "description": "Fires, floods, earthquakes, droughts, and other natural disasters affecting SCV — includes St. Francis Dam failure"},
+  {"title": "Conservation", "slug": "conservation", "description": "Environmental conservation, open space, and preservation efforts"},
+  {"title": "Arts and Culture", "slug": "arts-culture", "description": "Visual arts, performing arts, music, literature, and cultural life"}
+]

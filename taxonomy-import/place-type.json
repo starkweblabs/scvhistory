@@ -1,0 +1,15 @@
+[
+  {"title": "Road", "slug": "road", "description": "Streets, roads, highways, and named roadways"},
+  {"title": "Park", "slug": "park", "description": "Public parks, recreation areas, and open spaces"},
+  {"title": "Building", "slug": "building", "description": "Significant structures — historic, commercial, civic, residential"},
+  {"title": "Canyon", "slug": "canyon", "description": "Canyons and canyon corridors"},
+  {"title": "School", "slug": "school", "description": "School campuses and educational facilities as places"},
+  {"title": "Neighborhood", "slug": "neighborhood", "description": "Residential neighborhoods and communities"},
+  {"title": "Landmark", "slug": "landmark", "description": "Designated California Historical Landmarks and SCV Historical Landmarks"},
+  {"title": "Body of Water", "slug": "body-of-water", "description": "Rivers, creeks, lakes, reservoirs, and springs"},
+  {"title": "Ranch", "slug": "ranch", "description": "Historic and working ranches — land parcels with ranching history"},
+  {"title": "Cemetery", "slug": "cemetery", "description": "Burial grounds and memorial parks"},
+  {"title": "Mine", "slug": "mine", "description": "Gold, oil, and mineral extraction sites"},
+  {"title": "Oil Field", "slug": "oil-field", "description": "Historic and active oil production areas"},
+  {"title": "Railway Station", "slug": "railway-station", "description": "Historic and active railroad stations and depots"}
+]

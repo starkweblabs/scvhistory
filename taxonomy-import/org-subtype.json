@@ -1,0 +1,12 @@
+[
+  {"title": "Educational Institution", "slug": "educational-institution", "description": "Schools, colleges, universities, and other educational organizations"},
+  {"title": "Rancho", "slug": "rancho", "description": "Spanish and Mexican land grant rancho — formal legal entity with deeded land"},
+  {"title": "Mission", "slug": "mission", "description": "Spanish Catholic mission — religious and colonial administrative institution"},
+  {"title": "Government", "slug": "government", "description": "Government bodies — city, county, state, federal agencies and offices"},
+  {"title": "Business", "slug": "business", "description": "For-profit commercial enterprises"},
+  {"title": "Nonprofit", "slug": "nonprofit", "description": "Nonprofit organizations, foundations, and civic associations"},
+  {"title": "Media", "slug": "media", "description": "Newspapers, television stations, radio stations, and media organizations"},
+  {"title": "Military Unit", "slug": "military-unit", "description": "Formal military organizations — regiments, battalions, companies"},
+  {"title": "Cultural Organization", "slug": "cultural", "description": "Cultural, arts, and heritage organizations"},
+  {"title": "Religious Institution", "slug": "religious-institution", "description": "Churches, parishes, synagogues, and religious organizations"}
+]

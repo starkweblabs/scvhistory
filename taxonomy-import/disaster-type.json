@@ -1,0 +1,9 @@
+[
+  {"title": "Fire", "slug": "fire", "description": "Wildfires and structural fires"},
+  {"title": "Flood", "slug": "flood", "description": "Floods and inundation events"},
+  {"title": "Earthquake", "slug": "earthquake", "description": "Seismic events — includes Northridge 1994"},
+  {"title": "Dam Failure", "slug": "dam-failure", "description": "Dam collapses and failures — includes St. Francis Dam disaster (March 12, 1928)"},
+  {"title": "Landslide", "slug": "landslide", "description": "Landslides and debris flows"},
+  {"title": "Drought", "slug": "drought", "description": "Drought events and water shortage crises"},
+  {"title": "Industrial Accident", "slug": "industrial-accident", "description": "Industrial and infrastructure accidents"}
+]

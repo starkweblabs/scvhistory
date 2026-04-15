@@ -1,0 +1,11 @@
+[
+  {"title": "Tataviam / Pre-Contact", "slug": "tataviam-pre-contact", "description": "Pre-1769 Indigenous period; Tataviam and other Native peoples of the Santa Clarita Valley. Consult PNAAM and Tataviam community representatives for term accuracy."},
+  {"title": "Spanish Colonial (1769–1821)", "slug": "spanish-colonial-1769-1821", "description": "Spanish mission and colonial era. Begins with Portolá Expedition entry into SCV (August 8, 1769)."},
+  {"title": "Mexican Rancho Era (1821–1848)", "slug": "mexican-rancho-era-1821-1848", "description": "Mexican land-grant and rancho period following independence from Spain. Ends with Treaty of Guadalupe Hidalgo."},
+  {"title": "American Frontier (1848–1876)", "slug": "american-frontier-1848-1876", "description": "Post-Gold Rush American settlement. Includes Placerita Canyon gold discovery (1842, pre-dates era but associated), cattle drives, early township formation."},
+  {"title": "Railroad & Oil Era (1876–1910)", "slug": "railroad-oil-era-1876-1910", "description": "Southern Pacific Railroad arrival (1876), early oil boom at Pico Canyon, Newhall townsite established."},
+  {"title": "Early 20th Century (1910–1945)", "slug": "early-twentieth-century-1910-1945", "description": "Pre-WWII industrialization, film industry arrives, St. Francis Dam disaster (1928), Great Depression, WWII."},
+  {"title": "Postwar Boom (1945–1965)", "slug": "postwar-boom-1945-1965", "description": "Suburban expansion after WWII, population growth, Valencia master plan begins."},
+  {"title": "Incorporation Era (1965–1990)", "slug": "incorporation-era-1965-1990", "description": "City of Santa Clarita incorporation (1987), modern development, Newhall Land growth."},
+  {"title": "Contemporary (2010–Present)", "slug": "contemporary-2010-present", "description": "Current era from 2010 onward."}
+]
