@@ -262,3 +262,79 @@ Priority: Make SCVHistory.com a genuinely authoritative academic resource, not j
 - [ ] Change detection on legacy content — as Archive.org mirrors grow, flag when source documents change or disappear. Protects the archive's citations.
 - [ ] "On this day in SCV history" feature — daily auto-generated content based on event dates, birth dates, death dates in the archive
 
+
+---
+
+## Phase 8 — Data Model Refinements
+
+Priority: Get the data model right before content migration scales up. Changes now cost hours. Changes later cost weeks.
+
+### New Entry Types to Add
+
+**Photograph**
+Currently photos are assets only. A Photograph entry type makes the photo collection first-class searchable records.
+Fields needed: donor code, date taken, photographer, depicted persons (relation), depicted places (relation), depicted organizations (relation), caption, archival filename, original condition, copyright status, archive source.
+Why: Leon has 200+ donor prefixes. This is one of the archive's most valuable assets and deserves its own section.
+
+**Document**
+Primary source documents — deeds, letters, newspaper clippings, maps, census records, court records.
+Fields needed: document type, date, source institution, transcription (body), related persons, related places, related organizations, Archive.org URL, copyright/access status.
+Why: This is what separates a historical archive from a history website. Primary sources are the academic credibility core.
+
+**Landmark**
+Designated or significant sites — separate from Place.
+Fields needed: CHL number, CHL URL, designation date, designation body, current status, preservation notes, related place, related organizations.
+Why: CHL fields already exist on Place entries — this signals they need their own section. A landmark is a legal/cultural designation, not just a location.
+
+**Oral History**
+Audio and video recordings with transcripts.
+Fields needed: interviewee (relation to Person), interviewer, date recorded, duration, topics (taxonomy), transcript (body), media URL, Archive.org URL, collection it belongs to.
+Why: Directly tied to SCVTV's archive. Huge academic credibility signal. Preserves voices that would otherwise be lost.
+
+### Taxonomy Additions
+
+**Subject tags**
+Thematic taxonomy cutting across eras and content types.
+Suggested terms: Gold Rush, Water History, Indigenous History, Railroads, Oil Industry, Film Industry, Agriculture, Architecture, Military History, Politics, Law Enforcement, Education, Religion, Commerce.
+Why: Researchers think thematically, not chronologically. "Show me everything about the oil industry" is a common research question.
+
+**Record type** (for Document entries)
+Deed, Letter, Map, Newspaper clipping, Court record, Census record, Government document, Photograph, Telegram, Diary.
+
+**Confidence level**
+Editorial certainty taxonomy applied to dates, attributions, identifications.
+Terms: Confirmed (primary source), Probable (strong secondary evidence), Uncertain (limited evidence), Disputed (conflicting sources).
+Why: Scholarly honesty. No other regional archive does this. Huge credibility signal.
+
+**Tataviam and Indigenous taxonomy**
+Indigenous history deserves dedicated taxonomy — not folded into general era tags.
+Terms: specific villages, tribal bands, cultural practices, significant sites, language terms.
+Why: Respectful, accurate treatment of the valley's first peoples. Ideally developed in consultation with Tataviam descendants or representatives.
+
+### Relationship Fixes
+
+**Bidirectional article relationships**
+Currently articlesAbout on Person is a one-way reverse lookup. Add explicit subjectPersons, subjectOrganizations, subjectPlaces fields on Article entries that mirror back. Faster queries, cleaner data, easier templating.
+
+**Specific year field**
+Keep historicalPeriod decade buckets for filtering but add an optional specificYear plain text field on all entry types. Enables precise date queries alongside era browsing.
+
+**Military Profile merge into Person**
+Military Profile is an extension of Person, not a separate entity. A soldier is a person. Merge military fields into Person as a conditional field group triggered by a hasMilitaryService toggle. Eliminates the risk of orphaned Military Profile records with no Person connection.
+Note: Requires migration script to merge existing Military Profile records into Person records before deprecating the section.
+
+### Living Project Plan Page
+
+- [ ] Build /about/project page on the Craft site — fetches and renders BUILDPLAN.md from GitHub raw URL, displays as a beautifully designed public page
+- [ ] Page auto-updates whenever BUILDPLAN.md is pushed to GitHub — always current
+- [ ] Include the data map visualization on this page
+- [ ] Add "About This Project" to site navigation
+- [ ] This page serves as: public transparency document, CSUN pitch, community update, press reference
+
+### Data Map Page
+
+- [ ] Build /about/data-map page — interactive visualization of how all entry types connect
+- [ ] Updates as new entry types are added
+- [ ] Explains the knowledge graph concept to non-technical visitors
+- [ ] Links each entry type to example records
+
