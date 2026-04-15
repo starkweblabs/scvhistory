@@ -1,0 +1,27 @@
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; padding: 0; font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.6; color: #1c1a17; background: #fff; }
+img { max-width: 100%; height: auto; display: block; }
+.scv-site-header { background: #1a2744; padding: 1.25rem 0; position: sticky; top: 0; z-index: 100; border-bottom: 2px solid #b8860b; }
+.scv-site-header__inner { max-width: 1280px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+.scv-site-header__logo img { height: 68px; width: auto; }
+.scv-site-nav { display: flex; align-items: center; gap: 1.75rem; }
+.scv-site-nav a { font-family: 'Inter', sans-serif; font-size: 0.8125rem; font-weight: 500; letter-spacing: 0.05em; color: rgba(245,230,192,0.85); text-decoration: none; text-transform: uppercase; transition: color 0.2s ease; }
+.scv-site-nav a:hover { color: #d4a017; }
+#content { max-width: 1280px; margin: 0 auto; padding: 2rem; }
+.scv-article-wrap { display: grid; grid-template-columns: 1fr 300px; gap: 2.5rem; align-items: start; }
+@media (max-width: 900px) { .scv-article-wrap { grid-template-columns: 1fr; } .scv-article-sidebar { order: -1; } }
+.scv-person-header__inner { display: flex; gap: 1.75rem; align-items: flex-start; }
+.scv-person-header__photo-wrap { flex-shrink: 0; width: 160px; }
+.scv-person-header__photo { width: 100%; height: auto; border: 1px solid #e8e0d4; }
+.scv-person-header__meta { flex: 1; }
+.scv-person-header__meta h1 { font-family: 'Cormorant Garamond', serif; font-size: 2.25rem; font-weight: 600; color: #1a2744; margin: 0 0 0.25rem; line-height: 1.15; }
+@media (max-width: 600px) { .scv-person-header__inner { flex-direction: column; } .scv-person-header__photo-wrap { width: 120px; } }
+.scv-footer { background: #1a2744; color: rgba(245,230,192,0.75); margin-top: 4rem; padding: 3rem 0 0; }
+.scv-footer-inner { max-width: 1280px; margin: 0 auto; padding: 0 2rem 2rem; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem; }
+@media (max-width: 900px) { .scv-footer-inner { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .scv-footer-inner { grid-template-columns: 1fr; } }
+.scv-footer-bottom { border-top: 1px solid rgba(184,134,11,0.3); padding: 1rem 2rem; max-width: 1280px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; font-size: 0.75rem; color: rgba(245,230,192,0.5); }
+.scv-footer-bottom-links a { color: rgba(245,230,192,0.5); text-decoration: none; }
+.scv-footer-bottom-links a:hover { color: #d4a017; }
+.scv-lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.92); z-index: 9999; align-items: center; justify-content: center; }
+.scv-lightbox.is-open { display: flex; }
