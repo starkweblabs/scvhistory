@@ -224,3 +224,41 @@ Priority: Community ownership and long-term sustainability.
 persons_import.php, persons_import_v2.php, persons_v3_batch1/2/3.php
 orgs_import.php, orgs_import_v2.php
 places_import.php, places_import_v2.php
+
+---
+
+## Phase 7 — Legitimacy & Authority
+
+Priority: Make SCVHistory.com a genuinely authoritative academic resource, not just a website.
+
+### Legal & Identification
+- [ ] Apply for ISSN through Library of Congress — free, qualifies SCVHistory.com as a citable serial publication, essential for academic databases
+- [ ] Register DOIs through CrossRef for major articles and collections — small annual fee, makes individual articles permanently citable in academic papers
+- [ ] Publish Creative Commons license — CC BY-NC-SA recommended. Free to use with attribution, non-commercial, share-alike. Removes legal uncertainty for researchers and schools.
+- [ ] Permanent URLs policy — document that entry slugs are permanent. Configure Craft redirects for any that change. Researchers cite URLs — a broken link destroys credibility years later.
+
+### Metadata & Discoverability
+- [ ] Implement Schema.org structured data on all entry templates — Person, Place, Organization, HistoricalEvent types. Google treats this as authoritative structured data. Major SEO and credibility signal.
+- [ ] Implement Dublin Core metadata in page head — standard academic metadata format, picked up by academic databases and reference managers
+- [ ] Sitemap configuration in SEOmatic — ensure all entry types are indexed correctly
+- [ ] robots.txt — allow academic crawlers, configure correctly
+
+### Editorial Standards
+- [ ] Write and publish Editorial Standards page — how content is verified, sourced, and corrected. Leon's journalism background makes this credible. Transforms the site from a website into a reference source.
+- [ ] Write and publish Corrections Policy page — how errors are reported and corrected, with public correction log
+- [ ] Add primary source citations to every entry — linked citations to original documents, newspapers, deeds, census records. Where documents live on Archive.org, link directly.
+- [ ] Confidence scoring on historical claims — surface uncertainty levels on entries. "Date approximate — based on census records" vs "Date confirmed — primary source." No other regional archive does this.
+- [ ] Version history on entries — surface "Last revised" date on all entries. Craft tracks revisions natively. Shows intellectual honesty.
+
+### Institutional Credibility
+- [ ] Advisory board page — even two or three CSUN history faculty listed as advisors transforms perception. Formal advisory board signals institutional legitimacy.
+- [ ] Leon Worden credentials page — byline, journalism awards, Signal history, SCVTV role. The archive's credibility is inseparable from his credibility.
+- [ ] About page expansion — mission statement, history of the archive, founding date evidence (1997 internal file evidence vs 2000 domain registration)
+- [ ] Press and citations page — track where SCVHistory.com has been cited, quoted, or referenced
+
+### Knowledge Graph & Intelligence
+- [ ] Visual relationship map on each entry — shows how the entry connects to the rest of the archive. People to places to organizations to events. No other regional archive has this.
+- [ ] Confidence scoring system — field on each entry for editorial confidence level with sourcing notes
+- [ ] Change detection on legacy content — as Archive.org mirrors grow, flag when source documents change or disappear. Protects the archive's citations.
+- [ ] "On this day in SCV history" feature — daily auto-generated content based on event dates, birth dates, death dates in the archive
+
