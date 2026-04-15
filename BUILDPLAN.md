@@ -116,59 +116,78 @@ Priority: Preserve legacy site permanently and reduce Cloudways hosting load.
 - [ ] Strip non-essential code from mirror
 - [ ] Push clean static version to Archive.org as permanent record
 - [ ] Craft site becomes live canonical URL at scvhistory.com
-- [ ] Implement Archive.org CDN strategy for large files — high-res photos, PDFs, audio files reference Archive.org URLs instead of Cloudways. Craft asset fields support external URLs.
+- [ ] Implement Archive.org CDN strategy — high-res photos, PDFs, audio reference Archive.org URLs. Craft asset fields support external URLs.
 - [ ] Document Archive.org item structure and URL pattern for team reference
 - [ ] Build Twig helper for generating Archive.org embed URLs from asset records
 
 ---
 
-## Phase 3 — Academic & API Layer
+## Phase 3 — API + Flutter App
 
-Priority: Make the archive useful to researchers and connectable to other institutions.
+Priority: Make the archive connectable to academic institutions and a mobile app.
 
 - [ ] Enable and configure Craft GraphQL API (already installed — visible in CP)
-- [ ] Document public GraphQL endpoints for external use
+- [ ] Document public GraphQL endpoints — this is the foundation for both the Flutter app and academic integrations
 - [ ] Build /api documentation page on the site
 - [ ] Add COinS metadata to all entry templates — invisible structured citations that Zotero, Mendeley, and other reference managers pick up automatically
-- [ ] Investigate IIIF image protocol support — standard for academic image sharing, allows other institutions to embed SCV photos in their own collections
+- [ ] Investigate IIIF image protocol — standard for academic image sharing, allows other institutions to embed SCV photos
+- [ ] Build Flutter app against GraphQL API — browse entries, search, save articles, read offline. Flutter queries Craft GraphQL natively.
 - [ ] CSUN partnership page — explains the archive as a model digital humanities project, how to cite, how to contribute
 - [ ] Explore data export formats (CSV, JSON) for bulk researcher access
 
 ---
 
-## Phase 4 — Enhanced User Experience
+## Phase 4 — Search + Popularity + Discovery
 
-Priority: Make the site genuinely engaging for general public and students.
+Priority: Make finding things fast, accurate, and genuinely useful.
 
-- [ ] Replace browser speechSynthesis TTS with ElevenLabs API — better voice quality, same UI. Needs ElevenLabs API key stored in .env, Twig template passes text to API endpoint, returns audio stream. Keep existing Listen button UI.
-- [ ] User accounts — saved articles, reading history, personal collections (Craft has native user system)
-- [ ] Timeline visualization — interactive era-based timeline for homepage and dedicated page
-- [ ] Advanced search — full-text across all sections, filters by era, neighborhood, content type
-- [ ] Related content recommendations — "People connected to this place" cross-section linking
-- [ ] Print stylesheet — dedicated print CSS for archival-quality printed pages
-- [ ] Accessibility audit — WCAG 2.1 compliance for academic credibility and public funding eligibility
+- [ ] Implement Algolia search — best-in-class, generous free tier, works with Craft. Instant results, typo tolerance, faceted filtering by era/neighborhood/content type. Far superior to Craft native search.
+- [ ] Add view counter field to all entry types — lightweight Ajax increment on page load, stored as Number field in Craft
+- [ ] Build "Most Viewed" queries — populate popular entries on homepage, index pages, and sidebar
+- [ ] Track search term frequency — log what people search for, informs content priorities
+- [ ] Build contextual discovery prompts on every entry:
+    - "Explore this era" on era tags
+    - "Find related people" on place and org entries
+    - "Read the primary source" linking to Archive.org documents
+    - "Share this record" using native Web Share API
+- [ ] DECISION NEEDED: AI assistant feature — "Ask about this record" powered by Claude API. Users ask questions about entry content. Strong CSUN differentiator. Evaluate cost and scope.
 
 ---
 
-## Phase 5 — Growth & Community
+## Phase 5 — Accessibility + ElevenLabs TTS
 
-Priority: Build community ownership and long-term sustainability.
+Priority: Real accessibility baked in, not retrofitted. Professional voice quality.
 
+- [ ] Accessibility standards added to every template build checklist NOW — semantic HTML, ARIA labels, keyboard navigation, focus management, color contrast ratios. Not a retrofit — built in from the start.
+- [ ] Replace browser speechSynthesis TTS with ElevenLabs API — better voice quality, same Listen button UI. API key in .env, Twig template passes text to endpoint, returns audio stream. Evaluate per-character pricing for archive scale.
+- [ ] Full keyboard navigation audit
+- [ ] Screen reader testing (VoiceOver, NVDA)
+- [ ] WCAG 2.1 AA compliance — required for academic credibility and public funding eligibility
+- [ ] Print stylesheet — dedicated print CSS for archival-quality printed pages
+
+---
+
+## Phase 6 — User Accounts + Community
+
+Priority: Community ownership and long-term sustainability.
+
+- [ ] User accounts — saved articles, reading history, personal collections (Craft has native user system)
+- [ ] Timeline visualization — interactive era-based timeline for homepage and dedicated page
 - [ ] Photo submission workflow — community members submit photos with metadata
 - [ ] Corrections/additions form — flag errors or contribute information
 - [ ] Oral history section — audio recordings and transcripts, ties into SCVTV archive
 - [ ] Newsletter integration — announce new content additions
-- [ ] Spanish language support — given SCV's history, bilingual content is appropriate long-term
+- [ ] Spanish language support — bilingual content appropriate given SCV history
 - [ ] Dark mode
 - [ ] GitHub Issues + Project board for public task tracking
-- [ ] CSUN partnership pitch materials
 
 ---
 
 ## Open Technical Questions
 - [ ] Confirm articleOrganizations field handle on Articles section for org reverse-lookup
-- [ ] FacetWP-style filtering — no Craft equivalent plugin yet, likely custom query params
-- [ ] ElevenLabs API — confirm pricing model for archive use case (per character)
+- [ ] Algolia vs Meilisearch — Algolia recommended for ease, Meilisearch for self-hosted/open source
+- [ ] ElevenLabs pricing — confirm per-character cost at archive scale before committing
+- [ ] AI assistant feature — evaluate Claude API cost and scope for "Ask about this record"
 - [ ] IIIF — evaluate server requirements
 
 ---
