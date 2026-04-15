@@ -517,3 +517,146 @@ Flutter App — Phase 3
 └── Offline reading
 ```
 
+
+---
+
+## Phase 8 Additions — Schools, Yearbooks, Named Places Map
+
+### Schools & Alumni
+
+Do not create a separate School section. Schools are Organizations with an Educational Institution subtype.
+
+- [ ] Add Organization subtype taxonomy — Educational Institution, Rancho, Mission, Government, Business, Nonprofit, Media, Military Unit
+- [ ] Add education fields to Person entry type: elementarySchool, middleSchool, highSchool, college (all relations to Organization), classOf (plain text — graduation year)
+- [ ] Tag Hart High School, Placerita Junior High, College of the Canyons, and other SCV schools as Educational Institution subtype
+- [ ] Organization entry template gains alumni section automatically via reverse relationship — all Persons who list that org as their school
+
+### Yearbook Entry Type (New Section)
+
+- [ ] Create Yearbook section in Craft
+- [ ] Fields: title, school (relation to Organization), year (number), featuredImage (cover), body (notes), archiveUrl (Archive.org full scan link), yearbookStudents (relation to Person multi), historicalEra, historicalPeriod
+- [ ] On Person template: add Yearbooks section showing every yearbook that person appears in
+- [ ] On Organization template (Educational Institution): add Yearbooks section listing all yearbooks chronologically
+- [ ] Decision needed: tag yearbooks on Person records (entry point = person) vs tag persons on Yearbook records (entry point = yearbook). Both work — pick one as primary.
+
+### Named Places Map (/map)
+
+- [ ] Add named-after fields to Place entry type: namedAfter (relation to Person multi), namedAfterNotes (plain text), namedAfterDate (plain text)
+- [ ] Add placeType taxonomy: Road, Park, Building, Canyon, School, Neighborhood, Landmark, Body of Water, Ranch, Cemetery
+- [ ] Add bounding box field to Place for areas/regions (not just point coordinates)
+- [ ] Build /map page using Leaflet.js (open source, no API key needed)
+- [ ] Map features:
+    - All Place entries with lat/lng plotted as markers
+    - Markers color-coded by placeType
+    - Clicking a marker opens a side panel: place name, type, photo, named-after person with portrait, naming notes, links to full Place and Person entries
+    - Toggle: "Show named places only" — highlights places named after people
+    - Toggle: "Show by era" — filters markers by historical era
+    - Search/filter by placeType, era, neighborhood
+- [ ] This map becomes one of the most compelling pages on the site — a visual tribute to the people who shaped the valley's geography
+- [ ] Add /map link to main navigation
+
+### DATA_MODEL.md
+
+A companion document (DATA_MODEL.md) now lives in the repo root. It maps every entry type, every field, every relationship, and all taxonomy. Read it before building any new template or import script. It also contains 10 open questions that need decisions before content migration scales up.
+
+
+---
+
+## Data Model Decisions (2026-04-15)
+
+The following decisions have been made and are reflected in DATA_MODEL.md:
+
+**Military Profile → merge into Person**
+Add hasMilitaryService lightswitch to Person. When toggled, military fields appear as conditional field group. Migration script finds each Military Profile, copies fields to linked Person, deletes Military Profile. Must happen before Articles import.
+
+**Obituary → keep as separate section + add submission system**
+Obituaries are distinct records. Many have no Person record and never will. Restore Leon's original free community obituary service with structured submission workflow at /submit/obituary. Approved obits link to Person if record exists. Submitter gets email confirmation.
+
+**Article subject fields → add explicit bidirectional fields**
+Add subjectPersons, subjectOrganizations, subjectPlaces, subjectEvents as explicit fields on Article. Remove dependency on reverse-lookup queries. Faster, cleaner, easier to template.
+
+**Body and featuredImage → add to Event, Place, Group immediately**
+These gaps need to be filled in Craft CP before any content is entered for these sections.
+
+**Haunted Places → add to Place entry type**
+Add allegedlyHaunted (lightswitch), hauntedNotes (rich text), hauntedSources (plain text) to Place.
+Build /haunted page querying all places where allegedlyHaunted is true.
+Design with atmosphere — darker palette, era photos, folk history angle.
+Promote every October. Cross-link with Visit Santa Clarita tourism.
+SCV candidates: Vasquez Rocks, Eternal Valley, Hart Mansion, Mentryville, Placerita Canyon.
+
+**Neighborhood taxonomy → needs full audit**
+Current list is likely incomplete. Leon to review before Places import.
+Likely missing: agua-dulce, acton, bouquet-canyon, green-valley, hasley-canyon, mint-canyon, sand-canyon, stevenson-ranch.
+
+
+---
+
+## Data Model Decisions — 2026-04-15 Session 4 Continued
+
+### Immediate Field/Taxonomy Additions Needed Before Content Entry
+
+These should be added in Craft CP before content migration scales up:
+
+- [ ] Add groupType taxonomy to Group section — Family, Cultural Group, Informal Association, Expedition Party, Military Unit Informal
+- [ ] Move Ranchos from Group to Organization with subtype: Rancho
+- [ ] Move Walk of Fame from Group to Award entry type
+- [ ] Add monthDay field (MM-DD) to all entry types with significant dates — powers On This Day
+- [ ] Add body and featuredImage to Event, Place, Group — HIGH PRIORITY
+- [ ] Add waterInfrastructure fields to Place
+- [ ] Add disasterType fields to Event
+- [ ] Add allegedlyHaunted fields to Place
+- [ ] Add namedAfter fields to Place
+- [ ] Add placeType taxonomy to Place
+- [ ] Add orgSubtype taxonomy to Organization
+- [ ] Add subjectTags taxonomy across all entry types
+- [ ] Add confidenceLevel taxonomy across all entry types
+- [ ] Add specificYear plain text field to all entry types
+
+### New Entry Types — Priority Order
+
+| Entry Type | Priority | Reason |
+|---|---|---|
+| War Memorial | High | Separate from Person — honors fallen with no other record |
+| Award | High | Walk of Fame, SCV Man/Woman of Year — April festival traffic |
+| Yearbook | Medium | Schools and alumni angle — connects to educational institutions |
+| Photograph | Medium | 200+ donor collections — major archive asset |
+| Oral History | URGENT | Time-sensitive — living subjects aging |
+| Document | Medium | Primary sources — academic credibility |
+| Family (Group subtype) | Medium | del Valle, Newhall, Acosta — rich knowledge graph nodes |
+| Film/Media Production | Low | Fun, requires research, not urgent |
+| Cemetery Record | Low | Find A Grave covers this for now |
+| Archaeological Site | Very Low | Population strategy unclear |
+| Legal Record | Very Low | Only if significant volume found |
+
+### New Taxonomy — Priority Order
+
+| Taxonomy | Priority | Applied To |
+|---|---|---|
+| Conflict | High | War Memorial, Person military fields, Event |
+| groupType | High | Group section — restructures existing content |
+| placeType | High | Place — needed before Places import |
+| orgSubtype | High | Organization — needed before Orgs expand |
+| subjectTags | High | All entry types |
+| disasterType | Medium | Event |
+| confidenceLevel | Medium | All entry types |
+| waterType | Medium | Place |
+| documentType | Medium | Document (new) |
+| monthDay | Medium | All entries with dates — powers On This Day |
+| industry | Low | Subject tags handles this |
+| religion | Low | Subject tags handles this |
+
+### Special Pages to Build (Content Strategy)
+
+| Page | Priority | Notes |
+|---|---|---|
+| /walk-of-fame | High | April cowboy festival traffic — Award entry type |
+| /haunted | High | October traffic — allegedlyHaunted Place query |
+| /war-memorial | High | Honors fallen — War Memorial entry type |
+| /on-this-day | Medium | Dynamic — requires monthDay field on all dated entries |
+| /map | Medium | Leaflet.js — named places, colored by type |
+| /first-responders | Medium | Persons with hasFirstResponderService |
+| /st-francis-dam | Low | Long-term merge of Leon's standalone site |
+| /families | Low | Family group type index |
+| /film-locations | Low | Productions and filming locations |
+
