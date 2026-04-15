@@ -21,12 +21,14 @@
   {
     "title": "Indigenous History",
     "slug": "indigenous-history",
-    "description": "History of Native peoples of the Santa Clarita Valley, with emphasis on Tataviam (Fernandeño Tataviam Band of Mission Indians). CARE Principles apply.",
+    "description": "History of Native peoples of the Santa Clarita Valley and broader California coast, including Tataviam (Fernandeño Tataviam Band of Mission Indians) and Chumash people. CARE Principles apply for all Indigenous content.",
     "sameAs": [
       "https://www.wikidata.org/wiki/Q743736",
-      "https://www.tataviam-nsn.us/"
+      "https://www.wikidata.org/wiki/Q24251468",
+      "https://www.tataviam-nsn.us/",
+      "https://chumash.gov/"
     ],
-    "externalSource": "Wikidata+Tataviam-consulted"
+    "externalSource": "Wikidata+Tataviam-consulted+Chumash-consulted"
   },
   {
     "title": "Railroads",
@@ -186,5 +188,17 @@
       "https://www.wikidata.org/wiki/Q1051342"
     ],
     "externalSource": "Wikidata"
+  },
+  {
+    "title": "Chumash History",
+    "slug": "chumash-history",
+    "description": "History and culture of the Chumash people (Santa Ynez Band of Chumash Indians and related bands) of the California coast, with regional connections to SCV via missions, trade networks, and the 1824 Chumash revolt. Scope: contextual/historical for SCV — primary Chumash territory is coastal California.",
+    "sameAs": [
+      "https://www.wikidata.org/wiki/Q24251468",
+      "https://chumash.gov/chumash-history",
+      "https://chumash.gov/",
+      "https://northernchumash.org/"
+    ],
+    "externalSource": "Wikidata+Chumash-consulted"
   }
 ]
