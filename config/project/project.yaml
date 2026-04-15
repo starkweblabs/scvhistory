@@ -1,4 +1,4 @@
-dateModified: 1776229057
+dateModified: 1776272425
 email:
   fromEmail: nathan@starksocial.com
   fromName: 'SCV History'
@@ -202,6 +202,7 @@ meta:
     ea2701b7-c19a-42f4-bfa6-673e90079acf: 'Birth Date' # Birth Date
     ebf41740-5f0c-48b0-a176-663bd3142759: 'Org Address' # Org Address
     eca3a22b-ede0-47d3-89bb-8fda28ebfe83: 'MP Related Persons' # MP Related Persons
+    f0a5c7de-ccc3-4005-84ee-53feaafc26e9: 'Cultural Sensitivity Note' # Cultural Sensitivity Note
     f5eb4908-d535-4b94-9a6c-ecc1b3828387: 'Archive URL' # Archive URL
     f32eae51-5e21-4625-9edf-19e38d4a92b7: 'Org Latitude' # Org Latitude
     f93e01ae-4939-48d8-8151-268836846a7c: 'MP Specialty MOS' # MP Specialty MOS
