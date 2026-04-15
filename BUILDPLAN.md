@@ -396,3 +396,124 @@ Priority: Make the archive grow beyond what one person can maintain, and ensure 
 - [ ] **Editorial succession plan** — document Leon's methodology, source relationships, and editorial standards so the archive can continue if his direct involvement changes.
 - [ ] **Advisory board formation** — even two or three CSUN history or digital humanities faculty changes perception from personal project to institutional resource. Reach out early — faculty partnerships take time.
 
+
+---
+
+## Phase 10 — Membership, Community Stack & Forum
+
+Priority: Build after Phase 1-3 are complete and the core archive is solid. Flarum forum comes last — nail the site first.
+
+### Recommended Plugin Stack (Add to Craft Now)
+
+These plugins should be evaluated and installed during active development — not at launch.
+
+| Plugin | Purpose | Priority |
+|---|---|---|
+| Craft Scout | Algolia integration built for Craft — makes search setup dramatically faster | High |
+| Craft Blitz | Static page caching — makes site extremely fast without changing templates | High |
+| Sprig | Reactive Twig components without writing JavaScript — for save button, karma toggle, filters | High |
+| Craft Webhooks | Trigger external services (Flarum notifications, Algolia reindex) when entries are saved | Medium |
+| Craft Embedded Assets | Clean Archive.org, YouTube, Vimeo embeds in entry bodies | Medium |
+
+### Membership System (Craft Native)
+
+Craft's native user system is the foundation. No third-party membership plugin needed for core functionality.
+
+- [ ] Configure user registration and login
+- [ ] Define user groups: Reader, Contributor, Verified Contributor, Community Historian, Legacy Member, Editor, Admin
+- [ ] Add Karma field (Number) to User profile field layout
+- [ ] Add custom profile fields: display name, biography, neighborhood, areas of historical interest
+- [ ] Build user profile page template
+- [ ] Build saved articles system using Craft native favorites — Ajax toggle on every entry
+- [ ] Build reading history (optional, privacy-respecting)
+
+### Karma & Reputation System
+
+Points are awarded for contribution quality, not just activity.
+
+| Action | Points |
+|---|---|
+| Photo submitted and approved | +50 |
+| Correction accepted by editor | +25 |
+| New entry contribution accepted | +100 |
+| Forum post marked helpful | +5 |
+| Article saved by 10+ users | +10 to original contributor |
+| Account verified with real name | +20 |
+| Oral history recording submitted | +75 |
+
+### Membership Tiers
+
+| Tier | Points | Privileges |
+|---|---|---|
+| Reader | 0 | Browse, save, cite |
+| Contributor | 50 | Submit photos and corrections |
+| Verified Contributor | 200 | Submit new entry drafts, forum badge |
+| Community Historian | 500 | Early access to new sections, credited on entries |
+| Legacy Member | 1000 | Advisory input, listed permanently on About page |
+
+Legacy Member tier is intentionally meaningful — serious contributors become part of the archive's own history.
+
+### Request a Correction System
+
+Every entry gets a "Request a Correction" link. Structured, not just an email.
+
+- [ ] Build correction request form — fields: entry URL (auto-populated), type of correction (factual error, missing information, wrong photo, broken link, other), description, source or evidence, submitter name and email (optional)
+- [ ] Submissions create a draft in a dedicated Craft section (Corrections queue) visible to editors only
+- [ ] Editor reviews, accepts or rejects, edits entry if accepted
+- [ ] Submitter receives email notification of outcome if email provided
+- [ ] Accepted corrections increment submitter karma if they have an account
+- [ ] Accepted corrections logged publicly on the entry as "Revised [date] — community correction"
+- [ ] Why: Shows intellectual honesty. Encourages community trust. Feeds the karma system.
+
+### Push Notification System
+
+- [ ] Web push notifications via browser Push API — no app required
+- [ ] Notification triggers: new entry in a followed era or neighborhood, correction accepted, new oral history added, "On this day" daily digest
+- [ ] User controls: opt in per notification type, manage from profile settings
+- [ ] Mobile push via Flutter app when built — same notification service, different delivery channel
+- [ ] Recommended service: OneSignal — free tier covers archive scale, has Craft webhook integration
+- [ ] Why: Brings users back. Makes the archive feel alive. Researchers get alerted when relevant new content is added.
+
+### Flarum Community Forum
+
+Decision: Implement Flarum AFTER Phase 1-3 are complete and the core archive is solid.
+
+- [ ] Deploy Flarum on subdomain: community.scvhistory.com
+- [ ] Configure SSO bridge to Craft — one login for both systems
+- [ ] Set up forum categories mirroring archive sections:
+    - History Talk (general SCV history discussion)
+    - Research Help (academics and researchers helping each other)
+    - Corrections and Additions (feeds into editorial review queue)
+    - Oral Histories (coordinating recording efforts)
+    - Photo Identification (community helping identify unknown people in photos)
+    - Site Feedback
+- [ ] Karma from Flarum activity feeds back to Craft user profile
+- [ ] Style Flarum to match SCVHistory design system (navy, gold, cream, Cormorant Garamond)
+- [ ] Why Flarum over Discourse: lighter weight, better aesthetic fit, sufficient for archive community scale, well-documented Craft SSO integration
+
+### Full Stack Architecture
+
+```
+Craft CMS (core)
+├── Native user system (registration, login, profiles, groups)
+├── Karma field on User profile
+├── Saved articles (native favorites)
+├── Correction request queue (dedicated section)
+└── Submission portal (contributor workflow)
+
+Flarum (community.scvhistory.com) — Phase 10
+├── SSO bridge to Craft
+├── Categories mirror archive sections
+├── Karma feeds back to Craft
+
+Push Notifications (OneSignal)
+├── Web push (browser)
+└── Mobile push (Flutter app)
+
+Flutter App — Phase 3
+├── Craft GraphQL API
+├── Flarum API
+├── Browse, save, submit, notify
+└── Offline reading
+```
+
