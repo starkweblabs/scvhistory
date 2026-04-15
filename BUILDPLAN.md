@@ -903,3 +903,26 @@ Ship with the starter kit:
 
 This turns SCVHistory from a local website into a node in the global cultural heritage graph.
 
+
+---
+
+## Cross-Cutting Taxonomy Recommendations (Completed 2026-04-15)
+
+- culturalSensitivityNote field (ID 174) added globally — attach to all Category group field layouts in CP
+- subject-tags.json title fixed: "Politics & Government" (was "Politics and Government")
+- Spanish Colonial Expedition tag added to subject-tags.json (Portolá Expedition, Q723198)
+- All taxonomies verified as aligned with data model, IIIF annotations, and open-source goals
+- Taxonomy set is now complete and tight — no gaps identified
+
+## DB Sync Workflow (Established 2026-04-15)
+
+**Rule: Never overwrite local DB with Cloudways DB.**
+- Code: local → git → auto-deploy to Cloudways
+- Content/data: entered directly on Cloudways
+- Images: rsync from Cloudways to local when needed, then php craft index-assets/all
+- Person image reconnect: use reconnect_person_images.php via php craft exec
+- DB sync pipe command (emergency only):
+  ssh starkone@178.62.64.244 "cd /home/676057.cloudwaysapps.com/ufppzhwvbk/public_html && mysqldump ..." > ~/Downloads/scvhistory.sql
+- After any DB import locally: php craft migrate/all && php craft clear-caches/all
+- config/db.php required locally with tablePrefix = scvh_
+
