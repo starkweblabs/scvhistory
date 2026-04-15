@@ -9,7 +9,7 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:21:35+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -25,7 +25,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:21:35+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -41,7 +41,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:21:35+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -57,7 +57,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:21:35+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -73,7 +73,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:21:35+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -89,7 +89,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:21:35+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -105,7 +105,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:21:35+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -121,7 +121,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:21:35+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -137,7 +137,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:21:35+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -153,7 +153,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:21:35+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -175,7 +175,7 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:21:35+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -191,7 +191,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:21:35+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -207,7 +207,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:21:35+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -223,7 +223,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:21:35+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -238,6 +238,22 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2026-04-15T17:24:47+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: f0a5c7de-ccc3-4005-84ee-53feaafc26e9 # Cultural Sensitivity Note
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 181fbeb0-e725-445c-a040-cf4cae0a346e
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: 214305dd-7a10-4fab-a76d-6786e6bfee00
         userCondition: null
@@ -245,7 +261,7 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:21:35+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -261,7 +277,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:21:35+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -277,7 +293,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:21:35+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -299,7 +315,7 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:21:35+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -315,7 +331,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:21:35+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -337,7 +353,7 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:21:35+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -353,7 +369,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:21:35+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -369,7 +385,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:21:35+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -391,7 +407,7 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:21:35+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -407,7 +423,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:21:35+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -423,7 +439,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:21:35+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -439,7 +455,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:21:35+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -461,7 +477,7 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:21:35+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -477,7 +493,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:21:35+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -493,7 +509,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:21:35+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null

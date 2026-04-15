@@ -9,7 +9,7 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:25:29+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -25,7 +25,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:25:29+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -41,7 +41,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:25:29+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -57,7 +57,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:25:29+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -73,7 +73,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:25:29+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -89,7 +89,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:25:29+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -104,6 +104,22 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2026-04-15T17:26:40+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: f0a5c7de-ccc3-4005-84ee-53feaafc26e9 # Cultural Sensitivity Note
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fa864802-8888-45ee-9114-2b199e8f89e2
+            userCondition: null
+            warning: null
+            width: 100
         name: Identity
         uid: ffbdd1e1-4d50-41f2-a346-5397b6653a2a
         userCondition: null
@@ -111,7 +127,7 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:25:29+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -127,7 +143,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:25:29+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -149,7 +165,7 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:25:29+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -165,7 +181,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:25:29+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -181,7 +197,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:25:29+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null

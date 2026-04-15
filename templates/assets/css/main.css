@@ -2075,3 +2075,7 @@ figure.scv-person-portrait img, span.scv-person-portrait img { display: block; w
   color: var(--color-warm-gray);
 }
 
+.scv-index-item__placeholder-seal {
+  width: 60%;
+  opacity: 0.25;
+}

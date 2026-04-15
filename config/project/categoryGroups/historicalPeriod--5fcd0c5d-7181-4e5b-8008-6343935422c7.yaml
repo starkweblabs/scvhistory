@@ -11,7 +11,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: null
+            dateAdded: '2026-04-15T17:27:50+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -31,6 +31,22 @@ fieldLayouts:
             title: null
             type: craft\fieldlayoutelements\TitleField
             uid: 2c073291-c321-48b3-954f-68787bfccce9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-04-15T17:28:57+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: f0a5c7de-ccc3-4005-84ee-53feaafc26e9 # Cultural Sensitivity Note
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 120efa15-f646-44fa-89db-c587de5fff32
             userCondition: null
             warning: null
             width: 100

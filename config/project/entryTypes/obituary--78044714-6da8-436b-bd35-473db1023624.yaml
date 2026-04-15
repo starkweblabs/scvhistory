@@ -9,7 +9,7 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:25:48+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -25,7 +25,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:25:48+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -41,7 +41,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:25:48+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -57,7 +57,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:25:48+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -73,7 +73,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:25:48+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -89,7 +89,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:25:48+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -105,7 +105,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:25:48+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -127,7 +127,7 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:25:48+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -143,7 +143,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:25:48+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -159,7 +159,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:25:48+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -175,7 +175,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:25:48+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -197,7 +197,7 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:25:48+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -213,7 +213,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:25:48+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -228,6 +228,22 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2026-04-15T17:27:00+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: f0a5c7de-ccc3-4005-84ee-53feaafc26e9 # Cultural Sensitivity Note
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 73fbacb4-01f0-49df-9f9c-9f48d66507be
+            userCondition: null
+            warning: null
+            width: 100
         name: Notes
         uid: 1b6a06c6-898a-4b1c-a1a3-62897728aa66
         userCondition: null
@@ -235,7 +251,7 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:25:48+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -251,7 +267,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:25:48+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -267,7 +283,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: null
+            dateAdded: '2026-04-15T17:25:48+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
