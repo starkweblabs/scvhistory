@@ -1,8 +1,31 @@
-# SCVHistory.com — Changelog
+SCVHistory.com — Changelog
 
-> Sessions logged newest-first. Paste new entries at the top.
+2026-04-15
 
-## 2026-04-14 (Session 3)
+- Built full 12-phase BUILDPLAN covering templates, Archive.org, API, Flutter, search, ElevenLabs, membership, legitimacy, data model, community, LOD
+- Created DATA_MODEL.md — complete field reference for all 9 entry types plus 5 new entry types
+- Created TAXONOMY_STANDARDS.md — LCSH/AAT/TGN alignment, CARE Principles, governance
+- Created 11 taxonomy JSON files with verified Wikidata/AAT/LCSH URIs in taxonomy-import/
+- Created TATAVIAM_AUDIT.md — complete Indigenous cultural audit for 6 peoples (Tataviam, Chumash, Tongva, Serrano, Kitanemuk, Vanyume)
+- Verified all Indigenous Wikidata QIDs — corrected Tongva to Q1479279, Chumash confirmed Q24251468
+- Created culturalSensitivityNote global field on Cloudways (field ID 174)
+- Created Person JSON-LD partial template at templates/_partials/jsonld/person.twig
+- Created craft-cp-field-checklist-2026-04-15.md — complete CP field creation guide
+- Created IIIF_SESSION_PROMPT.md — 10-question focused prompt for dedicated IIIF session
+- Decided: Groups restructured with groupType taxonomy (Family, Cultural Group, etc.)
+- Decided: Roles Matrix field replaces plain text occupation on Person
+- Decided: Military Profile merged into Person as conditional field group
+- Decided: Obituary remains separate section with submission workflow
+- Decided: Haunted places, Named places map, Walk of Fame, War Memorial as special pages
+- Decided: Import pipeline is entity-first — never import articles before canonical entities exist
+- Decided: IIIF Manifests are derived outputs, not stored entities
+- Decided: Archive.org hosts files/tiles; Craft owns all metadata and presentation logic
+- Added Phase 12 LOD roadmap — Schema.org + Wikidata light LOD first
+- Fixed org section template on Cloudways — now rendering at /organizations/{slug}
+- Fixed all 14 org entry titles on Cloudways (were null)
+- Next: Add culturalSensitivityNote to all entry type layouts in CP, Military Profile migration, pull Cloudways DB to DDEV, build organizations/index.twig
+
+2026-04-14
 
 - Tested organizations/_entry.twig on Cloudways — template rendering correctly
 - Fixed org section template path — was _entries/organizations, corrected to organizations/_entry via CRAFT_ALLOW_ADMIN_CHANGES=true in .env
@@ -10,9 +33,6 @@
 - Identified images not showing on Cloudways — featuredImage field empty on org entries, needs investigation
 - Identified need for DB sync from Cloudways to DDEV local
 - Next: Pull Cloudways DB to DDEV, fix images, build organizations/index.twig
-
-## 2026-04-14
-
 - Received full project handoff document
 - Confirmed `php craft eval` does not exist in Craft 5 — use `php craft exec`
 - Confirmed Craft 5 sections API is `Craft::$app->entries` not `Craft::$app->sections`
