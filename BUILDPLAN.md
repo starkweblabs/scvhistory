@@ -14,13 +14,8 @@ You are working on SCVHistory.com, a Craft CMS 5 digital archive project for San
 ## How to Update These Files
 
 Adding to the queue: Tell Claude what to add — it generates an updated BUILDPLAN.md to download and commit.
-
-Logging a bug: Tell Claude the error — it updates ERRORLOG.md with the details and resolution.
-
-End of every session:
-1. Claude generates a CHANGELOG entry — paste it at the top of CHANGELOG.md in TextEdit
-2. Download any updated BUILDPLAN.md or ERRORLOG.md Claude generated
-3. Commit and push:
+Logging a bug: Tell Claude the error — it updates ERRORLOG.md.
+End of every session: Paste Claude's CHANGELOG entry at the top of CHANGELOG.md, download any updated files, commit and push.
 
 MAC:
 git add BUILDPLAN.md CHANGELOG.md ERRORLOG.md
@@ -30,7 +25,7 @@ git push
 ---
 
 ## Project North Star
-World-class digital archive of SCV history. Launch: 2027 (30th anniversary). Audience: general public, students, researchers, CSUN post-grads.
+World-class digital archive of SCV history. Launch: 2027 (30th anniversary). Audience: general public, students, researchers, CSUN post-grads. Goal: award-winning design, academic credibility, community adoption.
 
 ---
 
@@ -58,27 +53,27 @@ Content-type headers set in .twig files: {% header 'Content-Type: text/css' %}
 
 ## Entry Types (Craft CMS)
 
-These are the confirmed entry types in the Craft CMS install:
-
 | Section | Handle | Type | Template |
 |---|---|---|---|
-| Persons | persons | Channel | persons/_entry |
-| Organizations | organizations | Channel | organizations/_entry |
-| Places | places | Channel | places/_entry (not built) |
-| Groups | groups | Channel | _entries/groups (not built) |
-| Events | events | Channel | _entries/events (not built) |
-| Articles | articles | Channel | _entries/articles (not built) |
-| Collections | collections | Structure | _entries/collections (not built) |
-| Obituaries | obituaries | Channel | _entries/obituaries (not built) |
-| Military Profiles | militaryProfiles | Channel | _entries/militaryProfiles (not built) |
+| Persons | persons | Channel | persons/_entry — LIVE |
+| Organizations | organizations | Channel | organizations/_entry — LIVE |
+| Places | places | Channel | places/_entry — NOT BUILT |
+| Groups | groups | Channel | _entries/groups — NOT BUILT |
+| Events | events | Channel | _entries/events — NOT BUILT |
+| Articles | articles | Channel | _entries/articles — NOT BUILT |
+| Collections | collections | Structure | _entries/collections — NOT BUILT |
+| Obituaries | obituaries | Channel | _entries/obituaries — NOT BUILT |
+| Military Profiles | militaryProfiles | Channel | _entries/militaryProfiles — NOT BUILT |
 
 ---
 
-## Workstream 1 — Craft CMS Build
+## Phase 1 — Core Templates (Current)
+
+Priority: Get all main content types rendering on Cloudways.
 
 ### Content Status
-Persons: 33 — Local YES (untitled locally), Cloudways YES (titled)
-Organizations: 14 — Local NO, Cloudways YES (titled)
+Persons: 33 — Local YES (untitled locally), Cloudways YES
+Organizations: 14 — Local NO, Cloudways YES
 Places: 0 — Local NO, Cloudways NO
 Groups: 0 — Local NO, Cloudways NO
 
@@ -86,9 +81,6 @@ Groups: 0 — Local NO, Cloudways NO
 _layouts/base.twig — LIVE
 _partials/cite-article.twig — LIVE
 _partials/search-form.twig — LIVE
-templates/assets/css/main.css + main.twig — LIVE
-templates/assets/css/layout.css + layout.twig — LIVE
-templates/assets/js/main.js + main.twig — LIVE
 persons/_entry.twig — LIVE
 persons/index.twig — LIVE
 organizations/_entry.twig — LIVE
@@ -99,41 +91,92 @@ Homepage — NOT BUILT
 Search results — NOT BUILT
 
 ### Queue (in order)
-- [ ] Pull Cloudways DB to DDEV local — fixes untitled entries, enables local design against real content
-- [ ] Fix images on Cloudways — featuredImage field empty on org entries, needs investigation
+- [ ] Pull Cloudways DB to DDEV local — fixes untitled entries, enables real local development
+- [ ] Fix images on Cloudways — featuredImage field empty on org entries
 - [ ] Build organizations/index.twig
 - [ ] Run places_import_v2.php on Cloudways
 - [ ] Build places/_entry.twig and places/index.twig
 - [ ] Upgrade persons/index.twig — last-name alpha sort + sidebar filters
-- [ ] Wire Acosta parent/child relationship on Cloudways (wired locally only)
-- [ ] Build Search results page
-- [ ] Build Homepage with Recently Added strip (4-6 cards, latest entries across all sections)
-- [ ] Build "What's New" page — two streams: Site Updates (admin posts) + Recently Added (auto-query)
-- [ ] Build "Live Tech Updates" page — public log of build progress and deployment decisions
+- [ ] Wire Acosta parent/child on Cloudways
+- [ ] Build Search results page (whole-archive scope, tabbed by content type)
+- [ ] Build Homepage with Recently Added strip (4-6 cards)
+- [ ] Build "What's New" page — Site Updates (admin posts) + Recently Added (auto-query)
+- [ ] Build "Live Tech Updates" page — public log of build progress
 - [ ] Add "What's New" link to footer nav
 - [ ] Sort out SEOmatic trial licensing
-- [ ] README.md in repo — public explanation for GitHub visitors and CSUN audience
-
-### Open Questions
-- [ ] Confirm articleOrganizations field handle on Articles section for org reverse-lookup
-- [ ] FacetWP-style filtering approach in Craft
-- [ ] Why are images not showing — featuredImage empty on org entries
+- [ ] README.md in repo
 
 ---
 
-## Workstream 2 — Archive.org Legacy Mirror
-- [ ] Mirror legacy site to Cloudways (in progress)
-- [ ] Strip non-essential code
-- [ ] Push static version to Archive.org
-- [ ] Craft site becomes canonical URL
+## Phase 2 — Archive.org Migration + Large File Strategy
+
+Priority: Preserve legacy site permanently and reduce Cloudways hosting load.
+
+- [ ] Complete mirror of legacy scvhistory.com to Cloudways
+- [ ] Strip non-essential code from mirror
+- [ ] Push clean static version to Archive.org as permanent record
+- [ ] Craft site becomes live canonical URL at scvhistory.com
+- [ ] Implement Archive.org CDN strategy for large files — high-res photos, PDFs, audio files reference Archive.org URLs instead of Cloudways. Craft asset fields support external URLs.
+- [ ] Document Archive.org item structure and URL pattern for team reference
+- [ ] Build Twig helper for generating Archive.org embed URLs from asset records
+
+---
+
+## Phase 3 — Academic & API Layer
+
+Priority: Make the archive useful to researchers and connectable to other institutions.
+
+- [ ] Enable and configure Craft GraphQL API (already installed — visible in CP)
+- [ ] Document public GraphQL endpoints for external use
+- [ ] Build /api documentation page on the site
+- [ ] Add COinS metadata to all entry templates — invisible structured citations that Zotero, Mendeley, and other reference managers pick up automatically
+- [ ] Investigate IIIF image protocol support — standard for academic image sharing, allows other institutions to embed SCV photos in their own collections
+- [ ] CSUN partnership page — explains the archive as a model digital humanities project, how to cite, how to contribute
+- [ ] Explore data export formats (CSV, JSON) for bulk researcher access
+
+---
+
+## Phase 4 — Enhanced User Experience
+
+Priority: Make the site genuinely engaging for general public and students.
+
+- [ ] Replace browser speechSynthesis TTS with ElevenLabs API — better voice quality, same UI. Needs ElevenLabs API key stored in .env, Twig template passes text to API endpoint, returns audio stream. Keep existing Listen button UI.
+- [ ] User accounts — saved articles, reading history, personal collections (Craft has native user system)
+- [ ] Timeline visualization — interactive era-based timeline for homepage and dedicated page
+- [ ] Advanced search — full-text across all sections, filters by era, neighborhood, content type
+- [ ] Related content recommendations — "People connected to this place" cross-section linking
+- [ ] Print stylesheet — dedicated print CSS for archival-quality printed pages
+- [ ] Accessibility audit — WCAG 2.1 compliance for academic credibility and public funding eligibility
+
+---
+
+## Phase 5 — Growth & Community
+
+Priority: Build community ownership and long-term sustainability.
+
+- [ ] Photo submission workflow — community members submit photos with metadata
+- [ ] Corrections/additions form — flag errors or contribute information
+- [ ] Oral history section — audio recordings and transcripts, ties into SCVTV archive
+- [ ] Newsletter integration — announce new content additions
+- [ ] Spanish language support — given SCV's history, bilingual content is appropriate long-term
+- [ ] Dark mode
+- [ ] GitHub Issues + Project board for public task tracking
+- [ ] CSUN partnership pitch materials
+
+---
+
+## Open Technical Questions
+- [ ] Confirm articleOrganizations field handle on Articles section for org reverse-lookup
+- [ ] FacetWP-style filtering — no Craft equivalent plugin yet, likely custom query params
+- [ ] ElevenLabs API — confirm pricing model for archive use case (per character)
+- [ ] IIIF — evaluate server requirements
 
 ---
 
 ## Decisions Log
 2025 — Pivoted WordPress to Craft CMS 5 — Better structured content
 2025 — CSS/JS via templates/assets/ Twig files — Mutagen workaround
-2026-04-13 — 33 Person records imported via persons_v3_batch1/2/3.php
-2026-04-13 — Person titles corrected to WP short names
+2026-04-13 — 33 Person records imported, titles corrected
 2026-04-13 — persons/index.twig built with era filter and person grid
 2026-04-14 — Local = code only, Cloudways = content + testing
 2026-04-14 — Repo made public — BUILDPLAN and CHANGELOG are public transparency assets
@@ -162,12 +205,3 @@ Search results — NOT BUILT
 persons_import.php, persons_import_v2.php, persons_v3_batch1/2/3.php
 orgs_import.php, orgs_import_v2.php
 places_import.php, places_import_v2.php
-
----
-
-## Backlog / Future Wishlist
-- User accounts — saved articles, reading history, personal collections
-- SCVTalk integration — separate blog/media property
-- GitHub Issues + Project board for public task tracking
-- CSUN partnership pitch materials
-- Mobile app consideration
