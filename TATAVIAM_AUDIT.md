@@ -200,3 +200,58 @@ Verify the correct distinct QIDs before LOD export:
 - Tongva/Gabrielino: verify — may be Q2424671 or similar
 Run: curl https://www.wikidata.org/wiki/Special:EntityData/Q2424671.json | python3 -m json.tool | grep label
 
+
+---
+
+## Kitanemuk and Vanyume Audit — April 15, 2026
+
+### Kitanemuk
+- Territory: Tehachapi Mountains, Antelope Valley, southern Sierra Nevada foothills
+- Wikidata QID: Q6422453
+- Federal status: No standalone federally recognized tribe — descendants affiliated with San Manuel Band (Serrano) or Tataviam groups
+- SCV connection: Border territory, trade routes through Soledad Canyon and Mint Canyon
+- Authority: San Manuel Band and Tataviam affiliates
+
+### Vanyume
+- Classification: Serrano subgroup / dialect
+- Territory: Mojave Desert, Antelope Valley
+- Wikidata QID: Q7915068
+- Federal status: Under San Manuel Band of Mission Indians (Serrano)
+- SCV connection: Same as Serrano — northern/eastern border
+- Authority: San Manuel Band of Mission Indians
+
+### Fernandeño
+Do NOT create a separate Fernandeño term. It is the mission-era designation now part of the official name of the Fernandeño Tataviam Band of Mission Indians. Already covered under Tataviam History (Q743736).
+
+---
+
+## Tongva Wikidata QID — VERIFICATION REQUIRED
+
+Q24251468 is CONFIRMED as Chumash (verified April 15, 2026 via Wikidata API).
+The Tongva QID in subject-tags.json is currently TONGVA_QID_PENDING_VERIFICATION.
+
+**Run this to verify the correct Tongva QID:**
+```bash
+curl -s "https://www.wikidata.org/wiki/Special:EntityData/Q2424671.json" | python3 -c "import json,sys; d=json.load(sys.stdin); e=list(d['entities'].values())[0]; print(e['id'], e['labels'].get('en', {}).get('value', 'unknown'))"
+```
+
+Once confirmed, replace TONGVA_QID_PENDING_VERIFICATION in:
+- taxonomy-import/subject-tags.json (tongva-history and indigenous-history entries)
+
+Then commit with: git commit -m "fix: verified Tongva Wikidata QID"
+
+---
+
+## Complete Indigenous and Colonial Taxonomy — Final Summary
+
+| Term | Slug | QID | Status |
+|---|---|---|---|
+| Tataviam History | tataviam-history | Q743736 | Verified |
+| Chumash History | chumash-history | Q24251468 | Verified |
+| Tongva History | tongva-history | PENDING | Needs verification |
+| Serrano History | serrano-history | Q745474 | Verified |
+| Kitanemuk History | kitanemuk-history | Q6422453 | Verified |
+| Vanyume History | vanyume-history | Q7915068 | Verified |
+| Spanish Colonial Expedition | spanish-colonial-expedition | Q723198 | Verified |
+| Indigenous History | indigenous-history | Multiple | Updated |
+

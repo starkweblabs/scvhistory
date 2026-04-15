@@ -21,11 +21,11 @@
   {
     "title": "Indigenous History",
     "slug": "indigenous-history",
-    "description": "History of Native peoples of the Santa Clarita Valley and surrounding region, including Tataviam (primary SCV territory), Chumash (coastal/mission connections), Tongva/Gabrielino (LA Basin/mission connections), and Serrano (northern/eastern border territory). CARE Principles and PNAAM apply for all Indigenous content.",
+    "description": "History of Native peoples of the Santa Clarita Valley and surrounding region, including Tataviam (primary SCV territory), Chumash (coastal/mission connections), Tongva/Gabrielino (LA Basin/mission connections), Serrano (northern/eastern border), Kitanemuk (Tehachapi border), and Vanyume (Mojave/Antelope Valley). CARE Principles and PNAAM apply for all Indigenous content.",
     "sameAs": [
       "https://www.wikidata.org/wiki/Q743736",
       "https://www.wikidata.org/wiki/Q24251468",
-      "https://www.wikidata.org/wiki/Q24251468",
+      "TONGVA_QID_PENDING_VERIFICATION",
       "https://www.wikidata.org/wiki/Q745474",
       "https://www.tataviam-nsn.us/",
       "https://chumash.gov/",
@@ -208,9 +208,9 @@
   {
     "title": "Tongva History",
     "slug": "tongva-history",
-    "description": "History and culture of the Tongva (Gabrielino/Gabrieleño/Kizh) people of the Los Angeles Basin and Southern Channel Islands (Tovaangar), with regional connections to SCV via missions and trade. No federal recognition as of 2026 — multiple groups petitioning. CARE Principles apply.",
+    "description": "History and culture of the Tongva (Gabrielino/Gabrieleño/Kizh) people of the Los Angeles Basin and Southern Channel Islands (Tovaangar), with regional connections to SCV via missions and trade. No federal recognition as of 2026 — multiple groups petitioning. CARE Principles apply. NOTE: Wikidata QID requires verification — Q24251468 confirmed as Chumash, not Tongva.",
     "sameAs": [
-      "https://www.wikidata.org/wiki/Q24251468",
+      "TONGVA_QID_PENDING_VERIFICATION",
       "https://www.gabrieleno-nsn.us/",
       "https://gabrielinotongva.org/",
       "https://gabrielenoindians.org/"
@@ -227,5 +227,33 @@
       "https://serranonationofindians.org/"
     ],
     "externalSource": "Wikidata+Serrano-consulted"
+  },
+  {
+    "title": "Kitanemuk History",
+    "slug": "kitanemuk-history",
+    "description": "History and culture of the Kitanemuk people of the Tehachapi Mountains and Antelope Valley, with regional connections to SCV via trade and border territories. No standalone federally recognized tribe — descendants affiliated with San Manuel Band (Serrano) or Tataviam groups. CARE Principles apply.",
+    "sameAs": [
+      "https://www.wikidata.org/wiki/Q6422453"
+    ],
+    "externalSource": "Wikidata"
+  },
+  {
+    "title": "Vanyume History",
+    "slug": "vanyume-history",
+    "description": "History and culture of the Vanyume, a Serrano subgroup of the Mojave Desert and Antelope Valley. Primary authority: San Manuel Band of Mission Indians. CARE Principles apply.",
+    "sameAs": [
+      "https://www.wikidata.org/wiki/Q7915068"
+    ],
+    "externalSource": "Wikidata"
+  },
+  {
+    "title": "Spanish Colonial Expedition",
+    "slug": "spanish-colonial-expedition",
+    "description": "Spanish exploratory and military expeditions in Alta California, including the Portolá Expedition of 1769. Content framed in context of Indigenous impact and colonization, respectful of Tataviam, Serrano, Tongva, and other Native perspectives.",
+    "sameAs": [
+      "https://www.wikidata.org/wiki/Q723198",
+      "https://id.loc.gov/authorities/subjects/sh85011234"
+    ],
+    "externalSource": "Wikidata+LCSH"
   }
 ]
