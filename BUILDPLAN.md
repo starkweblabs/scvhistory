@@ -691,3 +691,81 @@ These should be added in Craft CP before content migration scales up:
 - [ ] Dynamic query falls back to parsed monthDay from birthDate, eventDate, dateFounded
 - [ ] Combine editorial control with automated data where it exists
 
+
+---
+
+## Phase 11 — Open-Source Starter Kit
+
+Priority: After Phase 1 launch. The SCV build IS the proof of concept.
+
+- [ ] Add CONTRIBUTING.md to repo — sets public intention now
+- [ ] Add README.md note: this project will be open-sourced as a regional archive starter kit
+- [ ] Separate SCV-specific content from reusable infrastructure in repo structure
+- [ ] Package Craft project config as importable starter (taxonomy as JSON, generic field names)
+- [ ] Document import pipeline as reusable scripts with external config
+- [ ] Publish OpenArchive Starter Kit as separate public repo after Phase 1
+- [ ] Pursue grant funding: NEH, Mellon Foundation, California Humanities
+- [ ] CSUN partnership + Code for America credential + 30-year proof of concept = strong grant application
+
+---
+
+## Legal and Compliance Pages (Build During Phase 1)
+
+- [ ] Privacy Policy — CCPA compliance, user data, cookie consent
+- [ ] Terms of Use — content usage, submissions, liability
+- [ ] Copyright and Attribution — Leon's content, community submissions, licensed photos
+- [ ] Accessibility Statement — WCAG 2.2 AA commitment, contact for issues
+- [ ] Data Sources — academic credibility, sourcing standards
+- [ ] Corrections Policy — already in queue
+- [ ] Takedown / Right to Be Forgotten — living persons, sensitive content
+- [ ] Community Guidelines — before forum/submissions go live
+- [ ] Cookie Policy — minimal but required
+
+---
+
+## Accessibility Checklist (WCAG 2.2 AA — Build Into Every Template)
+
+Target: WCAG 2.2 AA — legal standard for public sites receiving any government funding.
+
+Data model requirements:
+- [ ] altText field REQUIRED on all image assets — enforce at content entry level
+- [ ] transcript field REQUIRED on all Oral History entries
+- [ ] isLivingPerson flag on Person — gates sensitive data from public display
+
+Template requirements (add to every template as built):
+- [ ] Semantic HTML landmarks: main, article, section, nav, aside
+- [ ] Entity tooltips: role="tooltip", aria-describedby, keyboard nav (Tab/Enter/Escape)
+- [ ] Color contrast audit: Gold #b8860b on white — verify 4.5:1 AA ratio
+- [ ] Skip navigation link at top of every page
+- [ ] Focus indicators visible on all interactive elements
+- [ ] Form labels associated with inputs
+- [ ] Error messages descriptive and associated with fields
+
+---
+
+## Import Pipeline Strategy
+
+When content migration begins — follow this sequence strictly:
+
+1. Entity extraction pass — Claude API scans all HTML files, extracts named entities, returns JSON
+2. Deduplication — script checks entities against existing Craft records
+3. Stub creation — new entities created as minimal records in Craft
+4. Entity dictionary — name → Craft entry ID mapping built
+5. Article import — articles imported with auto-populated relation fields
+6. Human review — editor confirms/rejects suggested entity links
+7. Enrichment — stub entities filled out with full data
+
+Never import articles before entities exist. The linking opportunity is lost.
+
+---
+
+## Photo Processing Pipeline
+
+When bulk photo import begins:
+
+1. Claude vision API: era, setting, people count, visible text, landmarks
+2. Face recognition service: compare against known Person portraits
+3. NEVER auto-link faces — editor confirmation always required
+4. Store recognition confidence score + suggestion + confirmed flag on Photograph entry
+5. IIIF bounding box annotations for yearbook photo tagging (Phase 3)
+

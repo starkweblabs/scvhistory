@@ -920,3 +920,113 @@ Examples:
 Each gets full body content, associated persons, associated places, subject tags, and Indigenous taxonomy where applicable.
 For Tataviam specifically: develop taxonomy terms in consultation with community representatives.
 
+
+---
+
+## Decisions — 2026-04-15 Technical Deep Dive
+
+### Image and Asset Fields — Required for Compliance
+
+Every Asset (image) needs these fields added to the Asset field layout in Craft:
+- altText: Plain Text — REQUIRED for published images (accessibility)
+- licenseType: Plain Text — copyright status
+- creditLine: Plain Text — attribution line
+- permissionsNotes: Plain Text — usage restrictions
+
+Every Oral History entry: transcript field is REQUIRED, not optional.
+
+### Living Persons — Privacy Protection
+
+Add to Person entry type:
+- isLivingPerson: Lightswitch
+- When true: gates certain sensitive fields from public display (birth date exact, address, etc.)
+- Template logic checks this flag before outputting sensitive data
+
+### User-Submitted Content Fields
+
+Add to any entry created via community submission:
+- submittedBy: Relation → User
+- submissionDate: DateTime
+- approvedBy: Relation → User (editor)
+- approvedDate: DateTime
+- submissionNotes: Plain Text (editor notes)
+
+### Legal Pages Required
+
+| Page | Data Model Intersection |
+|---|---|
+| Privacy Policy | User data fields, cookie consent |
+| Terms of Use | Submission workflow fields |
+| Copyright and Attribution | licenseType and creditLine on every asset |
+| Accessibility Statement | altText required fields, transcript fields |
+| Data Sources | sourceLine and sourceInstitution fields on Article and Document |
+| Corrections Policy | Correction request entry type |
+| Takedown / Right to Be Forgotten | isLivingPerson flag, deletion workflow |
+| Community Guidelines | User submission fields |
+| Cookie Policy | Minimal — even if no tracking cookies |
+
+### Accessibility — Data Model Requirements (WCAG 2.2 AA)
+
+- altText: Plain Text — REQUIRED on all image assets (never optional)
+- transcript: Rich Text — REQUIRED on all Oral History entries
+- Entity tooltip system must use: role="tooltip", aria-describedby, keyboard navigation (Tab, Enter, Escape)
+- Semantic HTML landmarks in all templates: main, article, section, nav, aside
+- Color contrast: verify Gold #b8860b on white backgrounds — may fail 4.5:1 AA ratio for link text
+
+### Import Pipeline — Entity-First Approach
+
+Correct sequence for content migration:
+1. Extract entities from all HTML files using Claude API (people, places, orgs, events)
+2. Deduplicate, create canonical stubs in Craft
+3. Build entity dictionary (name → Craft entry ID)
+4. Import articles with auto-populated relation fields using dictionary
+5. Human review pass — editor confirms/rejects suggested links
+6. Enrich stub entities with full biographical data
+
+Claude API prompt pattern for entity extraction:
+Send HTML body, request JSON array of: name, type (person/place/org/event), brief description, date if mentioned.
+Script checks against existing Craft records, creates stubs for new entities, flags matches for linking.
+
+### Photo Tagging with Vision AI
+
+Workflow for archive photo processing:
+1. Claude vision API: era, setting type, people count, visible text, recognizable landmarks
+2. Face recognition (AWS Rekognition or similar): compare against known Person portraits
+3. NEVER auto-link faces — always human confirmation required
+4. Store: recognitionConfidence (Number), recognitionSuggestion (Relation → Person), recognitionConfirmed (Lightswitch)
+5. Add to Photograph entry type: recognitionConfidence, recognitionSuggestion, recognitionConfirmed
+
+### Yearbook Reader — Recommended Approach
+
+Primary: Archive.org BookReader (free, open source, handles page-turning, zoom, search if OCR exists)
+Craft entry = metadata layer, Archive.org = file host
+Embed via Archive.org JavaScript embed
+
+Advanced (Phase 3): IIIF + Universal Viewer
+- Enables bounding box annotations linking page regions to Person entries
+- Tag a face in the 1965 Hart yearbook → links to Person entry
+- Academic standard — required for institutional partnerships
+- Higher complexity, defer to Phase 3
+
+### Open-Source Starter Kit — Architecture
+
+SCV-specific content stays private. Generic infrastructure goes public.
+
+Public repo: OpenArchive Starter Kit
+- Craft CMS project config (entry types, fields, relations) — taxonomy terms as importable JSON
+- Base templates with generic variable names
+- Import pipeline scripts with external config files for field mappings
+- Entity linking JavaScript layer
+- DATA_MODEL.md as a documentation standard
+- Setup guide for new regional archives
+- MIT license for code, CC-BY for documentation
+
+Private repo: SCVHistory (starkweblabs/scvhistory)
+- Leon's content
+- SCV-specific taxonomy terms
+- SCV design system
+
+Immediate action: Add CONTRIBUTING.md and README.md note that project will be open-sourced as starter kit after Phase 1 launch.
+
+Grant opportunities: NEH, Mellon Foundation, California Humanities — all fund this type of civic infrastructure. CSUN partnership + Code for America credential + 30-year archive proof of concept = strong application.
+
