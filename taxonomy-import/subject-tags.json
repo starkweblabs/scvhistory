@@ -1,22 +1,185 @@
 [
-  {"title": "Gold Rush", "slug": "gold-rush", "description": "California Gold Rush and related mining activity", "sameAs": ["https://www.wikidata.org/wiki/Q202191", "http://vocab.getty.edu/aat/300055547"], "externalSource": "Wikidata+AAT"},
-  {"title": "Water History", "slug": "water-history", "description": "Water infrastructure, aqueducts, dams, and water rights in SCV", "sameAs": [], "externalSource": "Local-SCV"},
-  {"title": "Indigenous History", "slug": "indigenous-history", "description": "Tataviam and other Native peoples of the Santa Clarita Valley. CARE Principles apply — audit with Tataviam community before LOD export.", "sameAs": [], "externalSource": "Tataviam-consulted"},
-  {"title": "Railroads", "slug": "railroads", "description": "Railroad development and impact on SCV", "sameAs": ["https://www.wikidata.org/wiki/Q22667", "http://vocab.getty.edu/aat/300008187"], "externalSource": "Wikidata+AAT"},
-  {"title": "Oil Industry", "slug": "oil-industry", "description": "Oil discovery, drilling, and refining in SCV — first commercially productive oil well in California at Pico Canyon", "sameAs": ["https://www.wikidata.org/wiki/Q11002"], "externalSource": "Wikidata"},
-  {"title": "Film Industry", "slug": "film-industry", "description": "Motion picture production and filming locations in SCV", "sameAs": ["https://www.wikidata.org/wiki/Q11424"], "externalSource": "Wikidata"},
-  {"title": "Agriculture", "slug": "agriculture", "description": "Farming, ranching, and agriculture in SCV", "sameAs": ["https://www.wikidata.org/wiki/Q11451", "http://vocab.getty.edu/aat/300054258"], "externalSource": "Wikidata+AAT"},
-  {"title": "Architecture", "slug": "architecture", "description": "Historic buildings and architectural styles in SCV", "sameAs": ["https://www.wikidata.org/wiki/Q12271", "http://vocab.getty.edu/aat/300054197"], "externalSource": "Wikidata+AAT"},
-  {"title": "Military History", "slug": "military-history", "description": "Military events, bases, and service in SCV", "sameAs": ["https://www.wikidata.org/wiki/Q104787"], "externalSource": "Wikidata"},
-  {"title": "Politics and Government", "slug": "politics-government", "description": "Local, state, and federal politics in SCV", "sameAs": ["https://www.wikidata.org/wiki/Q7163"], "externalSource": "Wikidata"},
-  {"title": "Law Enforcement", "slug": "law-enforcement", "description": "Police, sheriffs, and law enforcement in SCV", "sameAs": ["https://www.wikidata.org/wiki/Q44554"], "externalSource": "Wikidata"},
-  {"title": "Education", "slug": "education", "description": "Schools, colleges, and educational institutions in SCV", "sameAs": ["https://www.wikidata.org/wiki/Q8434"], "externalSource": "Wikidata"},
-  {"title": "Religion", "slug": "religion", "description": "Religious institutions and practices in SCV", "sameAs": ["https://www.wikidata.org/wiki/Q9174"], "externalSource": "Wikidata"},
-  {"title": "Commerce and Trade", "slug": "commerce-trade", "description": "Business, retail, and commerce in SCV", "sameAs": ["https://www.wikidata.org/wiki/Q8374"], "externalSource": "Wikidata"},
-  {"title": "Land Grants", "slug": "land-grants", "description": "Mexican and Spanish land grants and ranchos", "sameAs": [], "externalSource": "Local-SCV"},
-  {"title": "Natural Disasters", "slug": "natural-disasters", "description": "Floods, fires, earthquakes, and other disasters in SCV", "sameAs": ["https://www.wikidata.org/wiki/Q8060"], "externalSource": "Wikidata"},
-  {"title": "Conservation", "slug": "conservation", "description": "Environmental and historic preservation in SCV", "sameAs": ["https://www.wikidata.org/wiki/Q62832"], "externalSource": "Wikidata"},
-  {"title": "Arts and Culture", "slug": "arts-culture", "description": "Visual arts, performing arts, and cultural heritage in SCV", "sameAs": ["https://www.wikidata.org/wiki/Q735"], "externalSource": "Wikidata"},
-  {"title": "Tataviam History", "slug": "tataviam-history", "description": "Specific Tataviam Indigenous history and culture. CARE Principles apply — no sameAs until community consent given.", "sameAs": [], "externalSource": "Tataviam-consulted"},
-  {"title": "Californio History", "slug": "californio-history", "description": "Californio community and culture in California and SCV", "sameAs": ["https://www.wikidata.org/wiki/Q1051342"], "externalSource": "Wikidata"}
+  {
+    "title": "Gold Rush",
+    "slug": "gold-rush",
+    "description": "California Gold Rush and related mining activity",
+    "sameAs": [
+      "https://www.wikidata.org/wiki/Q202191",
+      "http://vocab.getty.edu/aat/300055547"
+    ],
+    "externalSource": "Wikidata+AAT"
+  },
+  {
+    "title": "Water History",
+    "slug": "water-history",
+    "description": "Water infrastructure, aqueducts, dams, and water rights in SCV",
+    "sameAs": [],
+    "externalSource": "Local-SCV"
+  },
+  {
+    "title": "Indigenous History",
+    "slug": "indigenous-history",
+    "description": "History of Native peoples of the Santa Clarita Valley, with emphasis on Tataviam (Fernandeño Tataviam Band of Mission Indians). CARE Principles apply.",
+    "sameAs": [
+      "https://www.wikidata.org/wiki/Q743736",
+      "https://www.tataviam-nsn.us/"
+    ],
+    "externalSource": "Wikidata+Tataviam-consulted"
+  },
+  {
+    "title": "Railroads",
+    "slug": "railroads",
+    "description": "Railroad development and impact on SCV",
+    "sameAs": [
+      "https://www.wikidata.org/wiki/Q22667",
+      "http://vocab.getty.edu/aat/300008187"
+    ],
+    "externalSource": "Wikidata+AAT"
+  },
+  {
+    "title": "Oil Industry",
+    "slug": "oil-industry",
+    "description": "Oil discovery, drilling, and refining in SCV — first commercially productive oil well in California at Pico Canyon",
+    "sameAs": [
+      "https://www.wikidata.org/wiki/Q11002"
+    ],
+    "externalSource": "Wikidata"
+  },
+  {
+    "title": "Film Industry",
+    "slug": "film-industry",
+    "description": "Motion picture production and filming locations in SCV",
+    "sameAs": [
+      "https://www.wikidata.org/wiki/Q11424"
+    ],
+    "externalSource": "Wikidata"
+  },
+  {
+    "title": "Agriculture",
+    "slug": "agriculture",
+    "description": "Farming, ranching, and agriculture in SCV",
+    "sameAs": [
+      "https://www.wikidata.org/wiki/Q11451",
+      "http://vocab.getty.edu/aat/300054258"
+    ],
+    "externalSource": "Wikidata+AAT"
+  },
+  {
+    "title": "Architecture",
+    "slug": "architecture",
+    "description": "Historic buildings and architectural styles in SCV",
+    "sameAs": [
+      "https://www.wikidata.org/wiki/Q12271",
+      "http://vocab.getty.edu/aat/300054197"
+    ],
+    "externalSource": "Wikidata+AAT"
+  },
+  {
+    "title": "Military History",
+    "slug": "military-history",
+    "description": "Military events, bases, and service in SCV",
+    "sameAs": [
+      "https://www.wikidata.org/wiki/Q104787"
+    ],
+    "externalSource": "Wikidata"
+  },
+  {
+    "title": "Politics and Government",
+    "slug": "politics-government",
+    "description": "Local, state, and federal politics in SCV",
+    "sameAs": [
+      "https://www.wikidata.org/wiki/Q7163"
+    ],
+    "externalSource": "Wikidata"
+  },
+  {
+    "title": "Law Enforcement",
+    "slug": "law-enforcement",
+    "description": "Police, sheriffs, and law enforcement in SCV",
+    "sameAs": [
+      "https://www.wikidata.org/wiki/Q44554"
+    ],
+    "externalSource": "Wikidata"
+  },
+  {
+    "title": "Education",
+    "slug": "education",
+    "description": "Schools, colleges, and educational institutions in SCV",
+    "sameAs": [
+      "https://www.wikidata.org/wiki/Q8434"
+    ],
+    "externalSource": "Wikidata"
+  },
+  {
+    "title": "Religion",
+    "slug": "religion",
+    "description": "Religious institutions and practices in SCV",
+    "sameAs": [
+      "https://www.wikidata.org/wiki/Q9174"
+    ],
+    "externalSource": "Wikidata"
+  },
+  {
+    "title": "Commerce and Trade",
+    "slug": "commerce-trade",
+    "description": "Business, retail, and commerce in SCV",
+    "sameAs": [
+      "https://www.wikidata.org/wiki/Q8374"
+    ],
+    "externalSource": "Wikidata"
+  },
+  {
+    "title": "Land Grants",
+    "slug": "land-grants",
+    "description": "Mexican and Spanish land grants and ranchos",
+    "sameAs": [],
+    "externalSource": "Local-SCV"
+  },
+  {
+    "title": "Natural Disasters",
+    "slug": "natural-disasters",
+    "description": "Floods, fires, earthquakes, and other disasters in SCV",
+    "sameAs": [
+      "https://www.wikidata.org/wiki/Q8060"
+    ],
+    "externalSource": "Wikidata"
+  },
+  {
+    "title": "Conservation",
+    "slug": "conservation",
+    "description": "Environmental and historic preservation in SCV",
+    "sameAs": [
+      "https://www.wikidata.org/wiki/Q62832"
+    ],
+    "externalSource": "Wikidata"
+  },
+  {
+    "title": "Arts and Culture",
+    "slug": "arts-culture",
+    "description": "Visual arts, performing arts, and cultural heritage in SCV",
+    "sameAs": [
+      "https://www.wikidata.org/wiki/Q735"
+    ],
+    "externalSource": "Wikidata"
+  },
+  {
+    "title": "Tataviam History",
+    "slug": "tataviam-history",
+    "description": "Specific history and culture of the Tataviam people (Fernandeño Tataviam Band of Mission Indians). No exact sacred-site coordinates published. CARE Principles apply.",
+    "sameAs": [
+      "https://www.wikidata.org/wiki/Q743736",
+      "https://www.tataviam-nsn.us/heritage/history/",
+      "https://www.tataviam-nsn.us/heritage/territory/"
+    ],
+    "externalSource": "Wikidata+Tataviam-consulted"
+  },
+  {
+    "title": "Californio History",
+    "slug": "californio-history",
+    "description": "Californio community and culture in California and SCV",
+    "sameAs": [
+      "https://www.wikidata.org/wiki/Q1051342"
+    ],
+    "externalSource": "Wikidata"
+  }
 ]
