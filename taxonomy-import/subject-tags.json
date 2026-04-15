@@ -21,14 +21,18 @@
   {
     "title": "Indigenous History",
     "slug": "indigenous-history",
-    "description": "History of Native peoples of the Santa Clarita Valley and broader California coast, including Tataviam (Fernandeño Tataviam Band of Mission Indians) and Chumash people. CARE Principles apply for all Indigenous content.",
+    "description": "History of Native peoples of the Santa Clarita Valley and surrounding region, including Tataviam (primary SCV territory), Chumash (coastal/mission connections), Tongva/Gabrielino (LA Basin/mission connections), and Serrano (northern/eastern border territory). CARE Principles and PNAAM apply for all Indigenous content.",
     "sameAs": [
       "https://www.wikidata.org/wiki/Q743736",
       "https://www.wikidata.org/wiki/Q24251468",
+      "https://www.wikidata.org/wiki/Q24251468",
+      "https://www.wikidata.org/wiki/Q745474",
       "https://www.tataviam-nsn.us/",
-      "https://chumash.gov/"
+      "https://chumash.gov/",
+      "https://www.gabrieleno-nsn.us/",
+      "https://sanmanuel-nsn.gov/"
     ],
-    "externalSource": "Wikidata+Tataviam-consulted+Chumash-consulted"
+    "externalSource": "Wikidata+Multi-tribal-consulted"
   },
   {
     "title": "Railroads",
@@ -200,5 +204,28 @@
       "https://northernchumash.org/"
     ],
     "externalSource": "Wikidata+Chumash-consulted"
+  },
+  {
+    "title": "Tongva History",
+    "slug": "tongva-history",
+    "description": "History and culture of the Tongva (Gabrielino/Gabrieleño/Kizh) people of the Los Angeles Basin and Southern Channel Islands (Tovaangar), with regional connections to SCV via missions and trade. No federal recognition as of 2026 — multiple groups petitioning. CARE Principles apply.",
+    "sameAs": [
+      "https://www.wikidata.org/wiki/Q24251468",
+      "https://www.gabrieleno-nsn.us/",
+      "https://gabrielinotongva.org/",
+      "https://gabrielenoindians.org/"
+    ],
+    "externalSource": "Wikidata+Tongva-consulted"
+  },
+  {
+    "title": "Serrano History",
+    "slug": "serrano-history",
+    "description": "History and culture of the Serrano (Maarrenga'yam / Vanyume) people of the San Bernardino Mountains, Antelope Valley, and Mojave Desert, with regional connections to SCV via trade, missions, and border territories. Primary authority: San Manuel Band of Mission Indians (federally recognized). CARE Principles apply.",
+    "sameAs": [
+      "https://www.wikidata.org/wiki/Q745474",
+      "https://sanmanuel-nsn.gov/",
+      "https://serranonationofindians.org/"
+    ],
+    "externalSource": "Wikidata+Serrano-consulted"
   }
 ]

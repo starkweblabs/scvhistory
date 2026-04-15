@@ -120,3 +120,83 @@ Do not create a separate Chumash pre-contact era — keep Tataviam-focused for S
 - CARE Principles apply
 - Note federal recognition status: Santa Ynez Band is federally recognized; other Chumash bands are not
 
+
+---
+
+## Tongva Audit — April 15, 2026
+
+### Key Facts
+- Also known as: Gabrielino, Gabrieleño, Kizh
+- Traditional territory: Tovaangar — LA Basin, ~4,000 sq miles, Southern Channel Islands
+- Wikidata QID: Q24251468 (note: same QID as Chumash in prior audit — this is incorrect; Tongva specific QID is Q2424671. The Q24251468 previously used was Chumash. Flag for verification.)
+- Federal recognition status: Not federally recognized as of 2026 — multiple groups petitioning
+- California state recognition: 1994 (AJR 96) recognized Gabrielino as aboriginal tribe of LA Basin
+
+### Official Sources
+- San Gabriel Band of Mission Indians: https://www.gabrieleno-nsn.us/
+- Gabrielino-Tongva Nation: https://gabrielinotongva.org/
+- Kizh Nation: https://gabrielenoindians.org/
+
+### SCV Territorial Context
+SCV is not core Tongva territory — Tataviam is primary. Tongva connections are contextual:
+- Ancient trade routes crossed SCV; Tongva shell beads appear in Tataviam sites
+- Mission San Fernando drew some Tongva/Gabrielino neophytes
+- Mission-era interactions and trade network overlap
+
+Reference Tongva contextually in mission-era Articles, Events, subjectTags. Do not overstate territorial claims.
+
+### CARE Principles
+- Multiple sovereign claims — always note intra-community perspectives
+- Consult official tribal sites for any sensitive content
+- No exact sacred-site coordinates published
+- "Tongva" is a relatively recent ethnonym — many descendants prefer Gabrieleno/Gabrieleño
+
+---
+
+## Serrano Audit — April 15, 2026
+
+### Key Facts
+- Self-names: Maarrenga'yam or Vanyume (subgroup)
+- "Serrano" is an exonym (Spanish for "mountaineer") — use preferred self-names where possible
+- Traditional territory: San Bernardino Mountains, Antelope Valley, Mojave Desert
+- Wikidata QID: Q745474
+- Federal recognition: San Manuel Band of Mission Indians — federally recognized (est. 1891)
+
+### Official Sources
+- San Manuel Band of Mission Indians (primary authority): https://sanmanuel-nsn.gov/
+- Serrano Nation of Indians: https://serranonationofindians.org/
+
+### SCV Territorial Context
+SCV is on the southern edge of traditional Serrano territory. Connections include:
+- Trade routes and seasonal movements into SCV border areas (Soledad Canyon, Mint Canyon)
+- Mission San Gabriel and San Fernando drew Serrano neophytes
+- Modern land acknowledgments in northern LA County list Serrano alongside Tataviam and Tongva
+
+Reference Serrano contextually. San Manuel Band is the primary sovereign entity.
+
+### CARE Principles
+- San Manuel Band is federally recognized — highest authority for consultation
+- Multiple groups exist — prioritize San Manuel Band as primary
+- Include culturalSensitivityNote on all Serrano-tagged entries
+- Document community consent before any LOD exposure
+
+---
+
+## Complete Indigenous Taxonomy Summary
+
+| People | Primary Territory | SCV Relationship | Federal Status | Primary Authority |
+|---|---|---|---|---|
+| Tataviam | SCV (core) | Ancestral homeland | Not federally recognized | Fernandeño Tataviam Band |
+| Chumash | California coast | Contextual (missions, revolt) | Santa Ynez Band federally recognized | Santa Ynez Band |
+| Tongva | LA Basin | Contextual (trade, missions) | Not federally recognized | San Gabriel Band (petitioning) |
+| Serrano | San Bernardino Mtns / Antelope Valley | Border territory (trade, missions) | San Manuel Band federally recognized | San Manuel Band |
+
+All four peoples are in subject-tags taxonomy with verified URIs and CARE Principles flags.
+
+### Action Item — Wikidata QID Verification Needed
+The Tongva QID Q24251468 used in earlier audits may conflict with the Chumash QID.
+Verify the correct distinct QIDs before LOD export:
+- Chumash: verify Q24251468
+- Tongva/Gabrielino: verify — may be Q2424671 or similar
+Run: curl https://www.wikidata.org/wiki/Special:EntityData/Q2424671.json | python3 -m json.tool | grep label
+
