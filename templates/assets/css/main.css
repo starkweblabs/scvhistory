@@ -1986,3 +1986,13 @@ figure.scv-person-portrait img, span.scv-person-portrait img { display: block; w
   width: 90px;
   height: 90px;
 }
+
+.scv-index-item__placeholder {
+  width: 100%;
+  aspect-ratio: 1;
+  background: var(--color-cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-warm-gray);
+}
