@@ -235,3 +235,44 @@ Create these Plain Text fields and attach to the Asset field layout (apply to al
 
 ---
 *Derived from DATA_MODEL.md and BUILDPLAN.md (2026-04-15). Safe to commit to public repo.*
+
+---
+
+## Amendment — 2026-04-15
+
+### culturalSensitivityNote — Add to All Entry Types and Category Layouts
+
+Field created on Cloudways (field ID 174, UID f0a5c7de-ccc3-4005-84ee-53feaafc26e9).
+Must be added to field layouts manually in CP.
+
+**Add to entry type layouts:**
+- [ ] Person
+- [ ] Place
+- [ ] Organization
+- [ ] Group
+- [ ] Event
+- [ ] Article
+- [ ] Photograph
+- [ ] Yearbook
+- [ ] Oral History
+- [ ] Document
+- [ ] War Memorial
+
+**Add to Category field layout (so individual taxonomy terms carry their own note):**
+- [ ] Settings → Categories → each group → Field Layout → drag in culturalSensitivityNote
+
+**Instructions text for the field:**
+"Note any CARE Principles or PNAAM considerations. Example: 'Developed in consultation with Fernandeño Tataviam Band of Mission Indians' or 'Chumash content — respect Santa Ynez Band of Chumash Indians.'"
+
+### JSON-LD Person Template
+Created at: templates/_partials/jsonld/person.twig
+Include in persons/_entry.twig head block:
+{% include '_partials/jsonld/person' with { entry: entry } only %}
+
+### URI Audit Corrections (Do Not Override These)
+- water-history: correct URI is https://id.loc.gov/authorities/subjects/sh85145505 (LCSH water supply)
+- land-grants: correct URIs are https://www.wikidata.org/wiki/Q1000743 and https://id.loc.gov/authorities/subjects/sh85074242
+- Q6683 is the Mexican-American War — do NOT use for land-grants
+- Q134166 is reservoir — do NOT use for water-history
+- These are already correct in the committed subject-tags.json — do not replace
+
