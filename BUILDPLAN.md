@@ -769,3 +769,72 @@ When bulk photo import begins:
 4. Store recognition confidence score + suggestion + confirmed flag on Photograph entry
 5. IIIF bounding box annotations for yearbook photo tagging (Phase 3)
 
+
+---
+
+## Import Pipeline — Detailed Stages
+
+Run locally against Leon's HTML archive. Never upload source files to a server.
+Final Craft writes target Cloudways via SSH or direct API calls.
+
+### Stage 1 — File Inventory (Local, No API, Minutes)
+```
+python3 scan_inventory.py --source /path/to/legacy/html --output inventory.json
+```
+Extracts per file: filename, path, title, meta description, text content, internal links,
+image references, dates, Leon's URL key pattern (lw/sg/wr/ws/wy prefix).
+Output: inventory.json — one record per HTML file.
+
+### Stage 2 — Entity Extraction (Claude API, Batched)
+```
+python3 extract_entities.py --input inventory.json --output entities.json
+```
+Sends each article to Claude API for structured entity extraction.
+Returns JSON: persons, places, organizations, events, article_date, article_subject.
+Output: entities.json — all raw entity mentions across all articles.
+
+### Stage 3 — Deduplication (Local, Human Review)
+```
+python3 deduplicate.py --input entities.json --output canonical_entities.json
+```
+Fuzzy name matching, duplicate flagging, human review pass.
+Output: canonical_entities.json — deduplicated canonical entities ready for import.
+
+### Stage 4 — Craft Import (Cloudways)
+```
+php import_entities.php --input canonical_entities.json --env cloudways
+php import_articles.php --input inventory.json --entities canonical_entities.json --env cloudways
+```
+Entities first. Articles second. Relations auto-populated from entity dictionary.
+
+### Permanent Import Artifacts (Commit to Repo)
+- inventory.json — every file catalogued
+- entities.json — all raw entity mentions
+- canonical_entities.json — deduplicated, reviewed
+- article_relations.json — which articles mention which entities
+
+---
+
+## IIIF Integration Plan
+
+### Phase 3 — Basic IIIF
+- [ ] Add iiifManifestUrl, iiifHostedOnArchiveOrg, iiifArchiveOrgIdentifier fields to Yearbook, Photograph, Document entry types
+- [ ] Build Craft IIIF Manifest generator template at templates/iiif/manifest.twig
+- [ ] Embed Mirador 3 viewer in Yearbook and Photograph templates
+- [ ] Upload first yearbooks to Archive.org — test IIIF pipeline end to end
+
+### Phase 3 — IIIF Entity Linking
+- [ ] Build Annotation entry type in Craft
+- [ ] Build yearbook OCR entity extraction pipeline (Archive.org OCR → Claude API → Annotation records)
+- [ ] Annotations feed into generated Manifests as Web Annotations
+- [ ] Mirador 3 renders clickable portrait overlays linked to Person entries
+- [ ] Face recognition pass on yearbook photos — editor-confirmed Annotations only
+
+### Why Archive.org for Hosting
+- Free permanent storage
+- Native IIIF Image API and Manifest generation
+- CDN delivery — no bandwidth costs
+- Long-term preservation guarantee
+- OCR auto-generated on upload
+- Craft stores metadata + relations + rights; Archive.org stores files + tiles
+
