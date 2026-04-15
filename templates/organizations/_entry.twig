@@ -36,9 +36,6 @@
   {% if org.dateFounded %}
     <p><strong>Founded:</strong> {{ org.dateFounded }}</p>
   {% endif %}
-  {% if org.orgAddress %}
-    <p><strong>Address:</strong> {{ org.orgAddress }}</p>
-  {% endif %}
 </div>
           {% set eras = org.historicalEra.all() %}
           {% if eras|length %}
@@ -147,6 +144,25 @@
         </div>
       </div>
     {% endif %}
+nathanimhoff@scvhistory-web:/var/www/html$ 
+nathanimhoff@scvhistory-web:/var/www/html$ 
+nathanimhoff@scvhistory-web:/var/www/html$ cp /var/www/html/reconnect_org_images.php /tmp/fix_org_images.php
+php craft exec "$(tail -n +2 /tmp/fix_org_images.php)"
+= array:4 [
+    "henry-mayo-newhall-memorial-hospital" => "henry-mayo-hospital-scaled.jpg"
+    "rancho-san-francisco" => "rancho-san-francisco-diseno-map-1843.jpg"
+    "rancho-camulos" => "rancho-camulos-south-veranda-postcard-1910s.jpg"
+    "rancho-el-tejon" => "tejon-ranch-entrance-sign-interstate-5.jpg"
+  ]
+
+Output:
+Connected: henry-mayo-newhall-memorial-hospital → henry-mayo-hospital-scaled.jpg
+Connected: rancho-san-francisco → rancho-san-francisco-diseno-map-1843.jpg
+Connected: rancho-camulos → rancho-camulos-south-veranda-postcard-1910s.jpg
+Connected: rancho-el-tejon → tejon-ranch-entrance-sign-interstate-5.jpg
+
+
+nathanimhoff@scvhistory-web:/var/www/html$ 
 
     {# Search #}
     <div class="scv-sidebar-card">
