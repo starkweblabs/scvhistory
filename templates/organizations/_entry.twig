@@ -144,25 +144,45 @@
         </div>
       </div>
     {% endif %}
-nathanimhoff@scvhistory-web:/var/www/html$ 
-nathanimhoff@scvhistory-web:/var/www/html$ 
-nathanimhoff@scvhistory-web:/var/www/html$ cp /var/www/html/reconnect_org_images.php /tmp/fix_org_images.php
-php craft exec "$(tail -n +2 /tmp/fix_org_images.php)"
-= array:4 [
-    "henry-mayo-newhall-memorial-hospital" => "henry-mayo-hospital-scaled.jpg"
-    "rancho-san-francisco" => "rancho-san-francisco-diseno-map-1843.jpg"
-    "rancho-camulos" => "rancho-camulos-south-veranda-postcard-1910s.jpg"
-    "rancho-el-tejon" => "tejon-ranch-entrance-sign-interstate-5.jpg"
-  ]
+{# Location Map #}
+{% if org.orgLat and org.orgLng %}
+  <div class="scv-sidebar-card">
+    <h3 class="scv-sidebar-card-title">Location</h3>
+    <div class="scv-sidebar-card-body scv-sidebar-card-body--flush">
+      <div id="org-map" class="scv-map" style="height:220px;"></div>
+      <dl class="scv-location-meta">
+        {% if org.orgAddress %}
+          <dt>Address</dt>
+          <dd>{{ org.orgAddress }}</dd>
+        {% endif %}
+        {% if org.orgLat and org.orgLng %}
+          <dt>Lat</dt><dd>{{ org.orgLat }}</dd>
+          <dt>Long</dt><dd>{{ org.orgLng }}</dd>
+        {% endif %}
+        {% if org.orgWebsite.value is defined and org.orgWebsite.value %}
+          <dt>Website</dt>
+          <dd><a href="{{ org.orgWebsite.value }}" target="_blank" rel="noopener">{{ org.orgWebsite.value|replace({'https://': '', 'http://': ''}) }}</a></dd>
+        {% endif %}
+      </dl>
+    </div>
+  </div>
 
-Output:
-Connected: henry-mayo-newhall-memorial-hospital → henry-mayo-hospital-scaled.jpg
-Connected: rancho-san-francisco → rancho-san-francisco-diseno-map-1843.jpg
-Connected: rancho-camulos → rancho-camulos-south-veranda-postcard-1910s.jpg
-Connected: rancho-el-tejon → tejon-ranch-entrance-sign-interstate-5.jpg
-
-
-nathanimhoff@scvhistory-web:/var/www/html$ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var map = L.map('org-map', { zoomControl: true, scrollWheelZoom: false })
+        .setView([{{ org.orgLat }}, {{ org.orgLng }}], 15);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© <a href="https://openstreetmap.org">OpenStreetMap</a>',
+        maxZoom: 19
+      }).addTo(map);
+      L.marker([{{ org.orgLat }}, {{ org.orgLng }}])
+        .addTo(map)
+        .bindPopup('<strong>{{ org.title }}</strong>{% if org.orgAddress %}<br>{{ org.orgAddress }}{% endif %}');
+    });
+  </script>
+{% endif %}
 
     {# Search #}
     <div class="scv-sidebar-card">
