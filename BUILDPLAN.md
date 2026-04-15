@@ -57,8 +57,10 @@ Search results — NOT BUILT
 - [ ] Upgrade persons/index.twig — last-name alpha sort + sidebar filters (neighborhood, org)
 - [ ] Wire Acosta parent/child relationship on Cloudways (wired locally only)
 - [ ] Build Search results page
-- [ ] Build Homepage
-- [ ] Public changelog section on site (auto-surfaces recent updates)
+- [ ] Build Homepage (include Recently Added strip — 4-6 cards, latest entries across all sections)
+- [ ] Build "What's New" page — two streams: (1) Site Updates: simple Craft single section for admin notes; (2) Recently Added: auto-query last 15 entries across all sections ordered by dateUpdated
+- [ ] Add "Recently Added" strip to Homepage (4-6 cards, same query as What's New)
+- [ ] Add "What's New" link to footer nav
 
 ### Open Questions
 - [ ] Confirm articleOrganizations field handle on Articles section for org reverse-lookup
