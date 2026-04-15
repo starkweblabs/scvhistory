@@ -25,7 +25,7 @@
     "sameAs": [
       "https://www.wikidata.org/wiki/Q743736",
       "https://www.wikidata.org/wiki/Q24251468",
-      "TONGVA_QID_PENDING_VERIFICATION",
+      "https://www.wikidata.org/wiki/Q1479279",
       "https://www.wikidata.org/wiki/Q745474",
       "https://www.tataviam-nsn.us/",
       "https://chumash.gov/",
@@ -210,7 +210,7 @@
     "slug": "tongva-history",
     "description": "History and culture of the Tongva (Gabrielino/Gabrieleño/Kizh) people of the Los Angeles Basin and Southern Channel Islands (Tovaangar), with regional connections to SCV via missions and trade. No federal recognition as of 2026 — multiple groups petitioning. CARE Principles apply. NOTE: Wikidata QID requires verification — Q24251468 confirmed as Chumash, not Tongva.",
     "sameAs": [
-      "TONGVA_QID_PENDING_VERIFICATION",
+      "https://www.wikidata.org/wiki/Q1479279",
       "https://www.gabrieleno-nsn.us/",
       "https://gabrielinotongva.org/",
       "https://gabrielenoindians.org/"
