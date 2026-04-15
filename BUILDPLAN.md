@@ -660,3 +660,34 @@ These should be added in Craft CP before content migration scales up:
 | /families | Low | Family group type index |
 | /film-locations | Low | Productions and filming locations |
 
+
+---
+
+## Additional Features — 2026-04-15
+
+### Structured Roles Field (Replace Occupation)
+- [ ] Replace plain text occupation field on Person with structured Roles matrix/table field
+- [ ] Fields per role: title, organization (relation), start year, end year, primaryRole toggle, sort order
+- [ ] Person cards and index listings show primaryRole only
+- [ ] People index becomes filterable by role title
+- [ ] High priority — affects data entry quality from this point forward
+
+### Auto-Tagging / Entity Linking (Phase 4)
+- [ ] Layer 1: AI-assisted entity detection on article save — Claude API scans body text, suggests archive matches, editor approves, builds explicit relation fields
+- [ ] Layer 2: Real-time inline tooltips — JavaScript entity dictionary from GraphQL, on hover/tap shows mini-card (photo, name, dates, one-line description, link)
+- [ ] Disambiguation handling for common names
+- [ ] Mobile tap behavior
+- [ ] This feature makes every article smarter over time as the archive grows
+
+### Shared Birthday Feature (Phase 10)
+- [ ] User profile includes birthday (month/day only — no year required)
+- [ ] Dashboard query: Persons where birthDate monthDay matches user's birthday
+- [ ] Display: "You share a birthday with [Name] and [Name]"
+- [ ] Delightful personal touch that makes the archive feel connected to the user
+
+### On This Day — Hybrid Implementation
+- [ ] Add onThisDayDate (MM-DD) and onThisDayNote fields to all entry types
+- [ ] Leon manually flags entries with known anniversary significance
+- [ ] Dynamic query falls back to parsed monthDay from birthDate, eventDate, dateFounded
+- [ ] Combine editorial control with automated data where it exists
+

@@ -819,3 +819,104 @@ Sensitive location data (burial grounds, sacred sites) requires special handling
 
 Only if significant volume of records found. Land grant records likely best handled as Document entry type with documentType: Land Grant.
 
+
+---
+
+## Decisions — 2026-04-15 Session 4 Final
+
+### Zodiac Sign — Calculated, Not Stored
+Never store zodiac as a field. Calculate from birthDate using Twig macro or JavaScript.
+Only display when birthDate is specific enough to determine sign with certainty.
+"c. 1734" or "December 1962" = too ambiguous, do not display.
+"May 13, 1825" = display Taurus.
+Add to Person template as a subtle display element only.
+
+### Shared Birthday Feature (Phase 10 — User Accounts)
+When user has birthday in profile, query: Persons where birthDate monthDay matches user's monthDay.
+Display as personal touch on user dashboard: "You share a birthday with Henry Mayo Newhall."
+Simple, delightful, makes archive feel personal.
+
+### On This Day — Hybrid Approach
+Add to all entry types:
+- onThisDayDate: Plain Text (MM-DD) — manually set by editor
+- onThisDayNote: Plain Text — optional hook line "On this date in 1876..."
+
+Query logic:
+1. Use onThisDayDate if set (editorial control)
+2. Fall back to monthDay parsed from birthDate, eventDate, dateFounded
+3. Leon manually flags entries he knows have anniversary significance
+
+Not all articles have clean date hooks — this hybrid respects that reality while enabling dynamic content where data exists.
+
+### Occupation / Career — Replace Plain Text with Structured Roles Field
+
+Remove: occupation (Plain Text) from Person
+Replace with: roles (Matrix or Table field)
+
+Roles field structure:
+- roleTitle: Plain Text — "State Assemblymember"
+- roleOrganization: Relation → Organization (optional)
+- roleStart: Plain Text — year
+- roleEnd: Plain Text — year or "present"
+- primaryRole: Lightswitch — marks most SCV-significant role (one only)
+- Sort order: draggable
+
+Display rules:
+- Cards and index listings show primaryRole only
+- Full Person entry shows all roles in draggable order
+- People index filterable by roleTitle (structured query)
+- Organization pages show people who held roles there via reverse relation
+
+Migration: parse existing occupation plain text strings into structured roles during content entry. Not a script — done editorially as each Person record is reviewed.
+
+Example — Dante Acosta roles in order:
+1. State Assemblymember (primaryRole: true) ← shows on cards
+2. Santa Clarita City Council Member
+3. College of the Canyons Board of Trustees
+4. Political Staffer (McClintock, Boland, McKeon)
+5. Financial Advisor
+
+### Auto-Tagging / Entity Linking — Named Entity Recognition
+
+Two-layer system:
+
+Layer 1 — AI-assisted on save (editorial):
+When article saved, body text sent to Claude API.
+Claude returns detected entities with suggested archive matches.
+Editor reviews and approves — adds explicit relation fields to article.
+Builds structured data: subjectPersons, subjectPlaces, subjectOrganizations.
+
+Layer 2 — Real-time tooltip in frontend (reader):
+JavaScript scans article body text for known entity names.
+Names found in archive get wrapped in tooltip trigger.
+On hover/tap: mini-card appears inline — photo, name, DOB-DOD, one-line description, link to full entry.
+Click navigates to full Person/Place/Org entry.
+No editor involvement — purely frontend, powered by GraphQL API.
+
+Both layers together:
+- Layer 1 builds the knowledge graph (structured relations)
+- Layer 2 surfaces it for readers (inline discovery)
+- Every article becomes richer with every entity link
+- Feeds On This Day, knowledge graph visualization, related content recommendations
+
+Implementation notes:
+- Layer 2 requires a JavaScript entity dictionary built from GraphQL query at page load
+- Entity names must be exact match or fuzzy match (Levenshtein distance)
+- Disambiguation needed — "Hart" could be William S. Hart or Hart High School
+- Show tooltip only for entities with featuredImage + sufficient data for a useful card
+- Mobile: tap to show, tap again to dismiss or navigate
+
+### Ethnic and Cultural Heritage — Group Entry Type
+
+Confirmed: use Group section with groupType: Cultural Group
+
+Examples:
+- Tataviam People (groupType: Cultural Group)
+- Californio Community (groupType: Cultural Group)
+- Chinese Railroad Workers (groupType: Cultural Group)
+- Japanese American Farming Community (groupType: Cultural Group)
+- Basque Settlers (groupType: Cultural Group)
+
+Each gets full body content, associated persons, associated places, subject tags, and Indigenous taxonomy where applicable.
+For Tataviam specifically: develop taxonomy terms in consultation with community representatives.
+
