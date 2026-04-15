@@ -21,7 +21,7 @@
       <header class="scv-entry-header">
         {% if orgImage %}
           <div class="scv-entry-header__image">
-            <img src="{{ orgImage.url }}" alt="{{ orgImage.altText ?? org.title }}">
+            <img src="{{ orgImage.url }}" alt="{{ org.title }}">
           </div>
         {% endif %}
 
@@ -32,23 +32,14 @@
             <p class="scv-entry-aliases">Also known as {{ org.orgAliases }}</p>
           {% endif %}
 
-          <dl class="scv-entry-meta">
-            {% if org.dateFounded %}
-              <dt>Founded</dt>
-              <dd>{{ org.dateFounded }}</dd>
-            {% endif %}
-
-            {# {% if org.dateDissolved %}
-  <dt>Dissolved</dt>
-  <dd>{{ org.dateDissolved }}</dd>
-{% endif %} #}
-
-            {% if org.orgAddress %}
-              <dt>Address</dt>
-              <dd>{{ org.orgAddress }}</dd>
-            {% endif %}
-          </dl>
-
+          <div class="scv-entry-meta">
+  {% if org.dateFounded %}
+    <p><strong>Founded:</strong> {{ org.dateFounded }}</p>
+  {% endif %}
+  {% if org.orgAddress %}
+    <p><strong>Address:</strong> {{ org.orgAddress }}</p>
+  {% endif %}
+</div>
           {% set eras = org.historicalEra.all() %}
           {% if eras|length %}
             <div class="scv-tags">
@@ -144,12 +135,12 @@
       <div class="scv-sidebar-card">
         <h3 class="scv-sidebar-card-title">External Links</h3>
         <div class="scv-sidebar-card-body scv-external-links">
-          {% if org.orgWebsite %}
-            <a href="{{ org.orgWebsite }}" target="_blank" rel="noopener" class="scv-external-link">Official Website ↗</a>
-          {% endif %}
-          {% if org.orgWikipediaUrl %}
-            <a href="{{ org.orgWikipediaUrl }}" target="_blank" rel="noopener" class="scv-external-link">Wikipedia ↗</a>
-          {% endif %}
+          {% if org.orgWebsite.value is defined and org.orgWebsite.value %}
+  <a href="{{ org.orgWebsite.value }}" target="_blank" rel="noopener" class="scv-external-link">Official Website ↗</a>
+{% endif %}
+{% if org.orgWikipediaUrl.value is defined and org.orgWikipediaUrl.value %}
+  <a href="{{ org.orgWikipediaUrl.value }}" target="_blank" rel="noopener" class="scv-external-link">Wikipedia ↗</a>
+{% endif %}
           {% if org.orgLegacyUrl %}
             <a href="https://scvhistory.com/{{ org.orgLegacyUrl }}" target="_blank" rel="noopener" class="scv-external-link">View on Legacy Site ↗</a>
           {% endif %}
