@@ -1,6 +1,6 @@
 [
-  {"title": "Confirmed", "slug": "confirmed", "description": "Fact supported by primary source document. Source should be cited in entry."},
-  {"title": "Probable", "slug": "probable", "description": "Fact supported by strong secondary evidence or multiple corroborating sources."},
-  {"title": "Uncertain", "slug": "uncertain", "description": "Fact based on limited or circumstantial evidence. Should be noted in entry text."},
-  {"title": "Disputed", "slug": "disputed", "description": "Conflicting sources exist. Both accounts should be presented in entry text."}
+  {"title": "Confirmed", "slug": "confirmed", "description": "Primary source document exists and supports this claim. Source should be cited in entry.", "sameAs": [], "externalSource": "Local-SCV"},
+  {"title": "Probable", "slug": "probable", "description": "Strong secondary evidence or multiple corroborating sources support this claim.", "sameAs": [], "externalSource": "Local-SCV"},
+  {"title": "Uncertain", "slug": "uncertain", "description": "Limited or circumstantial evidence. Should be noted in entry text.", "sameAs": [], "externalSource": "Local-SCV"},
+  {"title": "Disputed", "slug": "disputed", "description": "Conflicting sources exist. Both accounts should be presented in entry text.", "sameAs": [], "externalSource": "Local-SCV"}
 ]

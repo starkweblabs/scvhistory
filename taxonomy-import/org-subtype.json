@@ -1,12 +1,12 @@
 [
-  {"title": "Educational Institution", "slug": "educational-institution", "description": "Schools, colleges, universities, and other educational organizations"},
-  {"title": "Rancho", "slug": "rancho", "description": "Spanish and Mexican land grant rancho — formal legal entity with deeded land"},
-  {"title": "Mission", "slug": "mission", "description": "Spanish Catholic mission — religious and colonial administrative institution"},
-  {"title": "Government", "slug": "government", "description": "Government bodies — city, county, state, federal agencies and offices"},
-  {"title": "Business", "slug": "business", "description": "For-profit commercial enterprises"},
-  {"title": "Nonprofit", "slug": "nonprofit", "description": "Nonprofit organizations, foundations, and civic associations"},
-  {"title": "Media", "slug": "media", "description": "Newspapers, television stations, radio stations, and media organizations"},
-  {"title": "Military Unit", "slug": "military-unit", "description": "Formal military organizations — regiments, battalions, companies"},
-  {"title": "Cultural Organization", "slug": "cultural", "description": "Cultural, arts, and heritage organizations"},
-  {"title": "Religious Institution", "slug": "religious-institution", "description": "Churches, parishes, synagogues, and religious organizations"}
+  {"title": "Educational Institution", "slug": "educational-institution", "description": "Schools, colleges, and universities", "sameAs": ["http://vocab.getty.edu/aat/300055197"], "externalSource": "Getty AAT"},
+  {"title": "Rancho", "slug": "rancho", "description": "Mexican land-grant ranchos — formal legal entities with deeded land", "sameAs": ["https://www.wikidata.org/wiki/Q3303261"], "externalSource": "Wikidata"},
+  {"title": "Mission", "slug": "mission", "description": "Spanish colonial missions", "sameAs": ["https://www.wikidata.org/wiki/Q1156970"], "externalSource": "Wikidata"},
+  {"title": "Government", "slug": "government", "description": "Local, state, or federal government bodies", "sameAs": ["https://www.wikidata.org/wiki/Q7163"], "externalSource": "Wikidata"},
+  {"title": "Business", "slug": "business", "description": "Commercial enterprises", "sameAs": ["https://www.wikidata.org/wiki/Q4830453"], "externalSource": "Wikidata"},
+  {"title": "Nonprofit", "slug": "nonprofit", "description": "Non-profit organizations", "sameAs": ["https://www.wikidata.org/wiki/Q163740"], "externalSource": "Wikidata"},
+  {"title": "Media", "slug": "media", "description": "Newspapers, radio, TV, and media outlets", "sameAs": ["https://www.wikidata.org/wiki/Q11033"], "externalSource": "Wikidata"},
+  {"title": "Military Unit", "slug": "military-unit", "description": "Military organizations and units", "sameAs": ["https://www.wikidata.org/wiki/Q176799"], "externalSource": "Wikidata"},
+  {"title": "Cultural Organization", "slug": "cultural-organization", "description": "Cultural and arts groups", "sameAs": [], "externalSource": "Local-SCV"},
+  {"title": "Religious Institution", "slug": "religious-institution", "description": "Churches, temples, and religious bodies", "sameAs": ["https://www.wikidata.org/wiki/Q1530022"], "externalSource": "Wikidata"}
 ]
