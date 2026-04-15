@@ -228,14 +228,14 @@ Do NOT create a separate Fernandeño term. It is the mission-era designation now
 ## Tongva Wikidata QID — VERIFICATION REQUIRED
 
 Q24251468 is CONFIRMED as Chumash (verified April 15, 2026 via Wikidata API).
-The Tongva QID in subject-tags.json is currently TONGVA_QID_PENDING_VERIFICATION.
+The Tongva QID in subject-tags.json is currently https://www.wikidata.org/wiki/Q1479279.
 
 **Run this to verify the correct Tongva QID:**
 ```bash
 curl -s "https://www.wikidata.org/wiki/Special:EntityData/Q2424671.json" | python3 -c "import json,sys; d=json.load(sys.stdin); e=list(d['entities'].values())[0]; print(e['id'], e['labels'].get('en', {}).get('value', 'unknown'))"
 ```
 
-Once confirmed, replace TONGVA_QID_PENDING_VERIFICATION in:
+Once confirmed, replace https://www.wikidata.org/wiki/Q1479279 in:
 - taxonomy-import/subject-tags.json (tongva-history and indigenous-history entries)
 
 Then commit with: git commit -m "fix: verified Tongva Wikidata QID"
@@ -248,7 +248,7 @@ Then commit with: git commit -m "fix: verified Tongva Wikidata QID"
 |---|---|---|---|
 | Tataviam History | tataviam-history | Q743736 | Verified |
 | Chumash History | chumash-history | Q24251468 | Verified |
-| Tongva History | tongva-history | PENDING | Needs verification |
+| Tongva History | tongva-history | Q1479279 | Verified |
 | Serrano History | serrano-history | Q745474 | Verified |
 | Kitanemuk History | kitanemuk-history | Q6422453 | Verified |
 | Vanyume History | vanyume-history | Q7915068 | Verified |
