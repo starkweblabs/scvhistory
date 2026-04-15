@@ -338,3 +338,61 @@ Note: Requires migration script to merge existing Military Profile records into 
 - [ ] Explains the knowledge graph concept to non-technical visitors
 - [ ] Links each entry type to example records
 
+
+---
+
+## Immediate Actions (Do This Week — Outside the CMS)
+
+These are not code tasks. They cost nothing and have long-term impact.
+
+- [ ] **ISSN application** — submit at loc.gov/issn. Takes 20 minutes, costs nothing, takes a few weeks to process. Required for academic database listing. Do this now.
+- [ ] **Tataviam consultation** — Leon likely has existing community relationships. Reach out before building the Indigenous taxonomy, not after. Respectful, academically correct, and strengthens the CSUN partnership angle significantly.
+- [ ] **Schema.org metadata decision** — confirm which Schema.org types to use for each entry type (Person, Place, Organization, Event, Article) and add to every template as we build them. Not a retrofit — build it in now.
+
+---
+
+## Phase 9 — Community, Education & Sustainability
+
+Priority: Make the archive grow beyond what one person can maintain, and ensure it outlives any single individual.
+
+### Contributor Portal
+- [ ] Structured submission workflow for descendants, local historians, and community members
+- [ ] Form fields for: type of contribution (correction, addition, photo, document), subject entry, description, source, contributor name and contact
+- [ ] Review queue in Craft CP — Leon or an editor approves before anything goes live
+- [ ] Contributor credit system — approved contributors listed on the entry they improved
+- [ ] Why: This is how the archive scales. Leon cannot add everything alone. A structured portal is the difference between a personal project and a community resource.
+
+### Teacher Resources Section
+- [ ] Lesson plans organized by grade level and California history standards
+- [ ] Primary source packets (documents + photographs + context)
+- [ ] Classroom guides tied to specific eras and topics
+- [ ] Downloadable PDFs formatted for classroom use
+- [ ] Why: Fastest path to school adoption. Gives CSUN education faculty a concrete partnership reason. Makes the archive a curriculum resource, not just a reference.
+
+### Media Kit Page
+- [ ] Press-quality photos of the site, Leon, and key archival images
+- [ ] Approved descriptions of the project in 50, 100, and 200 word versions
+- [ ] Usage guidelines for reproducing content
+- [ ] Press contact information
+- [ ] Links to any existing coverage
+- [ ] Why: One well-placed LA Times or KCRW story changes everything. Make it easy for journalists to cover the archive correctly.
+
+### Annual Report Page
+- [ ] Published yearly — what was added, visitor numbers, preservation milestones, partnerships
+- [ ] Lives as a page on the site, not a PDF download
+- [ ] First edition covers the rebuild itself — the 2027 launch is the story
+- [ ] Why: Shows funders, partners, and the community the archive is alive and growing. Pairs with the Live Tech Updates page.
+
+### Oral History — Move Up in Priority
+- [ ] URGENT: People who remember pre-incorporation SCV, the old ranches, oil fields, early film industry are in their 70s, 80s, and 90s. Every year without recording is permanent loss.
+- [ ] Move Oral History entry type from Phase 6 to Phase 3 alongside the API work
+- [ ] Minimum viable version: audio file + transcript + interviewee Person record + date + topics
+- [ ] SCVTV already has recording infrastructure — this is a workflow problem, not a technical one
+- [ ] Why: Irreplaceable. Cannot be reconstructed. Most urgent preservation gap in the entire project.
+
+### Sustainability & Institutional Permanence
+- [ ] **Endowment or funding model** — the archive needs a structure that outlives any single person. Options: SCVTV 501(c)(3) fiscal sponsorship (already exists), university partnership with CSUN, community foundation relationship, grant funding through NEH or California Humanities.
+- [ ] **Preservation redundancy partnerships** — Archive.org is one backup. Pursue relationships with Huntington Library, California State Library, or UCLA digital preservation programs. Academic institutions actively seek regional collections to partner with.
+- [ ] **Editorial succession plan** — document Leon's methodology, source relationships, and editorial standards so the archive can continue if his direct involvement changes.
+- [ ] **Advisory board formation** — even two or three CSUN history or digital humanities faculty changes perception from personal project to institutional resource. Reach out early — faculty partnerships take time.
+
