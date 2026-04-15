@@ -1,0 +1,54 @@
+{#
+  JSON-LD Schema.org block for Person entries
+  Usage: {% include '_partials/jsonld/person' with { entry: entry } only %}
+  Place inside <head> block in persons/_entry.twig
+#}
+
+{% set person = entry %}
+{% set image = person.featuredImage.one() %}
+
+<script type="application/ld+json">
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/"
+  },
+  "@type": "Person",
+  "@id": "{{ siteUrl }}{{ person.uri }}",
+  "name": "{{ person.title | replace({'"': '\\"'}) }}"
+  {% if person.fullName %}, "alternateName": "{{ person.fullName | replace({'"': '\\"'}) }}"{% endif %}
+  {% if person.body %}, "description": "{{ person.body | striptags | slice(0, 300) | replace({'"': '\\"', '\n': ' '}) }}"{% endif %}
+  {% if person.birthDate %}, "birthDate": "{{ person.birthDate }}"{% endif %}
+  {% if person.deathDate %}, "deathDate": "{{ person.deathDate }}"{% endif %}
+  {% if person.birthplace %}
+  , "birthPlace": { "@type": "Place", "name": "{{ person.birthplace | replace({'"': '\\"'}) }}" }
+  {% endif %}
+  {% if image %}, "image": "{{ image.url }}"{% endif %}
+  {% set sameAsUris = [] %}
+  {% if person.personWikipediaUrl %}{% set sameAsUris = sameAsUris | merge([person.personWikipediaUrl]) %}{% endif %}
+  {% if person.personGraveUrl %}{% set sameAsUris = sameAsUris | merge([person.personGraveUrl]) %}{% endif %}
+  {% if person.sameAs is defined %}{% for uri in person.sameAs %}{% set sameAsUris = sameAsUris | merge([uri]) %}{% endfor %}{% endif %}
+  {% if sameAsUris | length %}
+  , "sameAs": [{% for uri in sameAsUris %}"{{ uri }}"{% if not loop.last %},{% endif %}{% endfor %}]
+  {% endif %}
+  {% if person.roles is defined and person.roles.all() | length %}
+  , "hasOccupation": [
+    {% for role in person.roles.all() %}
+    {
+      "@type": "Role",
+      "roleName": "{{ role.roleTitle | replace({'"': '\\"'}) }}"
+      {% if role.roleOrganization.one() %}, "memberOf": { "@type": "Organization", "name": "{{ role.roleOrganization.one().title | replace({'"': '\\"'}) }}" }{% endif %}
+      {% if role.roleStart %}, "startDate": "{{ role.roleStart }}"{% endif %}
+      {% if role.roleEnd %}, "endDate": "{{ role.roleEnd }}"{% endif %}
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+  {% endif %}
+  , "dcterms:modified": "{{ person.dateUpdated | date('Y-m-d') }}"
+  , "dcterms:isPartOf": "{{ siteUrl }}"
+  {% if person.culturalSensitivityNote is defined and person.culturalSensitivityNote %}
+  , "dcterms:accessRights": "{{ person.culturalSensitivityNote | replace({'"': '\\"'}) }}"
+  {% endif %}
+}
+</script>

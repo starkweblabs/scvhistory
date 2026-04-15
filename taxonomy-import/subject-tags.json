@@ -13,8 +13,10 @@
     "title": "Water History",
     "slug": "water-history",
     "description": "Water infrastructure, aqueducts, dams, and water rights in SCV",
-    "sameAs": [],
-    "externalSource": "Local-SCV"
+    "sameAs": [
+      "https://id.loc.gov/authorities/subjects/sh85145505"
+    ],
+    "externalSource": "LCSH"
   },
   {
     "title": "Indigenous History",
@@ -132,8 +134,11 @@
     "title": "Land Grants",
     "slug": "land-grants",
     "description": "Mexican and Spanish land grants and ranchos",
-    "sameAs": [],
-    "externalSource": "Local-SCV"
+    "sameAs": [
+      "https://www.wikidata.org/wiki/Q1000743",
+      "https://id.loc.gov/authorities/subjects/sh85074242"
+    ],
+    "externalSource": "Wikidata+LCSH"
   },
   {
     "title": "Natural Disasters",
